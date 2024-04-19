@@ -6,7 +6,7 @@ class Routes {
   static const String otpVerification = '/otpVerification';
   static const String signUp = '/signUp';
   static const String setPassword = '/setPassword';
-  static const String accountCreated = '/accountCreated';
+  static const String verificationSuccessful = '/verificationSuccessful';
   static const String createPin = '/createPin';
   static const String biometricsSetUp = '/biometricsSetUp';
   static const String forgotPassword = '/forgotPassword';

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_text_field.dart';
@@ -82,10 +83,9 @@ class _OtpScreenState extends State<OtpScreen> {
     final seconds = strDigits(myDuration.inSeconds.remainder(60));
     final ColorScheme scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -93,7 +93,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 50,
                   ),
                   Image.asset(
                     "assets/images/rafiki.png",
@@ -182,8 +182,14 @@ class _OtpScreenState extends State<OtpScreen> {
                   ),
                   PrimaryButton(
                       label: "Verify",
-                      onPressed: () {},
-                      isEnabled: otp.length == 4)
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, Routes.verificationSuccessful);
+                      },
+                      isEnabled: otp.length == 4),
+                  const SizedBox(
+                    height: 50,
+                  )
                 ],
               ),
             ),

@@ -3,6 +3,7 @@ import 'package:broadcaadvendor/core/widgets/error_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/login_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/otp_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/signup_screen.dart';
+import 'package:broadcaadvendor/features/auth/presentation/screens/verification_successful.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -20,6 +21,10 @@ class AppRouter {
       case Routes.otpVerification:
         return MaterialPageRoute(
           builder: (_) => const OtpScreen(),
+        );
+      case Routes.verificationSuccessful:
+        return MaterialPageRoute(
+          builder: (_) => const VerificationSuccessfulScreen(),
         );
 
       default:
