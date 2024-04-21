@@ -18,6 +18,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       //   emit(AuthStateAuthError(authError: AuthError(message: l.message)));
       // }, (r) {
       //   emit(AuthStateIsLoggedIn(user: r));
+
       // });
     });
 
