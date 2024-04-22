@@ -1,7 +1,7 @@
-import 'package:get_it/get_it.dart';
+// import 'package:get_it/get_it.dart';
 
-final sl = GetIt.instance;
+// final sl = GetIt.instance;
 
-Future<void> initializeDependencies() async {
-  // sl.registerSingleton<NewsApiSservice>(NewsApiServiceImplementation());
-}
+// Future<void> initializeDependencies() async {
+//   // sl.registerSingleton<NewsApiSservice>(NewsApiServiceImplementation());
+// }

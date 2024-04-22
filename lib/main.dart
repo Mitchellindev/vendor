@@ -21,7 +21,7 @@ appInitialization() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  await initializeDependencies();
+  // await initializeDependencies();
   FlutterNativeSplash.remove();
 }
 

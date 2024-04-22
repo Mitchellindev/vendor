@@ -78,7 +78,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     textFieldkey: nameKey),
                 InputFieldWidget(
                   enabledBorderRadius: 5,
-                  obscureText: true,
+                  obscureText: obscureText,
                   hintColor: const Color.fromARGB(120, 58, 58, 58),
                   hintSize: 18,
                   hintText: "Password",
@@ -99,9 +99,16 @@ class _SignupScreenState extends State<SignupScreen> {
                         obscureText = !obscureText;
                       });
                     },
-                    icon: Icon(obscureText
-                        ? Icons.visibility_outlined
-                        : Icons.visibility_off_outlined),
+                    icon: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          obscureText = !obscureText;
+                        });
+                      },
+                      child: Icon(obscureText
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined),
+                    ),
                   ),
                 ),
                 InputFieldWidget(
