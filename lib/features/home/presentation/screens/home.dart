@@ -1,7 +1,8 @@
 import 'package:broadcaadvendor/features/home/presentation/widgets/loading_screen_body.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/no_store_yet.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_yet.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/store_summary_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,7 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               SearchHeader(scaffoldKey: scaffoldKey),
               if (isLoading) const LoadingScreenBody(),
-              if (!isLoading) const NoStoreYetWidget()
+              if (!isLoading) const NoStoreWidget()
+              // if (!isLoading) const StoreSummary()
             ],
           ),
         ),

@@ -1,7 +1,6 @@
 import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/error_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/forgot_password.dart';
-import 'package:broadcaadvendor/features/auth/presentation/screens/login_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/otp_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/reset_password.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/signup_screen.dart';
@@ -16,7 +15,7 @@ class AppRouter {
     switch (routeSettings.name) {
       case Routes.login:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => const HomeScreen(),
         );
       case Routes.signUp:
         return MaterialPageRoute(
