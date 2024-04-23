@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
         isLoading = false;
       });
     });
+
     return Scaffold(
       drawer: const MenuWidget(),
       key: scaffoldKey,

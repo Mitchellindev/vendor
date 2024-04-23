@@ -7,6 +7,8 @@ import 'package:broadcaadvendor/features/auth/presentation/screens/reset_passwor
 import 'package:broadcaadvendor/features/auth/presentation/screens/signup_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/verification_successful.dart';
 import 'package:broadcaadvendor/features/home/presentation/screens/home.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/store_creation_form_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -40,6 +42,14 @@ class AppRouter {
       case Routes.home:
         return MaterialPageRoute(
           builder: (_) => const HomeScreen(),
+        );
+      case Routes.firstStoreCreation:
+        return MaterialPageRoute(
+          builder: (_) => const FirstStoreCreationScreen(),
+        );
+      case Routes.storeCreationForm:
+        return MaterialPageRoute(
+          builder: (_) => const StoreCreationFormScreeen(),
         );
       default:
         return MaterialPageRoute(

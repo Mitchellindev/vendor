@@ -1,6 +1,5 @@
 import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SearchHeader extends StatefulWidget {
   const SearchHeader({super.key, required this.scaffoldKey});
@@ -26,14 +25,14 @@ class _SearchHeaderState extends State<SearchHeader> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             GestureDetector(
               onTap: () {
                 widget.scaffoldKey.currentState?.openDrawer();
               },
-              child: Icon(
+              child: const Icon(
                 Icons.menu,
                 size: 25,
               ),

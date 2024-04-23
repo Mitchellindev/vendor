@@ -8,15 +8,26 @@ class PrimaryButton extends StatelessWidget {
       required this.onPressed,
       required this.isEnabled,
       this.backgroundColor = const Color(0xff030E4F),
-      this.labelColor = Colors.white});
+      this.labelColor = Colors.white,
+      this.icon = const TextWidget(text: ""),
+      this.fontWeight = FontWeight.w600});
   final String label;
   final VoidCallback onPressed;
   final bool isEnabled;
+  final Widget icon;
   final Color backgroundColor;
   final Color labelColor;
+  final FontWeight fontWeight;
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return ElevatedButton.icon(
+      icon: icon,
+      label: TextWidget(
+        text: label,
+        color: labelColor,
+        fontSize: 18,
+        fontWeight: fontWeight,
+      ),
       onPressed: isEnabled ? onPressed : null,
       style: ElevatedButton.styleFrom(
         elevation: 0,
@@ -29,12 +40,6 @@ class PrimaryButton extends StatelessWidget {
         backgroundColor: isEnabled
             ? backgroundColor
             : Theme.of(context).colorScheme.secondary,
-      ),
-      child: TextWidget(
-        text: label,
-        color: labelColor,
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
       ),
     );
   }

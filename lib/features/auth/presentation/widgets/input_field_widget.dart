@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/core/constants/app_colors.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class InputFieldWidget extends StatelessWidget {
       this.onTap,
       this.maxLines = 1,
       this.fontWeight = FontWeight.w600,
+      this.labelColor = AppColors.primary,
       this.labelFontSize = 16,
       this.enabledBorderRadius = 30,
       this.verticalContentPadding = 0,
@@ -44,6 +46,7 @@ class InputFieldWidget extends StatelessWidget {
   final Color hintColor;
   final double labelFontSize;
   final TextEditingController? controller;
+  final Color labelColor;
   final double horizontalContentPadding;
   @override
   Widget build(BuildContext context) {
@@ -52,7 +55,7 @@ class InputFieldWidget extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         TextWidget(
           text: label,
-          color: Colors.black,
+          color: labelColor,
           fontWeight: fontWeight,
           fontSize: labelFontSize,
         ),
