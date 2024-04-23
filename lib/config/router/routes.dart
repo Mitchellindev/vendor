@@ -1,8 +1,8 @@
 class Routes {
   //Auth
   // static const String landing = '/login';
+  static const String login = '/';
   static const String phoneNumber = '/phoneNumber';
-  static const String login = '/login';
   static const String otpVerification = '/otpVerification';
   static const String signUp = '/signUp';
   static const String verificationSuccessful = '/verificationSuccessful';
@@ -16,4 +16,5 @@ class Routes {
   //Store
   static const String firstStoreCreation = '/firstStoreCreation';
   static const String storeCreationForm = '/storeCreationForm';
+  static const String editStore = '/editStore';
 }

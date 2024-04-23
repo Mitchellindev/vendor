@@ -14,11 +14,6 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
   PageController controller = PageController(viewportFraction: .9);
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),

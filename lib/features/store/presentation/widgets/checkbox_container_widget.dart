@@ -19,7 +19,6 @@ class _CheckBoxContainerWidgetDayState
   bool? value = false;
 
   void onchanged(val) {
-    void isCanceled() {}
     if (widget.day.name == widget.label) {
       if (value == false) {
         showDialog(
@@ -44,15 +43,6 @@ class _CheckBoxContainerWidgetDayState
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (value == false) {
-          showDialog(
-              context: context,
-              builder: (context) {
-                return TimePopupWidget(
-                  isCancelled: () {},
-                );
-              });
-        }
         if (value == true) {
           onchanged(false);
         } else {

@@ -1,5 +1,6 @@
 import 'package:broadcaadvendor/app/enums/enums.dart';
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/accordion_widget.dart';
@@ -52,6 +53,8 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
     super.initState();
   }
 
+  PageController controller = PageController(viewportFraction: .9);
+
   @override
   Widget build(BuildContext context) {
     ColorScheme colorScheme = Theme.of(context).colorScheme;
@@ -72,38 +75,50 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
               alignment: AlignmentDirectional.bottomCenter,
               clipBehavior: Clip.none,
               children: [
-                Container(
+                SizedBox(
+                  height: 170,
                   width: double.infinity,
-                  height: 160,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      width: 0.5,
-                      color: const Color.fromRGBO(3, 14, 79, 1),
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        "assets/images/gallery_add.png",
-                        width: 24,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const TextWidget(
-                        textAlign: TextAlign.center,
-                        text: "Upload cover photo",
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
-                        color: Color(0xffF49F1C),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                    ],
-                  ),
+                  child: PageView(
+                      controller: controller,
+                      padEnds: true,
+                      scrollDirection: Axis.horizontal,
+                      children: List.generate(
+                        3,
+                        (index) => Container(
+                          width: double.infinity,
+                          margin: const EdgeInsets.symmetric(horizontal: 5),
+                          height: 160,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              width: 0.5,
+                              color: const Color.fromRGBO(3, 14, 79, 1),
+                            ),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "assets/images/gallery_add.png",
+                                width: 24,
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              const TextWidget(
+                                textAlign: TextAlign.center,
+                                text: "Upload cover photo",
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                                color: Color(0xffF49F1C),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                            ],
+                          ),
+                        ),
+                      )),
                 ),
                 Positioned(
                   bottom: -50,
@@ -258,7 +273,12 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
             const SizedBox(
               height: 20,
             ),
-            PrimaryButton(label: "Submit", onPressed: () {}, isEnabled: true),
+            PrimaryButton(
+                label: "Submit",
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.editStore);
+                },
+                isEnabled: true),
             InputFieldWidget(
                 hintColor: colorScheme.primary,
                 validator: (p0) {
