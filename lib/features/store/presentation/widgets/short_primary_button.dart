@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class ShortPrimaryButton extends StatelessWidget {
   const ShortPrimaryButton({
     super.key,
+    required this.onPressed,
   });
-
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
@@ -16,7 +17,7 @@ class ShortPrimaryButton extends StatelessWidget {
         fontSize: 18,
         fontWeight: FontWeight.w600,
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           elevation: 0,
           minimumSize: const Size(200, 48),

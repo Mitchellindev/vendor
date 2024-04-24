@@ -25,7 +25,9 @@ class InputFieldWidget extends StatelessWidget {
       this.enabledBorderRadius = 30,
       this.verticalContentPadding = 0,
       this.controller,
-      this.horizontalContentPadding = 25});
+      this.horizontalContentPadding = 25,
+      this.labelPadding =
+          const EdgeInsets.symmetric(horizontal: 0, vertical: 0)});
   final String label;
   final String hintText;
   final double hintSize;
@@ -48,16 +50,20 @@ class InputFieldWidget extends StatelessWidget {
   final TextEditingController? controller;
   final Color labelColor;
   final double horizontalContentPadding;
+  final EdgeInsets labelPadding;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        TextWidget(
-          text: label,
-          color: labelColor,
-          fontWeight: fontWeight,
-          fontSize: labelFontSize,
+        Padding(
+          padding: labelPadding,
+          child: TextWidget(
+            text: label,
+            color: labelColor,
+            fontWeight: fontWeight,
+            fontSize: labelFontSize,
+          ),
         ),
         TextFormField(
           controller: controller,

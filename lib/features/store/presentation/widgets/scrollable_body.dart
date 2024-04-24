@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/cover_image_stack.dart';
@@ -62,14 +63,20 @@ class ScrollableBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const ShortPrimaryButton(),
+                  ShortPrimaryButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.editStore);
+                    },
+                  ),
                   PrimaryIconButton(
+                    onTap: () {},
                     icon: Image.asset(
                       "assets/images/shop.png",
                       width: 24,
                     ),
                   ),
                   PrimaryIconButton(
+                    onTap: () {},
                     icon: Image.asset(
                       "assets/images/chart.png",
                       width: 24,

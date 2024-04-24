@@ -97,7 +97,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   ),
                   Image.asset(
                     "assets/images/rafiki.png",
-                    width: 300,
+                    width: MediaQuery.of(context).size.width * .8,
                   ),
                   const SizedBox(
                     height: 72,
@@ -109,14 +109,14 @@ class _OtpScreenState extends State<OtpScreen> {
                     fontWeight: FontWeight.w500,
                     color: scheme.primary,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 30.0,
-                    ),
-                    child: SizedBox(
-                      height: 50,
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                    height: 50,
+                    child: Center(
                       child: OTPTextField(
-                        spaceBetween: 40,
+                        spaceBetween: MediaQuery.of(context).size.width * .05,
                         otpFieldStyle: OtpFieldStyle(
                           borderColor: const Color(0xff030E4F),
                           enabledBorderColor: const Color(0xff030E4F),

@@ -9,11 +9,15 @@ class AccordionWidget extends StatefulWidget {
     required this.colorScheme,
     required this.widgetList,
     required this.label,
+    this.paddingListTop = 20,
+    this.paddingListBottom = 0,
   });
 
   final ColorScheme colorScheme;
   final List<Widget> widgetList;
   final String label;
+  final double paddingListTop;
+  final double paddingListBottom;
   @override
   State<AccordionWidget> createState() => _AccordionWidgetState();
 }
@@ -24,8 +28,8 @@ class _AccordionWidgetState extends State<AccordionWidget> {
     return Transform.scale(
       scaleX: 1.055,
       child: Accordion(
-        paddingListTop: 20,
-        paddingListBottom: 0,
+        paddingListTop: widget.paddingListTop,
+        paddingListBottom: widget.paddingListBottom,
         headerBorderColor: widget.colorScheme.primary,
         headerBorderColorOpened: widget.colorScheme.primary,
         headerBorderWidth: 0.5,
