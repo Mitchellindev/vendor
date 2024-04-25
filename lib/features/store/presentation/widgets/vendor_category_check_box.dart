@@ -1,27 +1,23 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
-class VendorCategoryCheckBox extends StatefulWidget {
-  const VendorCategoryCheckBox(
-      {super.key, required this.day, required this.label});
-  final VendorCategory day;
+class CheckBoxContainerWidget<T> extends StatefulWidget {
+  const CheckBoxContainerWidget({super.key, required this.label});
+
   final String label;
 
   @override
-  State<VendorCategoryCheckBox> createState() =>
+  State<CheckBoxContainerWidget> createState() =>
       _CheckBoxContainerWidgetDayState();
 }
 
-class _CheckBoxContainerWidgetDayState extends State<VendorCategoryCheckBox> {
+class _CheckBoxContainerWidgetDayState extends State<CheckBoxContainerWidget> {
   bool? value = false;
 
   void onchanged(val) {
-    if (widget.day.name == widget.label) {
-      setState(() {
-        value = val;
-      });
-    }
+    setState(() {
+      value = val;
+    });
   }
 
   String capitalize({required String string}) {
@@ -35,7 +31,7 @@ class _CheckBoxContainerWidgetDayState extends State<VendorCategoryCheckBox> {
         if (value == true) {
           onchanged(false);
         } else {
-          onchanged(widget.day.name == widget.label);
+          onchanged(true);
         }
       },
       child: Container(

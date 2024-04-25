@@ -31,3 +31,9 @@ enum VendorCategory {
   makeup,
   hairCare
 }
+
+enum ProductCategories { men, women, kids }
+
+enum ProductColor { blue, red, green }
+
+enum ProductSize { small, medium, large, extralarge, extraextralarge }

@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/fab_icon_button.dart';
 import 'package:flutter/material.dart';
 
@@ -16,12 +17,17 @@ class FabRow extends StatelessWidget {
         const SizedBox(
           width: 20,
         ),
-        const FabIconButton(
+        FabIconButton(
           borderRadius: 20,
-          icon: Icon(
-            Icons.add,
-            color: Colors.white,
-            size: 30,
+          icon: IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.addProduct);
+            },
+            icon: Icon(
+              Icons.add,
+              color: Colors.white,
+              size: 30,
+            ),
           ),
         ),
       ],

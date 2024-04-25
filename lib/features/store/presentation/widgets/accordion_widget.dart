@@ -61,8 +61,7 @@ class _AccordionWidgetState extends State<AccordionWidget> {
             paddingBetweenClosedSections: 0,
             paddingBetweenOpenSections: 0,
             content: SizedBox(
-                height: MediaQuery.of(context).size.height * .5,
-                child: ListView(children: widget.widgetList)),
+                height: 170, child: ListView(children: widget.widgetList)),
           ),
         ],
       ),

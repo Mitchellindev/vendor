@@ -203,8 +203,7 @@ class _EditStoreScreenState extends State<EditStoreScreen> {
                 colorScheme: colorScheme,
                 widgetList: List.generate(
                     VendorCategory.values.length,
-                    (index) => VendorCategoryCheckBox(
-                          day: VendorCategory.values[index],
+                    (index) => CheckBoxContainerWidget<ProductCategories>(
                           label: VendorCategory.values[index].name,
                         )),
               ),

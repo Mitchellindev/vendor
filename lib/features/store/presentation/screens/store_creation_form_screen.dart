@@ -265,8 +265,7 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
               colorScheme: colorScheme,
               widgetList: List.generate(
                   VendorCategory.values.length,
-                  (index) => VendorCategoryCheckBox(
-                        day: VendorCategory.values[index],
+                  (index) => CheckBoxContainerWidget<VendorCategory>(
                         label: VendorCategory.values[index].name,
                       )),
             ),
