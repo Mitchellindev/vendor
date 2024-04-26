@@ -15,8 +15,6 @@ class Validator {
       return 'Your $label cannot be empty';
     } else if (value.length < 3) {
       return "Your $label is too short";
-    } else if (value.contains(" ")) {
-      return "Your $label cannot contain spaces";
     }
     return null;
   }
@@ -55,27 +53,8 @@ class Validator {
   static String? validatePassword(String? password) {
     if (password == null) return 'Password cannot be empty';
 
-    // Check for at least one uppercase letter
-    final upperRegex = RegExp('[A-Z]');
-    if (!upperRegex.hasMatch(password)) {
-      return 'Your password must contain at least one uppercase letter';
-    }
-
-    // Check for at least one lowercase letter
-    final lowerRegex = RegExp('[a-z]');
-    if (!lowerRegex.hasMatch(password)) {
-      return 'Your password must contain at least one lowercase letter';
-    }
-
-    // Check for at least one special character
-    final specialCharRegex = RegExp(r'[!@#$%^&*(),.?":{}|<>]');
-    if (!specialCharRegex.hasMatch(password)) {
-      return 'Your password must contain a special character';
-    }
-
-    // Check length
-    if (password.length < 8) {
-      return 'Your password must be at least 8 characters';
+    if (password.length < 6) {
+      return 'Your password must be at least 6 characters';
     }
     return null;
   }

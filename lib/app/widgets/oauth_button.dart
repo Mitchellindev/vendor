@@ -14,7 +14,6 @@ class OAuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 60),
       margin: const EdgeInsets.only(bottom: 20),
       width: double.infinity,
       height: 48,
@@ -26,6 +25,7 @@ class OAuthButton extends StatelessWidget {
         ),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (type == ButtonType.google)
             Image.asset(

@@ -140,11 +140,14 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                const TextWidget(
+                TextWidget(
                   text: "Forgot Password?",
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.forgotPassword);
+                  },
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xffF49F1C),
+                  color: const Color(0xffF49F1C),
                 ),
                 const SizedBox(
                   height: 20,

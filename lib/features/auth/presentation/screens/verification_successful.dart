@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,12 @@ class VerificationSuccessfulScreen extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              PrimaryButton(label: "Proceed", onPressed: () {}, isEnabled: true)
+              PrimaryButton(
+                  label: "Proceed",
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, Routes.home);
+                  },
+                  isEnabled: true)
             ],
           ),
         ),

@@ -105,17 +105,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 PrimaryButton(
                   label: "Login",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.home);
+                  },
                   isEnabled: emailIsValid && passwordIsValid,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                const TextWidget(
+                TextWidget(
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.forgotPassword);
+                  },
                   text: "Forgot Password?",
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xffF49F1C),
+                  color: const Color(0xffF49F1C),
                 ),
                 const SizedBox(
                   height: 20,

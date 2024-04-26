@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/core/constants/app_colors.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,11 +20,14 @@ class InputFieldWidget extends StatelessWidget {
       this.onTap,
       this.maxLines = 1,
       this.fontWeight = FontWeight.w600,
+      this.labelColor = AppColors.primary,
       this.labelFontSize = 16,
       this.enabledBorderRadius = 30,
       this.verticalContentPadding = 0,
       this.controller,
-      this.horizontalContentPadding = 25});
+      this.horizontalContentPadding = 25,
+      this.labelPadding =
+          const EdgeInsets.symmetric(horizontal: 0, vertical: 0)});
   final String label;
   final String hintText;
   final double hintSize;
@@ -44,17 +48,22 @@ class InputFieldWidget extends StatelessWidget {
   final Color hintColor;
   final double labelFontSize;
   final TextEditingController? controller;
+  final Color labelColor;
   final double horizontalContentPadding;
+  final EdgeInsets labelPadding;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        TextWidget(
-          text: label,
-          color: Colors.black,
-          fontWeight: fontWeight,
-          fontSize: labelFontSize,
+        Padding(
+          padding: labelPadding,
+          child: TextWidget(
+            text: label,
+            color: labelColor,
+            fontWeight: fontWeight,
+            fontSize: labelFontSize,
+          ),
         ),
         TextFormField(
           controller: controller,
