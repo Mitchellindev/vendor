@@ -106,7 +106,7 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
               ],
             ),
             const SizedBox(
-              height: 80,
+              height: 70,
             ),
             PrimaryButton(
                 label: "Create your store",
@@ -115,16 +115,16 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
                 },
                 isEnabled: true),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             const TextWidget(
               textAlign: TextAlign.center,
               text: "OR",
               fontWeight: FontWeight.w500,
-              fontSize: 18,
+              fontSize: 15,
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             PrimaryButton(
               label: "Create your service",
@@ -134,7 +134,7 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
               isEnabled: true,
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Container(
               width: double.infinity,
