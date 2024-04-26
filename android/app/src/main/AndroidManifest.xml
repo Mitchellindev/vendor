@@ -2,7 +2,11 @@
     <application
         android:label="broadcaadvendor"
         android:name="${applicationName}"
+<<<<<<< HEAD
         android:icon="@mipmap/launcher_icon">
+=======
+        android:icon="@mipmap/ic_launcher">
+>>>>>>> 48259b50136900464da49a7ec9c0bd5dd18c4e28
         <activity
             android:name=".MainActivity"
             android:exported="true"

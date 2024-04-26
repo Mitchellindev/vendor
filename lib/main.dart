@@ -1,6 +1,7 @@
 import 'package:broadcaadvendor/config/router/app_router.dart';
 import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/config/theme/light_theme.dart';
+import 'package:broadcaadvendor/injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
