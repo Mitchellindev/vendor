@@ -1,12 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="broadcaadvendor"
+        android:label="Broadcaad Vendor"
         android:name="${applicationName}"
-<<<<<<< HEAD
         android:icon="@mipmap/launcher_icon">
-=======
-        android:icon="@mipmap/ic_launcher">
->>>>>>> 48259b50136900464da49a7ec9c0bd5dd18c4e28
         <activity
             android:name=".MainActivity"
             android:exported="true"
