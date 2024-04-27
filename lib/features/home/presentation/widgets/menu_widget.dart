@@ -22,7 +22,7 @@ class _MenuWidgetState extends State<MenuWidget> {
             height: 40,
           ),
           Image.asset(
-            "assets/images/menu_logo.png",
+            "assets/images/splash_image.png",
             width: 180,
           ),
           const SizedBox(

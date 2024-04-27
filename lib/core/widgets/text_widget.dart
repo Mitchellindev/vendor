@@ -1,7 +1,6 @@
+import 'package:broadcaadvendor/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../constants/app_colors.dart';
 
 class TextWidget extends StatelessWidget {
   const TextWidget(
@@ -9,7 +8,7 @@ class TextWidget extends StatelessWidget {
       required this.text,
       this.fontSize = 14,
       this.fontWeight = FontWeight.normal,
-      this.color = AppColors.black,
+      this.color = AppColors.primary,
       this.textAlign,
       this.overflow,
       this.onTap,
