@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -66,7 +67,12 @@ class ProductItemWidget extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        PrimaryButton(label: "Edit Product", onPressed: () {}, isEnabled: true)
+        PrimaryButton(
+            label: "Edit Product",
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.editProduct);
+            },
+            isEnabled: true)
       ],
     );
   }
