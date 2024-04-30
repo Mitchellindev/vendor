@@ -21,4 +21,5 @@ class Routes {
   //Products
   static const String addProduct = '/addProduct';
   static const String categoryItems = '/categoryItems';
+  static const String editProduct = '/editProduct';
 }
