@@ -3,40 +3,49 @@ import 'package:flutter/material.dart';
 
 class CreateStoreOptionsButton extends StatelessWidget {
   const CreateStoreOptionsButton(
-      {super.key, required this.image, required this.label});
+      {super.key,
+      required this.image,
+      required this.label,
+      required this.onTap,
+      required this.isTapped});
   final String image;
   final String label;
+  final bool isTapped;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      margin: const EdgeInsets.only(bottom: 0),
-      width: double.infinity,
-      height: 48,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          width: .5,
-          color: const Color(0xff030E4F),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Image.asset(
-            image,
-            width: 24,
-          ),
-          const SizedBox(
-            width: 18,
-          ),
-          TextWidget(
-            text: label,
-            fontSize: 16,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+        margin: const EdgeInsets.only(bottom: 0),
+        width: double.infinity,
+        height: 48,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            width: isTapped ? 2 : .5,
             color: const Color(0xff030E4F),
-            fontWeight: FontWeight.w400,
           ),
-        ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(
+              image,
+              width: 24,
+            ),
+            const SizedBox(
+              width: 18,
+            ),
+            TextWidget(
+              text: label,
+              fontSize: 16,
+              color: const Color(0xff030E4F),
+              fontWeight: isTapped ? FontWeight.w500 : FontWeight.w400,
+            ),
+          ],
+        ),
       ),
     );
   }

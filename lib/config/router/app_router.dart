@@ -10,8 +10,10 @@ import 'package:broadcaadvendor/features/home/presentation/screens/home.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/add_products_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/categories_items_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/prompt_albert_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/store_creation_form_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -71,6 +73,16 @@ class AppRouter {
       case Routes.editProduct:
         return MaterialPageRoute(
           builder: (_) => const EditProductsScreen(),
+        );
+      case Routes.aiCreateStore:
+        return MaterialPageRoute(
+          builder: (_) => const AiCreateStoreScreen(),
+        );
+      case Routes.prompAlbert:
+        bool isMicrophoneEnabled = routeSettings.arguments as bool;
+        return MaterialPageRoute(
+          builder: (_) =>
+              PromptAlbertScreen(isMicrophoneEnabled: isMicrophoneEnabled),
         );
       default:
         return MaterialPageRoute(

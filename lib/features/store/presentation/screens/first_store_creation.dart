@@ -4,9 +4,16 @@ import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/create_store_button.dart';
 import 'package:flutter/material.dart';
 
-class FirstStoreCreationScreen extends StatelessWidget {
+class FirstStoreCreationScreen extends StatefulWidget {
   const FirstStoreCreationScreen({super.key});
 
+  @override
+  State<FirstStoreCreationScreen> createState() =>
+      _FirstStoreCreationScreenState();
+}
+
+class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
+  bool isFirstTapped = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,22 +38,40 @@ class FirstStoreCreationScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const CreateStoreOptionsButton(
-                  image: "assets/images/ai.png",
-                  label: "Ask Albert to create your store"),
+              CreateStoreOptionsButton(
+                onTap: () {
+                  setState(() {
+                    isFirstTapped = true;
+                  });
+                },
+                image: "assets/images/ai.png",
+                label: "Ask Albert to create your store",
+                isTapped: isFirstTapped,
+              ),
               const SizedBox(
                 height: 10,
               ),
-              const CreateStoreOptionsButton(
-                  image: "assets/images/document_add.png",
-                  label: "Create your store manually"),
+              CreateStoreOptionsButton(
+                onTap: () {
+                  setState(() {
+                    isFirstTapped = false;
+                  });
+                },
+                image: "assets/images/document_add.png",
+                label: "Create your store manually",
+                isTapped: !isFirstTapped,
+              ),
               const SizedBox(
                 height: 20,
               ),
               PrimaryButton(
                   label: "Get Started",
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.storeCreationForm);
+                    if (isFirstTapped) {
+                      Navigator.pushNamed(context, Routes.aiCreateStore);
+                    } else {
+                      Navigator.pushNamed(context, Routes.storeCreationForm);
+                    }
                   },
                   isEnabled: true)
             ],
