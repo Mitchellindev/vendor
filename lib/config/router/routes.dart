@@ -24,4 +24,7 @@ class Routes {
   static const String addProduct = '/addProduct';
   static const String categoryItems = '/categoryItems';
   static const String editProduct = '/editProduct';
+
+  //Services
+  static const String createFirstService = '/createFirstService';
 }

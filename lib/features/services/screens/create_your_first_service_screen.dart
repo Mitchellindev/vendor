@@ -4,16 +4,18 @@ import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/create_store_button.dart';
 import 'package:flutter/material.dart';
 
-class FirstStoreCreationScreen extends StatefulWidget {
-  const FirstStoreCreationScreen({super.key});
+class CreateYourFirstServiceScreen extends StatefulWidget {
+  const CreateYourFirstServiceScreen({super.key});
 
   @override
-  State<FirstStoreCreationScreen> createState() =>
-      _FirstStoreCreationScreenState();
+  State<CreateYourFirstServiceScreen> createState() =>
+      _CreateYourFirstServiceScreenState();
 }
 
-class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
+class _CreateYourFirstServiceScreenState
+    extends State<CreateYourFirstServiceScreen> {
   bool isFirstTapped = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +32,9 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
                 height: 70,
               ),
               TextWidget(
-                text: "Create your First Store!",
-                fontSize: 28,
+                text: "Create your First Service!",
+                textAlign: TextAlign.center,
+                fontSize: 27,
                 fontWeight: FontWeight.w500,
                 color: Theme.of(context).colorScheme.primary,
               ),
@@ -45,7 +48,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
                   });
                 },
                 image: "assets/images/ai.png",
-                label: "Ask Albert to create your store",
+                label: "Ask Albert to create your service",
                 isTapped: isFirstTapped,
               ),
               const SizedBox(
@@ -58,7 +61,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
                   });
                 },
                 image: "assets/images/document_add.png",
-                label: "Create your store manually",
+                label: "Create your service manually",
                 isTapped: !isFirstTapped,
               ),
               const SizedBox(

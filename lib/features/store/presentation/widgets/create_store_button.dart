@@ -1,8 +1,8 @@
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
-class CreateStoreOptionsButton extends StatelessWidget {
-  const CreateStoreOptionsButton(
+class OutlinedIconButtonWidget extends StatelessWidget {
+  const OutlinedIconButtonWidget(
       {super.key,
       required this.image,
       required this.label,
@@ -40,7 +40,7 @@ class CreateStoreOptionsButton extends StatelessWidget {
             ),
             TextWidget(
               text: label,
-              fontSize: 16,
+              fontSize: 15,
               color: const Color(0xff030E4F),
               fontWeight: isTapped ? FontWeight.w500 : FontWeight.w400,
             ),

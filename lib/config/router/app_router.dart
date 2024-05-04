@@ -10,6 +10,7 @@ import 'package:broadcaadvendor/features/home/presentation/screens/home.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/add_products_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/categories_items_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
+import 'package:broadcaadvendor/features/services/screens/create_your_first_service_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
@@ -83,6 +84,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) =>
               PromptAlbertScreen(isMicrophoneEnabled: isMicrophoneEnabled),
+        );
+      case Routes.createFirstService:
+        return MaterialPageRoute(
+          builder: (_) => const CreateYourFirstServiceScreen(),
         );
       default:
         return MaterialPageRoute(
