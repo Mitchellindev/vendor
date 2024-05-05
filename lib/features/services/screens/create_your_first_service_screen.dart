@@ -73,7 +73,8 @@ class _CreateYourFirstServiceScreenState
                     if (isFirstTapped) {
                       Navigator.pushNamed(context, Routes.aiCreateStore);
                     } else {
-                      Navigator.pushNamed(context, Routes.storeCreationForm);
+                      Navigator.pushNamed(
+                          context, Routes.serviceCreationFormScreen);
                     }
                   },
                   isEnabled: true)

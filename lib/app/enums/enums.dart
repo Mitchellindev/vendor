@@ -37,3 +37,29 @@ enum ProductCategories { men, women, kids }
 enum ProductColor { blue, red, green }
 
 enum ProductSize { small, medium, large, extralarge, extraextralarge }
+
+// enum ServiceType { casual, professional }
+
+enum ServiceCategory { casual, professional }
+
+enum ServiceType {
+  catering,
+  carRental,
+  hotelAccommodation, // Corrected typo
+  flightTravelBooking, // Corrected typo
+  restaurantReservation,
+  eventTickets,
+  movieTickets,
+  spaAndWellness,
+  fitnessClasses,
+  homeCleaning,
+  petGrooming,
+  photography,
+  onlineTutoring,
+  legalConsultations,
+  haircutSessions,
+  homeRepairsMaintenance, // Combined and corrected typo
+  makeUpAndGeleStyling, // Combined
+  hairMakingAndSalonServices, // Combined
+  haircutsAndSalonServices, // Combined
+}

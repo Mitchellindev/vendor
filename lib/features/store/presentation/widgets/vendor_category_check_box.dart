@@ -56,7 +56,10 @@ class _CheckBoxContainerWidgetDayState extends State<CheckBoxContainerWidget> {
                   value: value,
                   onChanged: onchanged,
                 ),
-                TextWidget(text: capitalize(string: widget.label)),
+                SizedBox(
+                  width: 300,
+                  child: TextWidget(text: capitalize(string: widget.label)),
+                ),
               ],
             ),
           ],
