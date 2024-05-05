@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -68,9 +69,14 @@ class _SearchHeaderState extends State<SearchHeader> {
             const SizedBox(
               height: 15,
             ),
-            Image.asset(
-              "assets/images/bell.png",
-              width: 24,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Routes.notifications);
+              },
+              child: Image.asset(
+                "assets/images/bell.png",
+                width: 24,
+              ),
             )
           ],
         ),

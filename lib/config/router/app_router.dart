@@ -7,6 +7,7 @@ import 'package:broadcaadvendor/features/auth/presentation/screens/reset_passwor
 import 'package:broadcaadvendor/features/auth/presentation/screens/signup_screen.dart';
 import 'package:broadcaadvendor/features/auth/presentation/screens/verification_successful.dart';
 import 'package:broadcaadvendor/features/home/presentation/screens/home.dart';
+import 'package:broadcaadvendor/features/notifications/screens/notifications_screens.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/add_products_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/categories_items_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
@@ -93,6 +94,11 @@ class AppRouter {
       case Routes.serviceCreationFormScreen:
         return MaterialPageRoute(
           builder: (_) => const ServiceCreationFormScreen(),
+        );
+
+      case Routes.notifications:
+        return MaterialPageRoute(
+          builder: (_) => const NotificationScreen(),
         );
       default:
         return MaterialPageRoute(

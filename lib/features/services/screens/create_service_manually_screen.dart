@@ -190,9 +190,9 @@ class _ServiceCreationFormScreenState extends State<ServiceCreationFormScreen> {
               label: "Service Type",
               colorScheme: colorScheme,
               widgetList: List.generate(
-                  ServiceType.values.length,
-                  (index) => CheckBoxContainerWidget<ServiceType>(
-                        label: ServiceType.values[index].name,
+                  ServiceCategory.values.length,
+                  (index) => CheckBoxContainerWidget<ServiceCategory>(
+                        label: ServiceCategory.values[index].name,
                       )),
             ),
             InputFieldWidget(
@@ -271,9 +271,9 @@ class _ServiceCreationFormScreenState extends State<ServiceCreationFormScreen> {
               label: "Service Category",
               colorScheme: colorScheme,
               widgetList: List.generate(
-                  ServiceCategory.values.length,
-                  (index) => CheckBoxContainerWidget<ServiceCategory>(
-                        label: ServiceCategory.values[index].name,
+                  ServiceType.values.length,
+                  (index) => CheckBoxContainerWidget<ServiceType>(
+                        label: ServiceType.values[index].name,
                       )),
             ),
             const Padding(
