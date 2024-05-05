@@ -128,7 +128,9 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
             ),
             PrimaryButton(
               label: "Create your service",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.createFirstService);
+              },
               labelColor: const Color(0xff030E4F),
               backgroundColor: Colors.white,
               isEnabled: true,
