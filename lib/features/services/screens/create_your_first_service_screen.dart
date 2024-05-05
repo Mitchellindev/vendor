@@ -52,7 +52,7 @@ class _CreateYourFirstServiceScreenState
                 isTapped: isFirstTapped,
               ),
               const SizedBox(
-                height: 10,
+                height: 10.1,
               ),
               OutlinedIconButtonWidget(
                 onTap: () {
