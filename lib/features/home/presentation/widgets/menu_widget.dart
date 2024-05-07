@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/menu_item_widget.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/notification_menu_item.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/privacy_policy_widget.dart';
@@ -34,7 +35,9 @@ class _MenuWidgetState extends State<MenuWidget> {
               iconPath: "assets/images/chat_menu_item.png",
               label: "My Chat"),
           MenuItemWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, Routes.profile);
+              },
               iconPath: "assets/images/profile.png",
               imageWidth: 22,
               label: "My Profile"),

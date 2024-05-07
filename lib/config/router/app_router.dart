@@ -11,8 +11,9 @@ import 'package:broadcaadvendor/features/notifications/screens/notifications_scr
 import 'package:broadcaadvendor/features/products/presentation/screens/add_products_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/categories_items_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
-import 'package:broadcaadvendor/features/services/screens/create_service_manually_screen.dart';
-import 'package:broadcaadvendor/features/services/screens/create_your_first_service_screen.dart';
+import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/create_service_manually_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/create_your_first_service_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
@@ -99,6 +100,10 @@ class AppRouter {
       case Routes.notifications:
         return MaterialPageRoute(
           builder: (_) => const NotificationScreen(),
+        );
+      case Routes.profile:
+        return MaterialPageRoute(
+          builder: (_) => const VendorProfileScreen(),
         );
       default:
         return MaterialPageRoute(

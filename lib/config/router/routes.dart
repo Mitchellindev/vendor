@@ -31,4 +31,7 @@ class Routes {
 
   //Notification
   static const String notifications = '/notifications';
+
+  //Profile
+  static const String profile = '/profile';
 }
