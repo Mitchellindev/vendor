@@ -61,7 +61,9 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
         )
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.myServices);
+        },
         "icon": "assets/images/service.png",
         "label": "My Services",
         "trailing": const Icon(

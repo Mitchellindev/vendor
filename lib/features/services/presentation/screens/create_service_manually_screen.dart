@@ -190,9 +190,18 @@ class _ServiceCreationFormScreenState extends State<ServiceCreationFormScreen> {
               label: "Service Type",
               colorScheme: colorScheme,
               widgetList: List.generate(
-                  ServiceCategory.values.length,
-                  (index) => CheckBoxContainerWidget<ServiceCategory>(
-                        label: ServiceCategory.values[index].name,
+                  ServiceNature.values.length,
+                  (index) => CheckBoxContainerWidget<ServiceNature>(
+                        label: ServiceNature.values[index].name,
+                      )),
+            ),
+            AccordionWidget(
+              label: "Service Type",
+              colorScheme: colorScheme,
+              widgetList: List.generate(
+                  ServiceType.values.length,
+                  (index) => CheckBoxContainerWidget<ServiceType>(
+                        label: ServiceType.values[index].name,
                       )),
             ),
             InputFieldWidget(

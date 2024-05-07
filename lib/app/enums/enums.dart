@@ -40,9 +40,11 @@ enum ProductSize { small, medium, large, extralarge, extraextralarge }
 
 // enum ServiceType { casual, professional }
 
-enum ServiceCategory { casual, professional }
+enum ServiceNature { casual, professional }
 
-enum ServiceType {
+enum ServiceType { homeService, onPremiseService }
+
+enum ServiceCategory {
   catering,
   carRental,
   hotelAccommodation, // Corrected typo
