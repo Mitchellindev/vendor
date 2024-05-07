@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
@@ -20,81 +21,91 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
     super.initState();
   }
 
-  final List<Map<String, dynamic>> items = [
-    {
-      "icon": "assets/images/notification_icon.png",
-      "label": "App Notification",
-      "trailing": const Row()
-    },
-    {
-      "icon": "assets/images/user.png",
-      "label": "Edit Vendor Profile",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/wallet.png",
-      "label": "Wallet",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/shop_blue.png",
-      "label": "My Stores",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/service.png",
-      "label": "My Services",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/pie_chart.png",
-      "label": "Store Performances",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/history.png",
-      "label": "Payment History",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/reciepts.png",
-      "label": "View All Reciepts",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-    {
-      "icon": "assets/images/persons.png",
-      "label": "My Customers",
-      "trailing": const Icon(
-        Icons.chevron_right,
-        size: 30,
-      )
-    },
-  ];
-
   bool appNotificationEnabled = false;
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> items = [
+      {
+        "icon": "assets/images/notification_icon.png",
+        "label": "App Notification",
+        "trailing": const Row(),
+        "onTap": () {}
+      },
+      {
+        "icon": "assets/images/user.png",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.editProfile);
+        },
+        "label": "Edit Vendor Profile",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/wallet.png",
+        "label": "Wallet",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/shop_blue.png",
+        "label": "My Stores",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/service.png",
+        "label": "My Services",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/pie_chart.png",
+        "label": "Store Performances",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/history.png",
+        "label": "Payment History",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/reciepts.png",
+        "label": "View All Reciepts",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/persons.png",
+        "label": "My Customers",
+        "trailing": const Icon(
+          Icons.chevron_right,
+          size: 30,
+        )
+      },
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -141,6 +152,7 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                         items.length,
                         (index) => index == 0
                             ? ProfileActionWidget(
+                                onTap: () {},
                                 icon: items[index]["icon"],
                                 label: items[index]["label"],
                                 trailing: Transform.scale(
@@ -178,14 +190,16 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                                 icon: items[index]["icon"],
                                 label: items[index]["label"],
                                 trailing: items[index]["trailing"],
+                                onTap: items[index]["onTap"],
                               ),
                       ),
                     ),
                     const HorizontalDivider(),
-                    const ProfileActionWidget(
+                    ProfileActionWidget(
+                        onTap: () {},
                         icon: "assets/images/settings.png",
                         label: "Settings",
-                        trailing: Icon(
+                        trailing: const Icon(
                           Icons.chevron_right,
                           size: 30,
                         ))

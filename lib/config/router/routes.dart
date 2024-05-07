@@ -34,4 +34,5 @@ class Routes {
 
   //Profile
   static const String profile = '/profile';
+  static const String editProfile = '/editProfile';
 }
