@@ -42,7 +42,7 @@ class _ServiceSummaryScreenState extends State<ServiceSummaryScreen> {
         borderRadius: 20,
         icon: IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, Routes.addProduct);
+            Navigator.pushNamed(context, Routes.addPackage);
           },
           icon: const Icon(
             Icons.add,

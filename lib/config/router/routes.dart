@@ -30,6 +30,7 @@ class Routes {
   static const String serviceCreationFormScreen = '/serviceCreationFormScreen';
   static const String serviceSummary = '/serviceSummary';
   static const String editServiceProfile = '/editServiceProfile';
+  static const String addPackage = '/addPackage';
 
   //Notification
   static const String notifications = '/notifications';

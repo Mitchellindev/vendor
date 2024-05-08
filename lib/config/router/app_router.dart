@@ -18,6 +18,7 @@ import 'package:broadcaadvendor/features/services/presentation/screens/create_yo
 import 'package:broadcaadvendor/features/services/presentation/screens/edit_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/my_services_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/service_summary_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/upload_package_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
@@ -127,6 +128,10 @@ class AppRouter {
       case Routes.editServiceProfile:
         return MaterialPageRoute(
           builder: (_) => const EditServiceScreen(),
+        );
+      case Routes.addPackage:
+        return MaterialPageRoute(
+          builder: (_) => const AddServicePackageScreen(),
         );
       default:
         return MaterialPageRoute(
