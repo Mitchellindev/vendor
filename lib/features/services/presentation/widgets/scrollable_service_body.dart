@@ -1,17 +1,21 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
 import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/features/services/presentation/widgets/packages_widget.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/cover_image_stack.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/description.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/my_tab_view_widget.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/primary_icon_button.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/rating_row.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/reviews.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/short_primary_button.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/vendor_details.dart';
 import 'package:flutter/material.dart';
 
-class ScrollableBody extends StatelessWidget {
-  const ScrollableBody({
+class ScrollableBodyService extends StatelessWidget {
+  const ScrollableBodyService({
     super.key,
     required this.controller,
   });
@@ -33,14 +37,14 @@ class ScrollableBody extends StatelessWidget {
               ),
               TextWidget(
                 textAlign: TextAlign.center,
-                text: "Omega Stores",
+                text: "Glam and Shine",
                 fontSize: 21,
                 color: Theme.of(context).colorScheme.primary,
                 fontWeight: FontWeight.w500,
               ),
               const TextWidget(
                 textAlign: TextAlign.center,
-                text: "@omega_Clothings",
+                text: "@glam-and-shine",
                 fontSize: 28,
                 color: Color(0xffF49F1C),
                 fontWeight: FontWeight.w500,
@@ -49,7 +53,7 @@ class ScrollableBody extends StatelessWidget {
                 height: 10,
               ),
               const TextWidget(
-                text: "Fashion",
+                text: "Makeup Services (PROFESS......)",
                 fontSize: 18,
                 textAlign: TextAlign.center,
               ),
@@ -64,14 +68,15 @@ class ScrollableBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ShortPrimaryButton(
+                    label: "Edit Service Profile",
                     onPressed: () {
-                      Navigator.pushNamed(context, Routes.editStore);
+                      Navigator.pushNamed(context, Routes.editServiceProfile);
                     },
                   ),
                   PrimaryIconButton(
                     onTap: () {},
                     icon: Image.asset(
-                      "assets/images/shop.png",
+                      "assets/images/block_icon.png",
                       width: 24,
                     ),
                   ),
@@ -115,17 +120,35 @@ class ScrollableBody extends StatelessWidget {
               const HorizontalDivider(
                 paddingVertical: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 230.0),
-                child: PrimaryButton(
-                    label: "0 Views", onPressed: () {}, isEnabled: true),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: SizeConfig.getProportionateScreenWidth(
+                        context: context, inputWidth: 115),
+                    child: PrimaryButton(
+                        label: "0 Views", onPressed: () {}, isEnabled: true),
+                  ),
+                  SizedBox(
+                    width: SizeConfig.getProportionateScreenWidth(
+                        context: context, inputWidth: 226),
+                    child: PrimaryButton(
+                        icon: Image.asset(
+                          "assets/images/promote.png",
+                          width: 30,
+                        ),
+                        label: " Promote Service",
+                        onPressed: () {},
+                        isEnabled: true),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 30,
               ),
               const MyTabViewWidget(
-                body: [],
-                tabLabels: ["Products", "Categories", "Description", "Reviews"],
+                body: [PackagesTabView(), Description(), Reviews()],
+                tabLabels: ["Packages", "Description", "Reviews"],
               ),
               const SizedBox(
                 height: 200,

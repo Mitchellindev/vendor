@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 class NoProducts extends StatelessWidget {
   const NoProducts({
     super.key,
+    this.title = "You have no product",
+    this.subTitle = "Tap the add icon, to add product to store.",
   });
-
+  final String title;
+  final String subTitle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,18 +20,18 @@ class NoProducts extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        const TextWidget(
+        TextWidget(
           textAlign: TextAlign.center,
-          text: "You have no product",
+          text: title,
           fontWeight: FontWeight.w500,
           fontSize: 18,
         ),
         const SizedBox(
           height: 10,
         ),
-        const TextWidget(
+        TextWidget(
           textAlign: TextAlign.center,
-          text: "Tap the add icon, to add product to store.",
+          text: subTitle,
           fontWeight: FontWeight.w300,
           fontSize: 18,
         ),

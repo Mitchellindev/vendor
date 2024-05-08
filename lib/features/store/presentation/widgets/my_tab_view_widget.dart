@@ -1,15 +1,11 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/products/presentation/widgets/categories_widget.dart';
-import 'package:broadcaadvendor/features/products/presentation/widgets/product_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/description.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/rating_row.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/reviews.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/tab_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class MyTabViewWidget extends StatefulWidget {
-  const MyTabViewWidget({super.key});
-
+  const MyTabViewWidget(
+      {super.key, required this.tabLabels, required this.body});
+  final List<String> tabLabels;
+  final List<Widget> body;
   @override
   State<MyTabViewWidget> createState() => _MyTabViewWidgetState();
 }
@@ -17,14 +13,6 @@ class MyTabViewWidget extends StatefulWidget {
 class _MyTabViewWidgetState extends State<MyTabViewWidget> {
   int chosenTabItem = 0;
 
-  List<Widget> pages = [
-    const Products(),
-    const CategoriesWidget(),
-    const Description(),
-    const Reviews()
-  ];
-
-  List<String> labels = ["Products", "Categories", "Description", "Reviews"];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,9 +22,9 @@ class _MyTabViewWidgetState extends State<MyTabViewWidget> {
           child: ListView(
               scrollDirection: Axis.horizontal,
               children: List.generate(
-                  labels.length,
+                  widget.tabLabels.length,
                   (index) => TabItemWidget(
-                      label: labels[index],
+                      label: widget.tabLabels[index],
                       onTap: () {
                         setState(() {
                           chosenTabItem = index;
@@ -47,7 +35,7 @@ class _MyTabViewWidgetState extends State<MyTabViewWidget> {
         const SizedBox(
           height: 20,
         ),
-        pages[chosenTabItem]
+        widget.body[chosenTabItem]
       ],
     );
   }

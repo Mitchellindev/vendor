@@ -28,6 +28,8 @@ class Routes {
   //Services
   static const String createFirstService = '/createFirstService';
   static const String serviceCreationFormScreen = '/serviceCreationFormScreen';
+  static const String serviceSummary = '/serviceSummary';
+  static const String editServiceProfile = '/editServiceProfile';
 
   //Notification
   static const String notifications = '/notifications';

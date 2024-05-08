@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/features/home/presentation/widgets/loading_screen_body.dart';
+import 'package:broadcaadvendor/features/home/presentation/widgets/logo_header.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/no_store.dart';
@@ -31,14 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: ListView(
             children: [
-              Row(
-                children: [
-                  Image.asset(
-                    "assets/images/home_logo.png",
-                    width: 150,
-                  ),
-                ],
-              ),
+              const LogoHeader(),
               SearchHeader(scaffoldKey: scaffoldKey),
               if (isLoading) const LoadingScreenBody(),
               if (!isLoading) const NoStoreWidget()

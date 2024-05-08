@@ -296,7 +296,7 @@ class _ServiceCreationFormScreenState extends State<ServiceCreationFormScreen> {
             PrimaryButton(
                 label: "Submit",
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.editStore);
+                  Navigator.pushNamed(context, Routes.serviceSummary);
                 },
                 isEnabled: true),
             const SizedBox(

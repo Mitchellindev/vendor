@@ -5,14 +5,16 @@ class ShortPrimaryButton extends StatelessWidget {
   const ShortPrimaryButton({
     super.key,
     required this.onPressed,
+    this.label = "Edit Store Profile",
   });
+  final String label;
   final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       icon: const SizedBox(),
-      label: const TextWidget(
-        text: "Edit Store Profile",
+      label: TextWidget(
+        text: label,
         color: Colors.white,
         fontSize: 18,
         fontWeight: FontWeight.w600,
