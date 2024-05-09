@@ -6,10 +6,11 @@ class OutlinedButtonWidget extends StatelessWidget {
     super.key,
     required this.label,
     required this.onTap,
+    this.color = const Color(0xff030E4F),
   });
   final String label;
   final VoidCallback onTap;
-
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,8 +31,8 @@ class OutlinedButtonWidget extends StatelessWidget {
           child: TextWidget(
             text: label,
             fontSize: 16,
-            color: const Color(0xff030E4F),
-            fontWeight: FontWeight.w500,
+            color: color,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ),

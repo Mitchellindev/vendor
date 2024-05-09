@@ -13,10 +13,14 @@ import 'package:broadcaadvendor/features/products/presentation/screens/categorie
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/edit_profile_screen.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_details.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/create_service_manually_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/create_your_first_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/edit_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/my_services_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/pending_services_details_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/pending_services_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/service_summary_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/upload_package_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
@@ -132,6 +136,26 @@ class AppRouter {
       case Routes.addPackage:
         return MaterialPageRoute(
           builder: (_) => const AddServicePackageScreen(),
+        );
+
+      case Routes.bookedService:
+        return MaterialPageRoute(
+          builder: (_) => const BookedServicesScreen(),
+        );
+
+      case Routes.bookedServicesDetails:
+        return MaterialPageRoute(
+          builder: (_) => const BookedServicesDetailsScreen(),
+        );
+
+      case Routes.pendingServices:
+        return MaterialPageRoute(
+          builder: (_) => const PendingServicesScreen(),
+        );
+
+      case Routes.pendingServicesDetials:
+        return MaterialPageRoute(
+          builder: (_) => const PendingServicesDetailsScreen(),
         );
       default:
         return MaterialPageRoute(

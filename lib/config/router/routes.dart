@@ -31,6 +31,10 @@ class Routes {
   static const String serviceSummary = '/serviceSummary';
   static const String editServiceProfile = '/editServiceProfile';
   static const String addPackage = '/addPackage';
+  static const String bookedService = '/bookedService';
+  static const String bookedServicesDetails = '/bookedServicesDetails';
+  static const String pendingServices = '/pendingServices';
+  static const String pendingServicesDetials = '/pendingServicesDetials';
 
   //Notification
   static const String notifications = '/notifications';
