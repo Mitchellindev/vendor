@@ -43,7 +43,9 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
         )
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.myWallet);
+        },
         "icon": "assets/images/wallet.png",
         "label": "Wallet",
         "trailing": const Icon(

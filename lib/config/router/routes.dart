@@ -43,4 +43,9 @@ class Routes {
   static const String profile = '/profile';
   static const String editProfile = '/editProfile';
   static const String myServices = '/myServices';
+
+  //Wallet
+  static const String myWallet = '/myWallet';
+  static const String allTransactons = '/allTransactons';
+  static const String transactionDetails = '/transactionDetails';
 }

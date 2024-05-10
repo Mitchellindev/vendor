@@ -28,6 +28,9 @@ import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_s
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/prompt_albert_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/store_creation_form_screen.dart';
+import 'package:broadcaadvendor/features/wallet/presentation/screens/all_transaction_screens.dart';
+import 'package:broadcaadvendor/features/wallet/presentation/screens/my_wallet_screen.dart';
+import 'package:broadcaadvendor/features/wallet/presentation/screens/transaction_details.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -156,6 +159,19 @@ class AppRouter {
       case Routes.pendingServicesDetials:
         return MaterialPageRoute(
           builder: (_) => const PendingServicesDetailsScreen(),
+        );
+
+      case Routes.myWallet:
+        return MaterialPageRoute(
+          builder: (_) => const MyWalletScreen(),
+        );
+      case Routes.allTransactons:
+        return MaterialPageRoute(
+          builder: (_) => const AllTransactionsScreen(),
+        );
+      case Routes.transactionDetails:
+        return MaterialPageRoute(
+          builder: (_) => const TransactionDetailsScreen(),
         );
       default:
         return MaterialPageRoute(
