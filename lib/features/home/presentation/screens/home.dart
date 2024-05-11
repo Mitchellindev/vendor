@@ -2,7 +2,8 @@ import 'package:broadcaadvendor/features/home/presentation/widgets/loading_scree
 import 'package:broadcaadvendor/features/home/presentation/widgets/logo_header.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/no_store.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_one.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_two.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool noStore = false;
   bool isLoading = true;
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
@@ -35,8 +37,16 @@ class _HomeScreenState extends State<HomeScreen> {
               const LogoHeader(),
               SearchHeader(scaffoldKey: scaffoldKey),
               if (isLoading) const LoadingScreenBody(),
-              if (!isLoading) const NoStoreWidget()
-              // if (!isLoading) const StoreSummary()
+              if (!isLoading && !noStore)
+                NoStoreWidgetTwo(
+                  ontTap: () {
+                    setState(() {
+                      noStore = true;
+                    });
+                  },
+                ),
+              // if (noStore) const StoreSummary(),
+              if (noStore) const NoStoreWidget()
             ],
           ),
         ),

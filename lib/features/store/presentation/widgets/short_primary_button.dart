@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,10 @@ class ShortPrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           elevation: 0,
-          minimumSize: const Size(200, 48),
+          minimumSize: Size(
+              SizeConfig.getProportionateScreenWidth(
+                  context: context, inputWidth: 200),
+              48),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
               side: const BorderSide(

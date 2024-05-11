@@ -18,23 +18,19 @@ class OtpScreen extends StatefulWidget {
 
 class _OtpScreenState extends State<OtpScreen> {
   String otp = '';
-  // Step 2
+
   Timer? countdownTimer;
   Duration myDuration = const Duration(seconds: 30);
 
-  /// Timer related methods ///
-  // Step 3
   void startTimer() {
     countdownTimer =
         Timer.periodic(const Duration(seconds: 1), (_) => setCountDown());
   }
 
-  // Step 4
   void stopTimer() {
     setState(() => countdownTimer!.cancel());
   }
 
-  // Step 5
   void resetTimer() {
     stopTimer();
 
@@ -44,7 +40,6 @@ class _OtpScreenState extends State<OtpScreen> {
     });
   }
 
-  // Step 6
   void setCountDown() {
     const reduceSecondsBy = 1;
     setState(() {
@@ -79,7 +74,6 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget build(BuildContext context) {
     String strDigits(int n) => n.toString().padLeft(2, '0');
 
-    // final minutes = strDigits(myDuration.inMinutes);
     final seconds = strDigits(myDuration.inSeconds.remainder(60));
     final ColorScheme scheme = Theme.of(context).colorScheme;
     return Scaffold(

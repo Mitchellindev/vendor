@@ -255,7 +255,7 @@ class DetailsContainer extends StatelessWidget {
                 onTap: onTap,
                 child: Image.asset(
                   "assets/images/edit_pen.png",
-                  width: 20,
+                  width: 15,
                 ),
               )
             ],

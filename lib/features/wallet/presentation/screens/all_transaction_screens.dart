@@ -148,7 +148,7 @@ class _AllTransactionsScreenState extends State<AllTransactionsScreen> {
             ),
             SizedBox(
               height: SizeConfig.getProportionateScreenHeight(
-                  context: context, inputHeight: 500),
+                  context: context, inputHeight: 490),
               child: ListView(
                 children: const [Transactions()],
               ),

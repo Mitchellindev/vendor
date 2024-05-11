@@ -9,9 +9,12 @@ class LogoHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(
-          "assets/images/home_logo.png",
-          width: 150,
+        Transform.translate(
+          offset: const Offset(-4, 0),
+          child: Image.asset(
+            "assets/images/home_logo.png",
+            width: 150,
+          ),
         ),
       ],
     );

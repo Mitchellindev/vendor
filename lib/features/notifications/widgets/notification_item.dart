@@ -32,67 +32,70 @@ class NotificationItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "assets/images/notification.png",
-                      width: 50,
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    SizedBox(
-                      width: SizeConfig.getProportionateScreenWidth(
-                          context: context, inputWidth: 220),
-                      child: const TextWidget(
-                        text: "Kelvin and two others viewed your store.",
-                        fontSize: 16,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        "assets/images/notification.png",
+                        width: 50,
                       ),
-                    ),
-                    PopupMenuButton<int>(
-                      color: Theme.of(context).colorScheme.secondary,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      icon: const Icon(Icons.more_vert),
-                      onSelected: (int itemIndex) =>
-                          onMenuItemSelected[itemIndex](),
-                      itemBuilder: (context) => [
-                        for (int i = 0; i < menuItems.length; i++)
-                          PopupMenuItem<int>(
-                            value: i,
-                            child: Padding(
-                              padding: const EdgeInsets.all(15),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    menuItems[i]["icon"],
-                                    width: 20,
-                                  ),
-                                  const SizedBox(
-                                    width: 30,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      TextWidget(
-                                        text: menuItems[i]["title"],
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      TextWidget(
-                                        text: menuItems[i]["subTitle"],
-                                      )
-                                    ],
-                                  )
-                                ],
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      SizedBox(
+                        width: SizeConfig.getProportionateScreenWidth(
+                            context: context, inputWidth: 210),
+                        child: const TextWidget(
+                          text: "Kelvin and two others viewed your store.",
+                          fontSize: 16,
+                        ),
+                      ),
+                      PopupMenuButton<int>(
+                        color: Theme.of(context).colorScheme.secondary,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        icon: const Icon(Icons.more_vert),
+                        onSelected: (int itemIndex) =>
+                            onMenuItemSelected[itemIndex](),
+                        itemBuilder: (context) => [
+                          for (int i = 0; i < menuItems.length; i++)
+                            PopupMenuItem<int>(
+                              value: i,
+                              child: Padding(
+                                padding: const EdgeInsets.all(15),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      menuItems[i]["icon"],
+                                      width: 20,
+                                    ),
+                                    const SizedBox(
+                                      width: 30,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        TextWidget(
+                                          text: menuItems[i]["title"],
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        TextWidget(
+                                          text: menuItems[i]["subTitle"],
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                      ],
-                    )
-                  ],
+                        ],
+                      )
+                    ],
+                  ),
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.0),

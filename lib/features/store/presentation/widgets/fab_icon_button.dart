@@ -12,8 +12,8 @@ class FabIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      width: 70,
-      height: 70,
+      width: 60,
+      height: 60,
       decoration: BoxDecoration(
           boxShadow: const [
             BoxShadow(
