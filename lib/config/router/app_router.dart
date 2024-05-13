@@ -13,6 +13,7 @@ import 'package:broadcaadvendor/features/products/presentation/screens/categorie
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/edit_profile_screen.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/ai_create_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_details.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/completed_rejected_screen.dart';
@@ -96,6 +97,11 @@ class AppRouter {
       case Routes.aiCreateStore:
         return MaterialPageRoute(
           builder: (_) => const AiCreateStoreScreen(),
+        );
+
+      case Routes.aiCreateService:
+        return MaterialPageRoute(
+          builder: (_) => const AiCreateServiceScreen(),
         );
       case Routes.prompAlbert:
         bool isMicrophoneEnabled = routeSettings.arguments as bool;

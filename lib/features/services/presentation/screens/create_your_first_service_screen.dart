@@ -71,7 +71,7 @@ class _CreateYourFirstServiceScreenState
                   label: "Get Started",
                   onPressed: () {
                     if (isFirstTapped) {
-                      Navigator.pushNamed(context, Routes.aiCreateStore);
+                      Navigator.pushNamed(context, Routes.aiCreateService);
                     } else {
                       Navigator.pushNamed(
                           context, Routes.serviceCreationFormScreen);

@@ -40,6 +40,7 @@ class Routes {
 
   static const String rejectedCompletedServiceDetailsScreen =
       '/rejectedCompletedServiceDetailsScreen';
+  static const String aiCreateService = '/aiCreateService';
 
   //Notification
   static const String notifications = '/notifications';
