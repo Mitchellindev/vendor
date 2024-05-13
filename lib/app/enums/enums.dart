@@ -65,3 +65,7 @@ enum ServiceCategory {
   hairMakingAndSalonServices, // Combined
   haircutsAndSalonServices, // Combined
 }
+
+enum Trend { up, down, none }
+
+enum ServiceTrend { completed, rejected, none }

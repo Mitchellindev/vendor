@@ -35,6 +35,11 @@ class Routes {
   static const String bookedServicesDetails = '/bookedServicesDetails';
   static const String pendingServices = '/pendingServices';
   static const String pendingServicesDetials = '/pendingServicesDetials';
+  static const String serviceQualityPerformanceScreen =
+      '/serviceQualityPerformanceScreen';
+
+  static const String rejectedCompletedServiceDetailsScreen =
+      '/rejectedCompletedServiceDetailsScreen';
 
   //Notification
   static const String notifications = '/notifications';
@@ -43,6 +48,7 @@ class Routes {
   static const String profile = '/profile';
   static const String editProfile = '/editProfile';
   static const String myServices = '/myServices';
+  static const String completedRejectedServices = '/completedRejectedService';
 
   //Wallet
   static const String myWallet = '/myWallet';

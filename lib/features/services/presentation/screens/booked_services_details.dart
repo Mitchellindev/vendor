@@ -1,8 +1,8 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/screens/payment_summary.dart';
 import 'package:broadcaadvendor/features/services/presentation/widgets/package_item.dart';
+import 'package:broadcaadvendor/features/services/presentation/widgets/payment_summary.dart';
 import 'package:flutter/material.dart';
 
 class BookedServicesDetailsScreen extends StatelessWidget {

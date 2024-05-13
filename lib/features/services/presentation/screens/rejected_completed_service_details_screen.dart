@@ -1,13 +1,11 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/services/presentation/widgets/package_item.dart';
 import 'package:broadcaadvendor/features/services/presentation/widgets/payment_summary.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/outlined_button_widget.dart';
 import 'package:flutter/material.dart';
 
-class PendingServicesDetailsScreen extends StatelessWidget {
-  const PendingServicesDetailsScreen({super.key});
+class RejectedCompletedServiceDetailsScreen extends StatelessWidget {
+  const RejectedCompletedServiceDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,7 @@ class PendingServicesDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
         title: const TextWidget(
-          text: "Booked Service Details",
+          text: "Bridal Makeup Service",
           fontSize: 21,
           fontWeight: FontWeight.w600,
         ),
@@ -31,8 +29,9 @@ class PendingServicesDetailsScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                    // color: const Color.fromARGB(15, 3, 14, 79),
-                    borderRadius: BorderRadius.circular(10)),
+                  // color: const Color.fromARGB(15, 3, 14, 79),
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: Row(
                   children: [
                     Image.asset(
@@ -82,25 +81,35 @@ class PendingServicesDetailsScreen extends StatelessWidget {
                 paddingVertical: 30,
               ),
               const PaymentSummary(),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0)
-                .copyWith(bottom: 20),
-            child: Column(
-              children: [
-                PrimaryButton(
-                    label: "Accept Booking", onPressed: () {}, isEnabled: true),
-                const SizedBox(
-                  height: 20,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextWidget(
+                      text: "Status",
+                      fontSize: 21,
+                      fontWeight: FontWeight.w500,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextWidget(
+                          text: "Completed:",
+                          fontSize: 18,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        Image.asset(
+                          "assets/images/up_trend.png",
+                          width: 30,
+                        )
+                      ],
+                    )
+                  ],
                 ),
-                OutlinedButtonWidget(
-                  label: "Reject Booking",
-                  onTap: () {},
-                  color: Colors.red,
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ],
       ),

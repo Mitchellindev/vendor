@@ -7,7 +7,9 @@ class PackagesTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<int> packages = [];
+    List<int> packages = [
+      1,
+    ];
     return Container(
       width: double.infinity,
       height: MediaQuery.of(context).size.height * .70,

@@ -15,12 +15,15 @@ import 'package:broadcaadvendor/features/profile/presentation/screens/edit_profi
 import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_details.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/completed_rejected_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/create_service_manually_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/create_your_first_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/edit_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/my_services_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/pending_services_details_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/pending_services_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/rejected_completed_service_details_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/service_quality_performance_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/service_summary_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/upload_package_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
@@ -173,6 +176,21 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const TransactionDetailsScreen(),
         );
+
+      case Routes.serviceQualityPerformanceScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ServiceQualityPerformanceScreen(),
+        );
+
+      case Routes.completedRejectedServices:
+        return MaterialPageRoute(
+          builder: (_) => const CompletedRejectedServicesScreen(),
+        );
+      case Routes.rejectedCompletedServiceDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const RejectedCompletedServiceDetailsScreen(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => const ErrorScreen(),

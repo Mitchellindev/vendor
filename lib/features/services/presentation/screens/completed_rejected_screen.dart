@@ -1,26 +1,63 @@
+import 'package:broadcaadvendor/app/enums/enums.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/utils/helpers.dart';
 import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/transactions.dart';
+import 'package:broadcaadvendor/features/services/presentation/widgets/rejected_service_item_widget.dart';
 import 'package:flutter/material.dart';
 
-class AllTransactionsScreen extends StatefulWidget {
-  const AllTransactionsScreen({super.key});
+class CompletedRejectedServicesScreen extends StatefulWidget {
+  const CompletedRejectedServicesScreen({super.key});
 
   @override
-  State<AllTransactionsScreen> createState() => _AllTransactionsScreenState();
+  State<CompletedRejectedServicesScreen> createState() =>
+      _CompletedRejectedServicesScreenState();
 }
 
-class _AllTransactionsScreenState extends State<AllTransactionsScreen> {
+class _CompletedRejectedServicesScreenState
+    extends State<CompletedRejectedServicesScreen> {
   DateTime selectedDate = DateTime.now();
-
+  List<Map<String, dynamic>> items = [
+    {
+      "title": "Bridal Makeover",
+      "image": "assets/images/service_img.png",
+      "subtitle": "10th May,2023",
+      "trend": Trend.up,
+      "amount": 400,
+      "status": ServiceTrend.completed,
+    },
+    {
+      "title": "Bridal Makeover",
+      "image": "assets/images/service_img.png",
+      "subtitle": "10th May,2023",
+      "trend": Trend.up,
+      "amount": 400,
+      "status": ServiceTrend.none,
+    },
+    {
+      "title": "Bridal Makeover",
+      "image": "assets/images/service_img.png",
+      "subtitle": "10th May,2023",
+      "trend": Trend.down,
+      "amount": 400,
+      "status": ServiceTrend.rejected,
+    },
+    {
+      "title": "Bridal Makeover",
+      "image": "assets/images/service_img.png",
+      "subtitle": "10th May,2023",
+      "trend": Trend.down,
+      "amount": 400,
+      "status": ServiceTrend.rejected,
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
         title: const TextWidget(
-          text: "All Transactions",
+          text: "Completed/Rejected",
           fontSize: 21,
           fontWeight: FontWeight.w600,
         ),
@@ -65,7 +102,7 @@ class _AllTransactionsScreenState extends State<AllTransactionsScreen> {
                       Row(
                         children: [
                           TextWidget(
-                            text: "Fund:",
+                            text: "Rej...:",
                             fontSize: 14,
                           ),
                           TextWidget(
@@ -78,7 +115,7 @@ class _AllTransactionsScreenState extends State<AllTransactionsScreen> {
                       Row(
                         children: [
                           TextWidget(
-                            text: "With:",
+                            text: "com...:",
                             fontSize: 14,
                           ),
                           TextWidget(
@@ -90,22 +127,6 @@ class _AllTransactionsScreenState extends State<AllTransactionsScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  const Row(
-                    children: [
-                      TextWidget(
-                        text: "Fund:",
-                        fontSize: 14,
-                      ),
-                      TextWidget(
-                        text: " NGN 2,000.00",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),
@@ -113,7 +134,22 @@ class _AllTransactionsScreenState extends State<AllTransactionsScreen> {
               height: SizeConfig.getProportionateScreenHeight(
                   context: context, inputHeight: 490),
               child: ListView(
-                children: const [Transactions()],
+                children: List.generate(
+                    items.length,
+                    (index) => GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context,
+                                Routes.rejectedCompletedServiceDetailsScreen);
+                          },
+                          child: RejectedCompletedServiceItemWidget(
+                            title: items[index]["title"],
+                            image: items[index]["image"],
+                            subtitle: items[index]["subtitle"],
+                            trend: items[index]["trend"],
+                            amount: items[index]["amount"],
+                            status: items[index]["status"],
+                          ),
+                        )),
               ),
             )
           ],
