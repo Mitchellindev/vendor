@@ -8,12 +8,15 @@ class MenuItemWidget extends StatelessWidget {
       required this.label,
       this.imageWidth = 24,
       this.color = Colors.white,
+      this.imageColor,
       required this.onTap});
   final String iconPath;
   final String label;
   final double imageWidth;
   final VoidCallback onTap;
   final Color color;
+  final Color? imageColor;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,6 +28,7 @@ class MenuItemWidget extends StatelessWidget {
             Image.asset(
               iconPath,
               width: imageWidth,
+              color: imageColor,
             ),
             const SizedBox(
               width: 15,

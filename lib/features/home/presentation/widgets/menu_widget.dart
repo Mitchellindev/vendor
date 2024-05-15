@@ -27,7 +27,7 @@ class _MenuWidgetState extends State<MenuWidget> {
             width: 180,
           ),
           const SizedBox(
-            height: 75,
+            height: 35,
           ),
           const NotificationMenuItem(),
           MenuItemWidget(
@@ -55,22 +55,27 @@ class _MenuWidgetState extends State<MenuWidget> {
               iconPath: "assets/images/chart.png",
               label: "My Store Analytics"),
           MenuItemWidget(
+              onTap: () {},
+              iconPath: "assets/images/settings.png",
+              imageColor: Colors.white,
+              label: "Settings"),
+          MenuItemWidget(
             onTap: () {},
             iconPath: "assets/images/logout.png",
             label: "Logout",
             color: const Color(0xffFF0000),
           ),
           const SizedBox(
-            height: 40,
+            height: 20,
           ),
           Image.asset(
             "assets/images/upgrade_to_premium.png",
             width: 220,
           ),
           const SizedBox(
-            height: 70,
+            height: 20,
           ),
-          const PrivacyPolicyWidget(),
+          const Flexible(child: PrivacyPolicyWidget()),
         ],
       ),
     );
