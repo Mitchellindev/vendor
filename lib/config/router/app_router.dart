@@ -12,6 +12,7 @@ import 'package:broadcaadvendor/features/products/presentation/screens/add_produ
 import 'package:broadcaadvendor/features/products/presentation/screens/categories_items_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/edit_profile_screen.dart';
+import 'package:broadcaadvendor/features/profile/presentation/screens/update_profile_image_and_name.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/ai_create_service_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/booked_services_details.dart';
@@ -200,6 +201,10 @@ class AppRouter {
       case Routes.rejectedCompletedServiceDetailsScreen:
         return MaterialPageRoute(
           builder: (_) => const RejectedCompletedServiceDetailsScreen(),
+        );
+      case Routes.updateUsernameAndProfileImage:
+        return MaterialPageRoute(
+          builder: (_) => const UpdateProfileImageAndName(),
         );
 
       default:

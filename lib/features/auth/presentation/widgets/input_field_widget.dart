@@ -12,7 +12,7 @@ class InputFieldWidget extends StatelessWidget {
       this.hintSize = 14,
       required this.onChanged,
       this.validator,
-      required this.textFieldkey,
+      this.textFieldkey,
       this.obscureText = false,
       this.suffixIcon,
       this.prefixicon,
@@ -35,7 +35,7 @@ class InputFieldWidget extends StatelessWidget {
   final void Function()? onTap;
 
   final String? Function(String?)? validator;
-  final GlobalKey<FormFieldState> textFieldkey;
+  final GlobalKey<FormFieldState>? textFieldkey;
   final bool obscureText;
   final Widget? suffixIcon;
   final Widget? prefixicon;

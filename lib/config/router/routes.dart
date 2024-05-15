@@ -51,6 +51,8 @@ class Routes {
   static const String editProfile = '/editProfile';
   static const String myServices = '/myServices';
   static const String completedRejectedServices = '/completedRejectedService';
+  static const String updateUsernameAndProfileImage =
+      '/updateUsernameAndProfileImage';
 
   //Wallet
   static const String myWallet = '/myWallet';

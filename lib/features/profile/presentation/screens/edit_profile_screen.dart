@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
@@ -18,47 +19,49 @@ class _EditProfileScreenState extends State<EditProfileScreen>
     super.initState();
   }
 
-  final List<Map<String, dynamic>> items = [
-    {
-      "icon": "assets/images/user.png",
-      "label": "Sanni Kayinsola",
-      "trailing": Image.asset(
-        "assets/images/profile_edit.png",
-        width: 20,
-      )
-    },
-    {
-      "onTap": () {},
-      "icon": "assets/images/phone.png",
-      "label": "Wallet",
-      "trailing": Image.asset(
-        "assets/images/profile_edit.png",
-        width: 20,
-      )
-    },
-    {
-      "onTap": () {},
-      "icon": "assets/images/location.png",
-      "label": "Ikoyi, Lagos state",
-      "trailing": Image.asset(
-        "assets/images/profile_edit.png",
-        width: 20,
-      )
-    },
-    {
-      "onTap": () {},
-      "icon": "assets/images/chat.png",
-      "label": "sannikayinsola@gmail,com",
-      "trailing": Image.asset(
-        "assets/images/profile_edit.png",
-        width: 20,
-      )
-    },
-  ];
-
   bool appNotificationEnabled = false;
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> items = [
+      {
+        "icon": "assets/images/user.png",
+        "label": "Sanni Kayinsola",
+        "trailing": Image.asset(
+          "assets/images/profile_edit.png",
+          width: 20,
+        ),
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.updateUsernameAndProfileImage);
+        }
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/phone.png",
+        "label": "Wallet",
+        "trailing": Image.asset(
+          "assets/images/profile_edit.png",
+          width: 20,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/location.png",
+        "label": "Ikoyi, Lagos state",
+        "trailing": Image.asset(
+          "assets/images/profile_edit.png",
+          width: 20,
+        )
+      },
+      {
+        "onTap": () {},
+        "icon": "assets/images/chat.png",
+        "label": "sannikayinsola@gmail,com",
+        "trailing": Image.asset(
+          "assets/images/profile_edit.png",
+          width: 20,
+        )
+      },
+    ];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -139,7 +142,7 @@ class _EditProfileScreenState extends State<EditProfileScreen>
                       icon: items[index]["icon"],
                       label: items[index]["label"],
                       trailing: items[index]["trailing"],
-                      onTap: () {},
+                      onTap: items[index]["onTap"],
                     ),
                   ),
                 ),
