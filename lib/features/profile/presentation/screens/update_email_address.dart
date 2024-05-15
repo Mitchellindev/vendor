@@ -4,8 +4,8 @@ import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_w
 import 'package:broadcaadvendor/features/store/presentation/widgets/outlined_button_widget.dart';
 import 'package:flutter/material.dart';
 
-class UpdateProfileImageAndNameScreen extends StatelessWidget {
-  const UpdateProfileImageAndNameScreen({super.key});
+class UpdateEmailAddressScreen extends StatelessWidget {
+  const UpdateEmailAddressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class UpdateProfileImageAndNameScreen extends StatelessWidget {
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
         title: const TextWidget(
-          text: "Update Picture and  Name",
+          text: "Update Email Address",
           fontSize: 21,
           fontWeight: FontWeight.w600,
         ),
@@ -24,32 +24,20 @@ class UpdateProfileImageAndNameScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
                   child: TextWidget(
-                    text: "Enter a New Profile Picture and Name",
+                    textAlign: TextAlign.start,
+                    text: "Enter a New Email Address",
                     fontSize: 21,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/vendor_img.png",
-                      width: 100,
-                    ),
-                    Image.asset(
-                      "assets/images/profile_edit.png",
-                      width: 30,
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
-                  ],
-                ),
                 InputFieldWidget(
                   hintColor: Theme.of(context).colorScheme.primary,
-                  hintText: "Sanni Oluwatoyin",
+                  hintText: "sannikayinsola@gmail.com",
                   onChanged: (val) {},
                   enabledBorderRadius: 10,
                 )

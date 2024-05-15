@@ -35,16 +35,20 @@ class _EditProfileScreenState extends State<EditProfileScreen>
         }
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.updateUserPhoneNumber);
+        },
         "icon": "assets/images/phone.png",
-        "label": "Wallet",
+        "label": "+2349014138731",
         "trailing": Image.asset(
           "assets/images/profile_edit.png",
           width: 20,
         )
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.updateAddress);
+        },
         "icon": "assets/images/location.png",
         "label": "Ikoyi, Lagos state",
         "trailing": Image.asset(
@@ -53,7 +57,9 @@ class _EditProfileScreenState extends State<EditProfileScreen>
         )
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.updateEmailAddress);
+        },
         "icon": "assets/images/chat.png",
         "label": "sannikayinsola@gmail,com",
         "trailing": Image.asset(

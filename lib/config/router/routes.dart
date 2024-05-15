@@ -38,6 +38,7 @@ class Routes {
   static const String pendingServicesDetials = '/pendingServicesDetials';
   static const String serviceQualityPerformanceScreen =
       '/serviceQualityPerformanceScreen';
+  static const String updateAddress = '/updateAddress';
 
   static const String rejectedCompletedServiceDetailsScreen =
       '/rejectedCompletedServiceDetailsScreen';
@@ -53,6 +54,8 @@ class Routes {
   static const String completedRejectedServices = '/completedRejectedService';
   static const String updateUsernameAndProfileImage =
       '/updateUsernameAndProfileImage';
+  static const String updateUserPhoneNumber = '/updateUserPhoneNumber';
+  static const String updateEmailAddress = '/updateEmailAddress';
 
   //Wallet
   static const String myWallet = '/myWallet';

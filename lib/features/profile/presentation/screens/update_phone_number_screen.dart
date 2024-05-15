@@ -4,8 +4,8 @@ import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_w
 import 'package:broadcaadvendor/features/store/presentation/widgets/outlined_button_widget.dart';
 import 'package:flutter/material.dart';
 
-class UpdateProfileImageAndNameScreen extends StatelessWidget {
-  const UpdateProfileImageAndNameScreen({super.key});
+class UpdateUserPhoneNumberScreen extends StatelessWidget {
+  const UpdateUserPhoneNumberScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class UpdateProfileImageAndNameScreen extends StatelessWidget {
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
         title: const TextWidget(
-          text: "Update Picture and  Name",
+          text: "Update Phone Number",
           fontSize: 21,
           fontWeight: FontWeight.w600,
         ),
@@ -28,28 +28,14 @@ class UpdateProfileImageAndNameScreen extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
                   child: TextWidget(
-                    text: "Enter a New Profile Picture and Name",
+                    text: "Enter a New Phone Number Country Code",
                     fontSize: 21,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      "assets/images/vendor_img.png",
-                      width: 100,
-                    ),
-                    Image.asset(
-                      "assets/images/profile_edit.png",
-                      width: 30,
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
-                  ],
-                ),
                 InputFieldWidget(
                   hintColor: Theme.of(context).colorScheme.primary,
-                  hintText: "Sanni Oluwatoyin",
+                  hintText: "+2349014138734",
                   onChanged: (val) {},
                   enabledBorderRadius: 10,
                 )

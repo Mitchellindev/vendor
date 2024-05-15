@@ -12,6 +12,9 @@ import 'package:broadcaadvendor/features/products/presentation/screens/add_produ
 import 'package:broadcaadvendor/features/products/presentation/screens/categories_items_screen.dart';
 import 'package:broadcaadvendor/features/products/presentation/screens/edit_products.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/edit_profile_screen.dart';
+import 'package:broadcaadvendor/features/profile/presentation/screens/update_address_screen.dart';
+import 'package:broadcaadvendor/features/profile/presentation/screens/update_email_address.dart';
+import 'package:broadcaadvendor/features/profile/presentation/screens/update_phone_number_screen.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/update_profile_image_and_name.dart';
 import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/ai_create_service_screen.dart';
@@ -204,9 +207,20 @@ class AppRouter {
         );
       case Routes.updateUsernameAndProfileImage:
         return MaterialPageRoute(
-          builder: (_) => const UpdateProfileImageAndName(),
+          builder: (_) => const UpdateProfileImageAndNameScreen(),
         );
-
+      case Routes.updateUserPhoneNumber:
+        return MaterialPageRoute(
+          builder: (_) => const UpdateUserPhoneNumberScreen(),
+        );
+      case Routes.updateAddress:
+        return MaterialPageRoute(
+          builder: (_) => const UpdateAddressScreen(),
+        );
+      case Routes.updateEmailAddress:
+        return MaterialPageRoute(
+          builder: (_) => const UpdateEmailAddressScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => const ErrorScreen(),
