@@ -1,6 +1,8 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
 import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/features/home/presentation/widgets/logo_header.dart';
+import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
 import 'package:flutter/material.dart';
 
 class NoStoreWidget extends StatefulWidget {
@@ -12,6 +14,7 @@ class NoStoreWidget extends StatefulWidget {
 
 class _NoStoreWidgetState extends State<NoStoreWidget> {
   PageController controller = PageController(viewportFraction: .9);
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +24,14 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
         height: MediaQuery.of(context).size.height * .95,
         child: ListView(
           children: [
+            const LogoHeader(),
+            SearchHeader(
+              scaffoldKey: scaffoldKey,
+              withSearch: true,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             Stack(
               alignment: AlignmentDirectional.bottomCenter,
               clipBehavior: Clip.none,
@@ -106,7 +117,7 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
               ],
             ),
             const SizedBox(
-              height: 70,
+              height: 100,
             ),
             PrimaryButton(
                 label: "Create your store",

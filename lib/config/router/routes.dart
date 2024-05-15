@@ -19,6 +19,7 @@ class Routes {
   static const String editStore = '/editStore';
   static const String aiCreateStore = '/aiCreateStore';
   static const String prompAlbert = '/promptAlbert';
+  static const String myStores = '/myStores';
 
   //Products
   static const String addProduct = '/addProduct';

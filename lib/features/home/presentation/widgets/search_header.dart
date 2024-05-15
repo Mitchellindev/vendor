@@ -3,8 +3,10 @@ import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_w
 import 'package:flutter/material.dart';
 
 class SearchHeader extends StatefulWidget {
-  const SearchHeader({super.key, required this.scaffoldKey});
+  const SearchHeader(
+      {super.key, required this.scaffoldKey, this.withSearch = true});
   final GlobalKey<ScaffoldState> scaffoldKey;
+  final bool withSearch;
   @override
   State<SearchHeader> createState() => _SearchHeaderState();
 }
@@ -40,29 +42,30 @@ class _SearchHeaderState extends State<SearchHeader> {
             ),
           ],
         ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            child: Transform.scale(
-              scaleY: .8,
-              child: InputFieldWidget(
-                  validator: (p0) {
-                    return null;
-                  },
-                  verticalContentPadding: 0,
-                  prefixicon: Image.asset(
-                    "assets/images/search.png",
-                  ),
-                  enabledBorderRadius: 5,
-                  hintColor: const Color.fromARGB(120, 58, 58, 58),
-                  hintSize: 16,
-                  fontWeight: FontWeight.w500,
-                  hintText: "Search",
-                  onChanged: (val) {},
-                  textFieldkey: searchKey),
+        if (widget.withSearch)
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Transform.scale(
+                scaleY: .8,
+                child: InputFieldWidget(
+                    validator: (p0) {
+                      return null;
+                    },
+                    verticalContentPadding: 0,
+                    prefixicon: Image.asset(
+                      "assets/images/search.png",
+                    ),
+                    enabledBorderRadius: 5,
+                    hintColor: const Color.fromARGB(120, 58, 58, 58),
+                    hintSize: 16,
+                    fontWeight: FontWeight.w500,
+                    hintText: "Search",
+                    onChanged: (val) {},
+                    textFieldkey: searchKey),
+              ),
             ),
           ),
-        ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -35,7 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             children: [
               const LogoHeader(),
-              SearchHeader(scaffoldKey: scaffoldKey),
+              SearchHeader(
+                scaffoldKey: scaffoldKey,
+                withSearch: noStore,
+              ),
               if (isLoading) const LoadingScreenBody(),
               if (!isLoading && !noStore)
                 NoStoreWidgetTwo(

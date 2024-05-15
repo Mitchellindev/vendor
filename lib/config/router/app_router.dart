@@ -30,6 +30,7 @@ import 'package:broadcaadvendor/features/services/presentation/screens/upload_pa
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/my_stores_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/prompt_albert_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/store_creation_form_screen.dart';
 import 'package:broadcaadvendor/features/wallet/presentation/screens/all_transaction_screens.dart';
@@ -135,6 +136,10 @@ class AppRouter {
       case Routes.myServices:
         return MaterialPageRoute(
           builder: (_) => const MyServicesScreen(),
+        );
+      case Routes.myStores:
+        return MaterialPageRoute(
+          builder: (_) => const MyStoresScreen(),
         );
 
       case Routes.serviceSummary:
