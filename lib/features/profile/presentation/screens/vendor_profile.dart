@@ -54,7 +54,9 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
         )
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.myStores);
+        },
         "icon": "assets/images/shop_blue.png",
         "label": "My Stores",
         "trailing": const Icon(
@@ -74,7 +76,9 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
         )
       },
       {
-        "onTap": () {},
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.storePerformance);
+        },
         "icon": "assets/images/pie_chart.png",
         "label": "Store Performances",
         "trailing": const Icon(
@@ -150,7 +154,9 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                 child: ListView(
                   children: [
                     const ProfileHeader(),
-                    const HorizontalDivider(),
+                    const HorizontalDivider(
+                      paddingVertical: 20,
+                    ),
                     Column(
                       children: List.generate(
                         items.length,
@@ -198,15 +204,6 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                               ),
                       ),
                     ),
-                    const HorizontalDivider(),
-                    ProfileActionWidget(
-                        onTap: () {},
-                        icon: "assets/images/settings.png",
-                        label: "Settings",
-                        trailing: const Icon(
-                          Icons.chevron_right,
-                          size: 30,
-                        ))
                   ],
                 ),
               ),

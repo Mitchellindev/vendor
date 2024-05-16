@@ -32,11 +32,16 @@ import 'package:broadcaadvendor/features/services/presentation/screens/service_q
 import 'package:broadcaadvendor/features/services/presentation/screens/service_summary_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/upload_package_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/ai_create_store_screen.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/clicks_views_list_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/edit_store_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/first_store_creation.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/my_stores_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/prompt_albert_screen.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/rejected_sold_list_screen.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/sales_stocks_details_screen.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/sales_stocks_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/screens/store_creation_form_screen.dart';
+import 'package:broadcaadvendor/features/store/presentation/screens/store_performance_screen.dart';
 import 'package:broadcaadvendor/features/wallet/presentation/screens/all_transaction_screens.dart';
 import 'package:broadcaadvendor/features/wallet/presentation/screens/my_wallet_screen.dart';
 import 'package:broadcaadvendor/features/wallet/presentation/screens/transaction_details.dart';
@@ -221,6 +226,29 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const UpdateEmailAddressScreen(),
         );
+      case Routes.storePerformance:
+        return MaterialPageRoute(
+          builder: (_) => const StorePerformanceScreen(),
+        );
+
+      case Routes.stockSales:
+        return MaterialPageRoute(
+          builder: (_) => const SalesStocksScreen(),
+        );
+
+      case Routes.salesStockDetails:
+        return MaterialPageRoute(
+          builder: (_) => const SalesStockDetailsScreen(),
+        );
+      case Routes.clicksViewsList:
+        return MaterialPageRoute(
+          builder: (_) => const ClickViewsListScreen(),
+        );
+      case Routes.rejectedSoldListScreen:
+        return MaterialPageRoute(
+          builder: (_) => const RejectedSoldListScreen(),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (_) => const ErrorScreen(),

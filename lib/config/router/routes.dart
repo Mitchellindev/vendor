@@ -20,6 +20,10 @@ class Routes {
   static const String aiCreateStore = '/aiCreateStore';
   static const String prompAlbert = '/promptAlbert';
   static const String myStores = '/myStores';
+  static const String storePerformance = '/storePerformance';
+  static const String stockSales = '/stockSales';
+  static const String clicksViewsList = '/clicksViewsList';
+  static const String rejectedSoldListScreen = '/rejectedSoldListScreen';
 
   //Products
   static const String addProduct = '/addProduct';
@@ -42,6 +46,7 @@ class Routes {
 
   static const String rejectedCompletedServiceDetailsScreen =
       '/rejectedCompletedServiceDetailsScreen';
+  static const String salesStockDetails = '/salesStockDetails';
   static const String aiCreateService = '/aiCreateService';
 
   //Notification

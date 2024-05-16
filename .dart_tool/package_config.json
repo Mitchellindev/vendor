@@ -362,6 +362,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "smooth_page_indicator",
+      "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/smooth_page_indicator-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
@@ -458,7 +464,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-15T20:11:28.997052Z",
+  "generated": "2024-05-15T23:33:52.153288Z",
   "generator": "pub",
   "generatorVersion": "3.4.0",
   "flutterRoot": "file:///Users/chukwuemekaokwor/Downloads/flutter",

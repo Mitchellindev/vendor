@@ -69,3 +69,5 @@ enum ServiceCategory {
 enum Trend { up, down, none }
 
 enum ServiceTrend { completed, rejected, none }
+
+enum StockTrend { sales, stock, none }
