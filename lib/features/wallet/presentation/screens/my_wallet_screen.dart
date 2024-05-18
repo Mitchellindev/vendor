@@ -1,8 +1,8 @@
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/atm_card_widget.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/transaction_history.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/wallet_actions.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/atm_card_widget.dart';
+import '../widgets/transaction_history.dart';
+import '../widgets/wallet_actions.dart';
 import 'package:flutter/material.dart';
 
 class MyWalletScreen extends StatelessWidget {

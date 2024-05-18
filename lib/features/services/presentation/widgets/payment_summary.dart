@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/details_row.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'details_row.dart';
 import 'package:flutter/material.dart';
 
 class PaymentSummary extends StatelessWidget {

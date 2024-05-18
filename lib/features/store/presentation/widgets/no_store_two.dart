@@ -1,8 +1,8 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/orange_data_row_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/store_details_widget.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'orange_data_row_widget.dart';
+import 'store_details_widget.dart';
 import 'package:flutter/material.dart';
 
 class NoStoreWidgetTwo extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/features/products/presentation/widgets/product_item_widget.dart';
+import 'product_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductsGridView extends StatelessWidget {

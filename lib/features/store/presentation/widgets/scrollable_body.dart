@@ -1,17 +1,17 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/products/presentation/widgets/categories_widget.dart';
-import 'package:broadcaadvendor/features/products/presentation/widgets/product_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/cover_image_stack.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/description.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/my_tab_view_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/primary_icon_button.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/rating_row.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/reviews.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/short_primary_button.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/vendor_details.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/horizontal_divider.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../../../products/presentation/widgets/categories_widget.dart';
+import '../../../products/presentation/widgets/product_widget.dart';
+import 'cover_image_stack.dart';
+import 'description.dart';
+import 'my_tab_view_widget.dart';
+import 'primary_icon_button.dart';
+import 'rating_row.dart';
+import 'reviews.dart';
+import 'short_primary_button.dart';
+import 'vendor_details.dart';
 import 'package:flutter/material.dart';
 
 class ScrollableBody extends StatelessWidget {

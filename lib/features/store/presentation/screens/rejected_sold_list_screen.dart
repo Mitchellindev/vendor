@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/rejected_sold_widget_item.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/rejected_sold_widget_item.dart';
 import 'package:flutter/material.dart';
 
 class RejectedSoldListScreen extends StatelessWidget {

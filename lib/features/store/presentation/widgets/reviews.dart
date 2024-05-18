@@ -1,6 +1,6 @@
-import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/reviews_heading.dart';
+import '../../../../core/widgets/horizontal_divider.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'reviews_heading.dart';
 import 'package:flutter/material.dart';
 
 class Reviews extends StatelessWidget {

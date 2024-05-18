@@ -1,7 +1,7 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/create_store_button.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../../../store/presentation/widgets/create_store_button.dart';
 import 'package:flutter/material.dart';
 
 class CreateYourFirstServiceScreen extends StatefulWidget {

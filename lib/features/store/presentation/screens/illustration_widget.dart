@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/core/utils/size_config.dart';
+import '../../../../core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class IllustrationWidget extends StatelessWidget {

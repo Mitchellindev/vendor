@@ -1,6 +1,6 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/map_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/schedule_row.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'map_widget.dart';
+import 'schedule_row.dart';
 import 'package:flutter/material.dart';
 
 class Description extends StatelessWidget {

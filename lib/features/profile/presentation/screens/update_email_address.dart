@@ -1,7 +1,7 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/outlined_button_widget.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../../../auth/presentation/widgets/input_field_widget.dart';
+import '../../../store/presentation/widgets/outlined_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class UpdateEmailAddressScreen extends StatelessWidget {

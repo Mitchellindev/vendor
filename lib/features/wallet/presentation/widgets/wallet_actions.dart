@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/wallet_action_widget.dart';
+import 'wallet_action_widget.dart';
 import 'package:flutter/material.dart';
 
 class WalletActions extends StatelessWidget {

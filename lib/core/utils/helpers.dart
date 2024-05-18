@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
+import '../../app/widgets/primary_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

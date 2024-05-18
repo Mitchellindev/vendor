@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/features/services/presentation/widgets/booked_service_item.dart';
+import 'booked_service_item.dart';
 import 'package:flutter/material.dart';
 
 class BookedServices extends StatelessWidget {

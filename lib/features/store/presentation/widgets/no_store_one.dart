@@ -1,8 +1,8 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/logo_header.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../../../home/presentation/widgets/logo_header.dart';
+import '../../../home/presentation/widgets/search_header.dart';
 import 'package:flutter/material.dart';
 
 class NoStoreWidget extends StatefulWidget {

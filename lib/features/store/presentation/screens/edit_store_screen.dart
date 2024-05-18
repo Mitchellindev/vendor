@@ -1,13 +1,13 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/accordion_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/checkbox_container_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/cover_image_stack.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/edit_photos_popup.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/name_change_popup.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/primary_icon_button.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/vendor_category_check_box.dart';
+import '../../../../app/enums/enums.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/accordion_widget.dart';
+import '../widgets/checkbox_container_widget.dart';
+import '../widgets/cover_image_stack.dart';
+import '../widgets/edit_photos_popup.dart';
+import '../widgets/name_change_popup.dart';
+import '../widgets/primary_icon_button.dart';
+import '../widgets/vendor_category_check_box.dart';
 import 'package:flutter/material.dart';
 
 class EditStoreScreen extends StatefulWidget {

@@ -1,9 +1,9 @@
-import 'package:broadcaadvendor/features/home/presentation/widgets/loading_screen_body.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/logo_header.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_one.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_two.dart';
+import '../widgets/loading_screen_body.dart';
+import '../widgets/logo_header.dart';
+import '../widgets/menu_widget.dart';
+import '../widgets/search_header.dart';
+import '../../../store/presentation/widgets/no_store_one.dart';
+import '../../../store/presentation/widgets/no_store_two.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

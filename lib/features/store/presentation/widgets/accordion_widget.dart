@@ -1,6 +1,6 @@
 import 'package:accordion/accordion.dart';
 import 'package:accordion/controllers.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class AccordionWidget extends StatefulWidget {

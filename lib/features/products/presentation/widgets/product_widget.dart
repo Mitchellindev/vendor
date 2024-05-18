@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/features/products/presentation/widgets/no_products_widget.dart';
-import 'package:broadcaadvendor/features/products/presentation/widgets/products_grid_view.dart';
+import 'no_products_widget.dart';
+import 'products_grid_view.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {

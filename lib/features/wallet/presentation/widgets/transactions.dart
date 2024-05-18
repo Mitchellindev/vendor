@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/transaction_widget.dart';
+import '../../../../config/router/routes.dart';
+import 'transaction_widget.dart';
 import 'package:flutter/material.dart';
 
 class Transactions extends StatelessWidget {

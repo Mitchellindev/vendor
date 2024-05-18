@@ -1,6 +1,6 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class VerificationSuccessfulScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/screens/service_item_widget.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'service_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class MyServicesScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/features/products/presentation/widgets/no_products_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/services_grid_view.dart';
+import '../../../products/presentation/widgets/no_products_widget.dart';
+import 'services_grid_view.dart';
 import 'package:flutter/material.dart';
 
 class PackagesTabView extends StatelessWidget {

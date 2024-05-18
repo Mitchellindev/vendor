@@ -1,6 +1,6 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/time_pop_up_widget.dart';
+import '../../../../app/enums/enums.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'time_pop_up_widget.dart';
 import 'package:flutter/material.dart';
 
 class CheckBoxContainerWidgetDay extends StatefulWidget {

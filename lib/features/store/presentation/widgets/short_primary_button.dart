@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/utils/size_config.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import '../../../../core/utils/size_config.dart';
+import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class ShortPrimaryButton extends StatelessWidget {

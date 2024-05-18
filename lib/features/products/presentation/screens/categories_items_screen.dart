@@ -1,6 +1,6 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/products/presentation/widgets/products_grid_view.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/fab_row.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/products_grid_view.dart';
+import '../../../store/presentation/widgets/fab_row.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesItemsScreen extends StatelessWidget {

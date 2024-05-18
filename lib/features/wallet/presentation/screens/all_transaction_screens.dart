@@ -1,7 +1,7 @@
-import 'package:broadcaadvendor/core/utils/helpers.dart';
-import 'package:broadcaadvendor/core/utils/size_config.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/transactions.dart';
+import '../../../../core/utils/helpers.dart';
+import '../../../../core/utils/size_config.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/transactions.dart';
 import 'package:flutter/material.dart';
 
 class AllTransactionsScreen extends StatefulWidget {

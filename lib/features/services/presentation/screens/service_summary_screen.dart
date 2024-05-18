@@ -1,9 +1,9 @@
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/logo_header.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/search_header.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/scrollable_service_body.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/fab_icon_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../home/presentation/widgets/logo_header.dart';
+import '../../../home/presentation/widgets/menu_widget.dart';
+import '../../../home/presentation/widgets/search_header.dart';
+import '../widgets/scrollable_service_body.dart';
+import '../../../store/presentation/widgets/fab_icon_button.dart';
 import 'package:flutter/material.dart';
 
 class ServiceSummaryScreen extends StatefulWidget {

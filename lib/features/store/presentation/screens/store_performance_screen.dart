@@ -1,12 +1,12 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/utils/size_config.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/rejected_service_item_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/chart_container.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/click_views_chart_container.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/clicks_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/rejected_sold_widget_item.dart';
+import '../../../../app/enums/enums.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/utils/size_config.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../../../services/presentation/widgets/rejected_service_item_widget.dart';
+import '../widgets/chart_container.dart';
+import '../widgets/click_views_chart_container.dart';
+import '../widgets/clicks_widget.dart';
+import '../widgets/rejected_sold_widget_item.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/clicks_widget.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/clicks_widget.dart';
 import 'package:flutter/material.dart';
 
 class ClickViewsListScreen extends StatelessWidget {

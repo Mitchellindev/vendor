@@ -1,9 +1,9 @@
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/package_item.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/payment_summary.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/outlined_button_widget.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../core/widgets/horizontal_divider.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/package_item.dart';
+import '../widgets/payment_summary.dart';
+import '../../../store/presentation/widgets/outlined_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class PendingServicesDetailsScreen extends StatelessWidget {

@@ -1,8 +1,8 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/utils/helpers.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/rejected_service_item_widget.dart';
+import '../../../../app/enums/enums.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/utils/helpers.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/rejected_service_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class ServiceQualityPerformanceScreen extends StatefulWidget {

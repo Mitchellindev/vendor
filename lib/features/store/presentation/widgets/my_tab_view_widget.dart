@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/features/store/presentation/widgets/tab_item_widget.dart';
+import 'tab_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class MyTabViewWidget extends StatefulWidget {

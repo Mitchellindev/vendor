@@ -1,6 +1,6 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/fab_icon_button.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../../../auth/presentation/widgets/input_field_widget.dart';
+import '../widgets/fab_icon_button.dart';
 import 'package:flutter/material.dart';
 
 class PromptAlbertScreen extends StatefulWidget {

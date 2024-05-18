@@ -1,7 +1,7 @@
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/menu_item_widget.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/notification_menu_item.dart';
-import 'package:broadcaadvendor/features/home/presentation/widgets/privacy_policy_widget.dart';
+import '../../../../config/router/routes.dart';
+import 'menu_item_widget.dart';
+import 'notification_menu_item.dart';
+import 'privacy_policy_widget.dart';
 import 'package:flutter/material.dart';
 
 class MenuWidget extends StatefulWidget {

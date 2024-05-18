@@ -1,10 +1,10 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
-import 'package:broadcaadvendor/app/widgets/oauth_button.dart';
-import 'package:broadcaadvendor/app/widgets/primary_button.dart';
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/validator/validator.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
+import '../../../../app/enums/enums.dart';
+import '../../../../app/widgets/oauth_button.dart';
+import '../../../../app/widgets/primary_button.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/validator/validator.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/input_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'text_widget.dart';
 import 'package:flutter/material.dart';
 
 class LoadingWidget extends StatelessWidget {

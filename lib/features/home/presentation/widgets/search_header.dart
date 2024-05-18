@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/features/auth/presentation/widgets/input_field_widget.dart';
+import '../../../../config/router/routes.dart';
+import '../../../auth/presentation/widgets/input_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class SearchHeader extends StatefulWidget {

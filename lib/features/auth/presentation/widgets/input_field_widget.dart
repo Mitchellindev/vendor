@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/constants/app_colors.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import '../../../../core/constants/app_colors.dart';
+import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class InputFieldWidget extends StatelessWidget {

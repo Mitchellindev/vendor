@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/features/store/presentation/widgets/fab_row.dart';
-import 'package:broadcaadvendor/features/store/presentation/widgets/scrollable_body.dart';
+import 'fab_row.dart';
+import 'scrollable_body.dart';
 import 'package:flutter/material.dart';
 
 class StoreSummary extends StatefulWidget {

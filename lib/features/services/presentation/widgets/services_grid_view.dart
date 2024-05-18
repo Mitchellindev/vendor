@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/features/services/presentation/widgets/service_grid_item.dart';
+import 'service_grid_item.dart';
 import 'package:flutter/material.dart';
 
 class ServicesGridView extends StatelessWidget {

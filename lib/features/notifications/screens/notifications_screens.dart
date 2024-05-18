@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/notifications/widgets/notification_item.dart';
+import '../../../core/widgets/text_widget.dart';
+import '../widgets/notification_item.dart';
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:broadcaadvendor/core/network/api_endpoint.dart';
+import 'api_endpoint.dart';
 import 'package:dio/dio.dart';
 
 // import 'package:the_food_hub_nsk_nig/core/network/api_endpoint.dart';

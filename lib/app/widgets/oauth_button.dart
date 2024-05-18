@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/app/enums/enums.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import '../enums/enums.dart';
+import '../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class OAuthButton extends StatelessWidget {

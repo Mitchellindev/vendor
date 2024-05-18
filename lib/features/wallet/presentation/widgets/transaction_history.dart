@@ -1,5 +1,5 @@
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/wallet/presentation/widgets/transactions.dart';
+import '../../../../core/widgets/text_widget.dart';
+import 'transactions.dart';
 import 'package:flutter/material.dart';
 
 class TransactionHistory extends StatelessWidget {

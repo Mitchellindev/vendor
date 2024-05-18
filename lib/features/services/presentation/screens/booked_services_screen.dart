@@ -1,7 +1,7 @@
-import 'package:broadcaadvendor/config/router/routes.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/booked_services.dart';
-import 'package:broadcaadvendor/features/services/presentation/widgets/no_booked_service.dart';
+import '../../../../config/router/routes.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../widgets/booked_services.dart';
+import '../widgets/no_booked_service.dart';
 import 'package:flutter/material.dart';
 
 class BookedServicesScreen extends StatefulWidget {

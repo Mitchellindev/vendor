@@ -1,7 +1,7 @@
-import 'package:broadcaadvendor/core/utils/size_config.dart';
-import 'package:broadcaadvendor/core/widgets/text_widget.dart';
-import 'package:broadcaadvendor/features/profile/presentation/screens/vendor_profile.dart';
-import 'package:broadcaadvendor/features/profile/presentation/widgets/vendor_status_tag.dart';
+import '../../../../core/utils/size_config.dart';
+import '../../../../core/widgets/text_widget.dart';
+import '../screens/vendor_profile.dart';
+import 'vendor_status_tag.dart';
 import 'package:flutter/material.dart';
 
 class ProfileHeader extends StatelessWidget {
