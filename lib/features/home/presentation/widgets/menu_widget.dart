@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import '../../../../config/router/routes.dart';
 import 'menu_item_widget.dart';
 import 'notification_menu_item.dart';
 import 'privacy_policy_widget.dart';
-import 'package:flutter/material.dart';
 
 class MenuWidget extends StatefulWidget {
   const MenuWidget({super.key});
@@ -63,7 +64,7 @@ class _MenuWidgetState extends State<MenuWidget> {
             onTap: () {},
             iconPath: "assets/images/logout.png",
             label: "Logout",
-            color: const Color(0xffFF0000),
+            color: const Color.fromARGB(252, 255, 0, 0),
           ),
           const SizedBox(
             height: 20,
