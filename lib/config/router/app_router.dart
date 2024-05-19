@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/features/home/presentation/screens/dashboard_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
 import 'package:flutter/material.dart';
@@ -258,6 +259,10 @@ class AppRouter {
       case Routes.paymentHistoryDetails:
         return MaterialPageRoute(
           builder: (_) => const PaymentHistoryDetailsScreen(),
+        );
+      case Routes.dashboard:
+        return MaterialPageRoute(
+          builder: (_) => const DashboardScreen(),
         );
       default:
         return MaterialPageRoute(

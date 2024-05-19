@@ -12,6 +12,7 @@ class Routes {
 
 //Home
   static const String home = '/home';
+  static const String dashboard = '/dashboard';
 
   //Store
   static const String firstStoreCreation = '/firstStoreCreation';

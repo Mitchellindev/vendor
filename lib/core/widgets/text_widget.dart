@@ -13,7 +13,8 @@ class TextWidget extends StatelessWidget {
       this.overflow,
       this.onTap,
       this.textDecoration,
-      this.letterSpacing});
+      this.letterSpacing,
+      this.fontStyle});
   final String text;
   final double fontSize;
   final FontWeight fontWeight;
@@ -23,6 +24,7 @@ class TextWidget extends StatelessWidget {
   final TextOverflow? overflow;
   final double? letterSpacing;
   final TextDecoration? textDecoration;
+  final FontStyle? fontStyle;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -36,6 +38,7 @@ class TextWidget extends StatelessWidget {
             decoration: textDecoration,
             fontSize: fontSize,
             fontWeight: fontWeight,
+            fontStyle: fontStyle,
             letterSpacing: letterSpacing),
       ),
     );

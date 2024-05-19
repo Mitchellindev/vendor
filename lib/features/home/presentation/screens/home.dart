@@ -1,10 +1,8 @@
-import '../widgets/loading_screen_body.dart';
+import 'package:flutter/material.dart';
+
 import '../widgets/logo_header.dart';
 import '../widgets/menu_widget.dart';
 import '../widgets/search_header.dart';
-import '../../../store/presentation/widgets/no_store_one.dart';
-import '../../../store/presentation/widgets/no_store_two.dart';
-import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -39,17 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 scaffoldKey: scaffoldKey,
                 withSearch: noStore,
               ),
-              if (isLoading) const LoadingScreenBody(),
-              if (!isLoading && !noStore)
-                NoStoreWidgetTwo(
-                  ontTap: () {
-                    setState(() {
-                      noStore = true;
-                    });
-                  },
-                ),
-              // if (noStore) const StoreSummary(),
-              if (noStore) const NoStoreWidget()
+              // if (isLoading) const LoadingScreenBody(),
+
+              // // if (noStore) const StoreSummary(),
+              // if (noStore) const NoStoreWidget()
             ],
           ),
         ),

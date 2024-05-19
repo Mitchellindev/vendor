@@ -1,5 +1,6 @@
-import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class StoreDetailsWidget extends StatelessWidget {
   const StoreDetailsWidget(
@@ -16,7 +17,17 @@ class StoreDetailsWidget extends StatelessWidget {
           fontSize: 21,
           fontWeight: FontWeight.w500,
         ),
-        ...dataRows
+        Container(
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.tertiary,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          margin: const EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: dataRows,
+          ),
+        )
       ],
     );
   }

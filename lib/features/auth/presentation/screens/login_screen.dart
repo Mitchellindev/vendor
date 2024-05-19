@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 PrimaryButton(
                   label: "Login",
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.home);
+                    Navigator.pushNamed(context, Routes.dashboard);
                   },
                   isEnabled: emailIsValid && passwordIsValid,
                 ),
