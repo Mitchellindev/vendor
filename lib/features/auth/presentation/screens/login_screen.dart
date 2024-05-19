@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/oauth_button.dart';
 import '../../../../app/widgets/primary_button.dart';
@@ -5,7 +7,6 @@ import '../../../../config/router/routes.dart';
 import '../../../../core/validator/validator.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../widgets/input_field_widget.dart';
-import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -74,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     textFieldkey: emailKey),
                 InputFieldWidget(
                   enabledBorderRadius: 5,
-                  obscureText: true,
+                  obscureText: obscureText,
                   hintColor: const Color.fromARGB(120, 58, 58, 58),
                   hintSize: 18,
                   hintText: "Password",
