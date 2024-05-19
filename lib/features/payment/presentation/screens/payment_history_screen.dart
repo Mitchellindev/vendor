@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/payment/presentation/widgets/payment_history_item.dart';
 import 'package:flutter/material.dart';
@@ -57,6 +58,9 @@ class PaymentHistoryScreen extends StatelessWidget {
               price: items[index]["price"],
               date: items[index]["date"],
               status: items[index]["status"],
+              onTap: () {
+                Navigator.pushNamed(context, Routes.paymentHistoryDetails);
+              },
             ),
           ),
         ),

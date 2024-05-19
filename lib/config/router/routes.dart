@@ -69,4 +69,5 @@ class Routes {
 
   //Payment
   static const String paymentHistory = "/paymentHistory";
+  static const String paymentHistoryDetails = "/paymentHistoryDetails";
 }

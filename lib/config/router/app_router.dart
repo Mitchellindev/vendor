@@ -1,6 +1,7 @@
+import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
+import 'package:flutter/material.dart';
 
-import 'routes.dart';
 import '../../core/widgets/error_screen.dart';
 import '../../features/auth/presentation/screens/forgot_password.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
@@ -47,7 +48,7 @@ import '../../features/store/presentation/screens/store_performance_screen.dart'
 import '../../features/wallet/presentation/screens/all_transaction_screens.dart';
 import '../../features/wallet/presentation/screens/my_wallet_screen.dart';
 import '../../features/wallet/presentation/screens/transaction_details.dart';
-import 'package:flutter/material.dart';
+import 'routes.dart';
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings routeSettings) {
@@ -253,6 +254,10 @@ class AppRouter {
       case Routes.paymentHistory:
         return MaterialPageRoute(
           builder: (_) => const PaymentHistoryScreen(),
+        );
+      case Routes.paymentHistoryDetails:
+        return MaterialPageRoute(
+          builder: (_) => const PaymentHistoryDetailsScreen(),
         );
       default:
         return MaterialPageRoute(
