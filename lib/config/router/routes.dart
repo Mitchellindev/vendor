@@ -66,4 +66,7 @@ class Routes {
   static const String myWallet = '/myWallet';
   static const String allTransactons = '/allTransactons';
   static const String transactionDetails = '/transactionDetails';
+
+  //Payment
+  static const String paymentHistory = "/paymentHistory";
 }

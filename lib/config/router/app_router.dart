@@ -1,3 +1,5 @@
+import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
+
 import 'routes.dart';
 import '../../core/widgets/error_screen.dart';
 import '../../features/auth/presentation/screens/forgot_password.dart';
@@ -248,7 +250,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const RejectedSoldListScreen(),
         );
-
+      case Routes.paymentHistory:
+        return MaterialPageRoute(
+          builder: (_) => const PaymentHistoryScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => const ErrorScreen(),
