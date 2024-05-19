@@ -38,7 +38,7 @@ class DetailsGridBlock extends StatelessWidget {
           ),
           Flexible(
             child: TextWidget(
-              text: "₦$value",
+              text: value,
               fontSize: 18,
               textAlign: TextAlign.center,
               fontWeight: FontWeight.w500,

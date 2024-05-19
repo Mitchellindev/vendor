@@ -43,6 +43,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
       "label": "Payout",
       "amount": "12.00",
     },
+    {
+      "label": "Albert Here",
+      "amount": "Say Hi",
+    },
   ];
   bool noStore = false;
   bool isLoading = true;
@@ -196,12 +200,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   childAspectRatio: 2 / 1,
                                   children: List.generate(
                                       data.length,
-                                      (index) => DetailsGridBlock(
-                                            label: data[index]["label"],
-                                            value: isVisible
-                                                ? data[index]["amount"]
-                                                : "*****",
-                                          )),
+                                      (index) => index == 5
+                                          ? const DetailsGridBlock(
+                                              label: "Albert Here",
+                                              value: "Say Hi",
+                                            )
+                                          : DetailsGridBlock(
+                                              label: data[index]["label"],
+                                              value: isVisible
+                                                  ? "₦${data[index]["amount"]}"
+                                                  : "*****",
+                                            )),
                                 ),
                               ),
                               const HorizontalDivider(
