@@ -1,5 +1,7 @@
 import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/features/payment/data/models/payment_history_model.dart';
+import 'package:broadcaadvendor/features/payment/data/providers/payment_history_provider.dart';
 import 'package:broadcaadvendor/features/payment/presentation/widgets/payment_history_item.dart';
 import 'package:flutter/material.dart';
 
@@ -8,36 +10,8 @@ class PaymentHistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> items = [
-      {
-        "image": "assets/images/product.png",
-        "label": "Channel Bag",
-        "price": 6000,
-        "date": "5 Nov, 2023 ",
-        "status": "Completed"
-      },
-      {
-        "image": "assets/images/product.png",
-        "label": "Channel Bag",
-        "price": 6000,
-        "date": "5 Nov, 2023 ",
-        "status": "Completed"
-      },
-      {
-        "image": "assets/images/product.png",
-        "label": "Channel Bag",
-        "price": 6000,
-        "date": "5 Nov, 2023 ",
-        "status": "Completed"
-      },
-      {
-        "image": "assets/images/product.png",
-        "label": "Channel Bag",
-        "price": 6000,
-        "date": "5 Nov, 2023 ",
-        "status": "Completed"
-      },
-    ];
+    final List<PaymentHistoryModel> history =
+        PaymentHistoryProvider.getHistory();
     return Scaffold(
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
@@ -51,13 +25,13 @@ class PaymentHistoryScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: ListView(
           children: List.generate(
-            items.length,
+            history.length,
             (index) => PaymentHistoryItem(
-              image: items[index]["image"],
-              label: items[index]["label"],
-              price: items[index]["price"],
-              date: items[index]["date"],
-              status: items[index]["status"],
+              image: history[index].image,
+              label: history[index].label,
+              price: history[index].price,
+              date: history[index].date,
+              status: history[index].status,
               onTap: () {
                 Navigator.pushNamed(context, Routes.paymentHistoryDetails);
               },

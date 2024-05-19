@@ -1,10 +1,10 @@
-import '../../../../config/router/routes.dart';
-import '../../../../core/utils/size_config.dart';
-import '../../../../core/widgets/horizontal_divider.dart';
-import '../../../../core/widgets/text_widget.dart';
-import '../widgets/fab_row_two.dart';
-import '../widgets/profile_action_widget.dart';
-import '../widgets/profile_header.dart';
+import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/utils/size_config.dart';
+import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
+import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/features/profile/presentation/widgets/fab_row_two.dart';
+import 'package:broadcaadvendor/features/profile/presentation/widgets/profile_action_widget.dart';
+import 'package:broadcaadvendor/features/profile/presentation/widgets/profile_header.dart';
 import 'package:flutter/material.dart';
 
 class VendorProfileScreen extends StatefulWidget {
