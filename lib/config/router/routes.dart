@@ -71,4 +71,7 @@ class Routes {
   //Payment
   static const String paymentHistory = "/paymentHistory";
   static const String paymentHistoryDetails = "/paymentHistoryDetails";
+
+  //support
+  static const String customerSupport = "/customerSupport";
 }

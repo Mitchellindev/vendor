@@ -1,6 +1,7 @@
 import 'package:broadcaadvendor/features/home/presentation/screens/dashboard_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
+import 'package:broadcaadvendor/features/support/presentation/screens/customer_support_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/widgets/error_screen.dart';
@@ -263,6 +264,10 @@ class AppRouter {
       case Routes.dashboard:
         return MaterialPageRoute(
           builder: (_) => const DashboardScreen(),
+        );
+      case Routes.customerSupport:
+        return MaterialPageRoute(
+          builder: (_) => const CustomerSupportScreen(),
         );
       default:
         return MaterialPageRoute(
