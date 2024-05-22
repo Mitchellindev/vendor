@@ -61,14 +61,19 @@ class _MenuWidgetState extends State<MenuWidget> {
               imageColor: Colors.white,
               label: "Settings"),
           MenuItemWidget(
+            onTap: () {
+              Navigator.pushNamed(context, Routes.customerSupport);
+            },
+            iconPath: "assets/images/logout.png",
+            label: "Customer Support",
+          ),
+          MenuItemWidget(
             onTap: () {},
             iconPath: "assets/images/logout.png",
             label: "Logout",
             color: const Color.fromARGB(252, 255, 0, 0),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const Spacer(),
           Image.asset(
             "assets/images/upgrade_to_premium.png",
             width: 220,

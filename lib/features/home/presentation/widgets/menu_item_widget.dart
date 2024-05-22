@@ -1,5 +1,6 @@
-import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class MenuItemWidget extends StatelessWidget {
   const MenuItemWidget(
@@ -20,7 +21,7 @@ class MenuItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15),
       child: GestureDetector(
         onTap: onTap,
         child: Row(

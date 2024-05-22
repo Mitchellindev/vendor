@@ -1,6 +1,8 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../core/widgets/text_widget.dart';
 import '../../../services/presentation/screens/service_item_widget.dart';
-import 'package:flutter/material.dart';
 
 class MyStoresScreen extends StatelessWidget {
   const MyStoresScreen({super.key});
@@ -21,7 +23,11 @@ class MyStoresScreen extends StatelessWidget {
         child: ListView(
             children: List.generate(
           4,
-          (index) => const ServiceItemWidget(),
+          (index) => ServiceItemWidget(
+            onTap: () {
+              Navigator.pushNamed(context, Routes.storeFront);
+            },
+          ),
         )),
       ),
     );

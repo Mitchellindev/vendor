@@ -1,32 +1,55 @@
+import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../../../home/presentation/widgets/logo_header.dart';
 import '../../../home/presentation/widgets/search_header.dart';
-import 'package:flutter/material.dart';
+
+class NoStoreOrServiceScreen extends StatefulWidget {
+  const NoStoreOrServiceScreen({super.key});
+
+  @override
+  State<NoStoreOrServiceScreen> createState() => _NoStoreOrServiceScreenState();
+}
+
+class _NoStoreOrServiceScreenState extends State<NoStoreOrServiceScreen> {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: scaffoldKey,
+      drawer: const MenuWidget(),
+      body: NoStoreWidget(
+        scaffoldKey: scaffoldKey,
+      ),
+    );
+  }
+}
 
 class NoStoreWidget extends StatefulWidget {
-  const NoStoreWidget({super.key});
-
+  const NoStoreWidget({super.key, required this.scaffoldKey});
+  final GlobalKey<ScaffoldState> scaffoldKey;
   @override
   State<NoStoreWidget> createState() => _NoStoreWidgetState();
 }
 
 class _NoStoreWidgetState extends State<NoStoreWidget> {
   PageController controller = PageController(viewportFraction: .9);
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.only(top: 20).copyWith(left: 20, right: 20),
       child: SizedBox(
         height: MediaQuery.of(context).size.height * .95,
         child: ListView(
           children: [
             const LogoHeader(),
             SearchHeader(
-              scaffoldKey: scaffoldKey,
+              scaffoldKey: widget.scaffoldKey,
               withSearch: true,
             ),
             const SizedBox(

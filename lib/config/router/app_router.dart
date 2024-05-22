@@ -1,6 +1,7 @@
 import 'package:broadcaadvendor/features/home/presentation/screens/dashboard_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_one.dart';
 import 'package:broadcaadvendor/features/support/presentation/screens/customer_support_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ import '../../features/auth/presentation/screens/otp_screen.dart';
 import '../../features/auth/presentation/screens/reset_password.dart';
 import '../../features/auth/presentation/screens/signup_screen.dart';
 import '../../features/auth/presentation/screens/verification_successful.dart';
-import '../../features/home/presentation/screens/home.dart';
+import '../../features/home/presentation/screens/store_front.dart';
 import '../../features/notifications/screens/notifications_screens.dart';
 import '../../features/products/presentation/screens/add_products_screen.dart';
 import '../../features/products/presentation/screens/categories_items_screen.dart';
@@ -80,9 +81,9 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ResetPasswordScreen(),
         );
-      case Routes.home:
+      case Routes.storeFront:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => const StoreFrontScreen(),
         );
       case Routes.firstStoreCreation:
         return MaterialPageRoute(
@@ -268,6 +269,10 @@ class AppRouter {
       case Routes.customerSupport:
         return MaterialPageRoute(
           builder: (_) => const CustomerSupportScreen(),
+        );
+      case Routes.noStoreOrService:
+        return MaterialPageRoute(
+          builder: (_) => const NoStoreOrServiceScreen(),
         );
       default:
         return MaterialPageRoute(

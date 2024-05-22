@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/widgets/text_widget.dart';
 import 'service_item_widget.dart';
-import 'package:flutter/material.dart';
 
 class MyServicesScreen extends StatelessWidget {
   const MyServicesScreen({super.key});
@@ -21,7 +22,9 @@ class MyServicesScreen extends StatelessWidget {
         child: ListView(
             children: List.generate(
           4,
-          (index) => const ServiceItemWidget(),
+          (index) => ServiceItemWidget(
+            onTap: () {},
+          ),
         )),
       ),
     );

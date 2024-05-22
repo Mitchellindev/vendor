@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
 import '../../../../core/widgets/text_widget.dart';
-import 'package:flutter/material.dart';
 
 class VerificationSuccessfulScreen extends StatelessWidget {
   const VerificationSuccessfulScreen({super.key});
@@ -35,7 +36,7 @@ class VerificationSuccessfulScreen extends StatelessWidget {
               PrimaryButton(
                   label: "Proceed",
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, Routes.home);
+                    Navigator.pushReplacementNamed(context, Routes.storeFront);
                   },
                   isEnabled: true)
             ],

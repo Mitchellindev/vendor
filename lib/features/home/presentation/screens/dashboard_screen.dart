@@ -285,7 +285,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                     PrimaryButton(
                         label: "Create Your Store/Service",
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.noStoreOrService);
+                        },
                         isEnabled: true),
                     const SizedBox(
                       height: 20,

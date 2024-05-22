@@ -11,7 +11,7 @@ class Routes {
   static const String resetPassword = '/resetPasswords';
 
 //Home
-  static const String home = '/home';
+  static const String storeFront = '/storeFront';
   static const String dashboard = '/dashboard';
 
   //Store
@@ -25,6 +25,7 @@ class Routes {
   static const String stockSales = '/stockSales';
   static const String clicksViewsList = '/clicksViewsList';
   static const String rejectedSoldListScreen = '/rejectedSoldListScreen';
+  static const String noStoreOrService = '/noStoreOrService';
 
   //Products
   static const String addProduct = '/addProduct';
