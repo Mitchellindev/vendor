@@ -1,3 +1,5 @@
+import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/core/widgets/white_popup.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../config/router/routes.dart';
@@ -32,6 +34,13 @@ class _MenuWidgetState extends State<MenuWidget> {
           ),
           const NotificationMenuItem(),
           MenuItemWidget(
+              onTap: () {
+                Navigator.pushNamed(context, Routes.dashboard);
+              },
+              iconPath: "assets/images/settings.png",
+              imageColor: Colors.white,
+              label: "Dashboard"),
+          MenuItemWidget(
               onTap: () {},
               iconPath: "assets/images/chat_menu_item.png",
               label: "My Chat"),
@@ -56,7 +65,9 @@ class _MenuWidgetState extends State<MenuWidget> {
               iconPath: "assets/images/chart.png",
               label: "My Store Analytics"),
           MenuItemWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, Routes.settings);
+              },
               iconPath: "assets/images/settings.png",
               imageColor: Colors.white,
               label: "Settings"),
@@ -64,11 +75,58 @@ class _MenuWidgetState extends State<MenuWidget> {
             onTap: () {
               Navigator.pushNamed(context, Routes.customerSupport);
             },
-            iconPath: "assets/images/logout.png",
+            iconPath: "assets/images/settings.png",
+            imageColor: Colors.white,
             label: "Customer Support",
           ),
           MenuItemWidget(
-            onTap: () {},
+            onTap: () {
+              showWhitePopup(
+                  context: context,
+                  widget: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const TextWidget(
+                          text: "Logout",
+                          fontSize: 21,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const TextWidget(
+                          text: "Are you sure you want to logout?",
+                          textAlign: TextAlign.center,
+                          fontSize: 18,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextWidget(
+                              text: "Yes",
+                              fontSize: 21,
+                              fontWeight: FontWeight.w600,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                            const SizedBox(
+                              width: 100,
+                            ),
+                            const TextWidget(
+                                text: "Yes",
+                                fontSize: 21,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.red)
+                          ],
+                        )
+                      ],
+                    ),
+                  ));
+            },
             iconPath: "assets/images/logout.png",
             label: "Logout",
             color: const Color.fromARGB(252, 255, 0, 0),

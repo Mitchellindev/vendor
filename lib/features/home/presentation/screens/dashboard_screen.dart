@@ -22,37 +22,50 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   bool isVisible = false;
   DateTime selectedTime = DateTime.now();
-  List<Map<String, dynamic>> data = [
-    {
-      "label": "Total Earnings",
-      "amount": "12.00",
-    },
-    {
-      "label": "Total Sales",
-      "amount": "12.00",
-    },
-    {
-      "label": "Wallet Balance",
-      "amount": "12.00",
-    },
-    {
-      "label": "Weekly Sales",
-      "amount": "12.00",
-    },
-    {
-      "label": "Payout",
-      "amount": "12.00",
-    },
-    {
-      "label": "Albert Here",
-      "amount": "Say Hi",
-    },
-  ];
+
   bool noStore = false;
   bool isLoading = true;
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    List<Map<String, dynamic>> data = [
+      {
+        "label": "Total Earnings",
+        "amount": "12.00",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.storePerformance);
+        }
+      },
+      {
+        "label": "Total Sales",
+        "amount": "12.00",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.storePerformance);
+        }
+      },
+      {
+        "label": "Wallet Balance",
+        "amount": "12.00",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.myWallet);
+        }
+      },
+      {
+        "label": "Weekly Sales",
+        "amount": "12.00",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.storePerformance);
+        }
+      },
+      {
+        "label": "Payout",
+        "amount": "12.00",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.paymentMethods);
+        }
+      },
+      {"label": "Albert Here", "amount": "Say Hi", "onTap": () {}},
+    ];
     Future.delayed(const Duration(seconds: 2), () {
       setState(() {
         isLoading = false;
@@ -205,11 +218,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                               label: "Albert Here",
                                               value: "Say Hi",
                                             )
-                                          : DetailsGridBlock(
-                                              label: data[index]["label"],
-                                              value: isVisible
-                                                  ? "₦${data[index]["amount"]}"
-                                                  : "*****",
+                                          : GestureDetector(
+                                              onTap: data[index]["onTap"],
+                                              child: DetailsGridBlock(
+                                                label: data[index]["label"],
+                                                value: isVisible
+                                                    ? "₦${data[index]["amount"]}"
+                                                    : "*****",
+                                              ),
                                             )),
                                 ),
                               ),

@@ -1,6 +1,10 @@
+import 'package:broadcaadvendor/features/card_details/presentation/screens/card_details_screen.dart';
 import 'package:broadcaadvendor/features/home/presentation/screens/dashboard_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
+import 'package:broadcaadvendor/features/payment_method/presentation/screens/master_card_screen.dart';
+import 'package:broadcaadvendor/features/payment_method/presentation/screens/payment_methods_screen.dart';
+import 'package:broadcaadvendor/features/settings/presentation/screens/settings_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_one.dart';
 import 'package:broadcaadvendor/features/support/presentation/screens/customer_support_screen.dart';
 import 'package:flutter/material.dart';
@@ -273,6 +277,23 @@ class AppRouter {
       case Routes.noStoreOrService:
         return MaterialPageRoute(
           builder: (_) => const NoStoreOrServiceScreen(),
+        );
+      case Routes.paymentMethods:
+        return MaterialPageRoute(
+          builder: (_) => const PaymentMethodsScreen(),
+        );
+
+      case Routes.settings:
+        return MaterialPageRoute(
+          builder: (_) => const SettingsScreen(),
+        );
+      case Routes.masterCard:
+        return MaterialPageRoute(
+          builder: (_) => const MasterCardScreen(),
+        );
+      case Routes.cardDetails:
+        return MaterialPageRoute(
+          builder: (_) => const CardDetailsScreen(),
         );
       default:
         return MaterialPageRoute(

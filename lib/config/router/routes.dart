@@ -75,4 +75,12 @@ class Routes {
 
   //support
   static const String customerSupport = "/customerSupport";
+
+  //Settings
+  static const String settings = "/settings";
+
+  //Payment Methods
+  static const String paymentMethods = "/paymentMethods";
+  static const String masterCard = "/masterCard";
+  static const String cardDetails = "/cardDetails";
 }

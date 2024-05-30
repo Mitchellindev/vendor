@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:flutter/material.dart';
 
 class LogoHeader extends StatelessWidget {
@@ -7,16 +8,19 @@ class LogoHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Transform.translate(
-          offset: const Offset(-4, 0),
-          child: Image.asset(
-            "assets/images/home_logo.png",
-            width: 150,
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, Routes.dashboard),
+      child: Row(
+        children: [
+          Transform.translate(
+            offset: const Offset(-4, 0),
+            child: Image.asset(
+              "assets/images/home_logo.png",
+              width: 150,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
