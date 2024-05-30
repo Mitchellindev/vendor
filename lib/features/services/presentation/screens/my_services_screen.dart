@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/text_widget.dart';
@@ -23,7 +24,9 @@ class MyServicesScreen extends StatelessWidget {
             children: List.generate(
           4,
           (index) => ServiceItemWidget(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, Routes.serviceSummary);
+            },
           ),
         )),
       ),
