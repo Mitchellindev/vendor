@@ -24,6 +24,9 @@ dependencies:
   shimmer: ^3.0.0
   accordion: ^2.6.0
   smooth_page_indicator: ^1.1.0
+  dartz: ^0.10.1
+  shared_preferences: ^2.2.3
+  data_connection_checker_tv: ^0.3.5-nullsafety
 
 dev_dependencies:
   flutter_test:
