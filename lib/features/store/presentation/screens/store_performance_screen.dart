@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../config/router/routes.dart';
 import '../../../../core/utils/size_config.dart';
@@ -7,8 +10,6 @@ import '../widgets/chart_container.dart';
 import '../widgets/click_views_chart_container.dart';
 import '../widgets/clicks_widget.dart';
 import '../widgets/rejected_sold_widget_item.dart';
-import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class StorePerformanceScreen extends StatefulWidget {
   const StorePerformanceScreen({super.key});
@@ -21,7 +22,7 @@ class _StorePerformanceScreenState extends State<StorePerformanceScreen> {
   late PageController controller;
   @override
   void initState() {
-    controller = PageController();
+    controller = PageController(initialPage: 1);
     super.initState();
   }
 

@@ -1,5 +1,6 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
 import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
@@ -83,7 +84,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
       resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+          padding:
+              EdgeInsets.symmetric(horizontal: 20.0.width, vertical: 20.height),
           child: isLoading
               ? const LoadingScreenBody()
               : Stack(
@@ -115,16 +117,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               },
                               child: Image.asset(
                                 "assets/images/bell.png",
-                                width: 24,
+                                width: 24.width,
                               ),
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 20.height,
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 10.0),
+                          padding: EdgeInsets.only(top: 10.height),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -132,10 +134,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 children: [
                                   Image.asset(
                                     "assets/images/profile_pic.png",
-                                    width: 60,
+                                    width: 60.width,
                                   ),
-                                  const SizedBox(
-                                    width: 20,
+                                  SizedBox(
+                                    width: 20.width,
                                   ),
                                   const Column(
                                     crossAxisAlignment:
@@ -152,22 +154,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   )
                                 ],
                               ),
-                              const SizedBox(
-                                height: 15,
+                              SizedBox(
+                                height: 15.height,
                               ),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   const TextWidget(
                                     text: "Overview",
                                     fontSize: 21,
                                     fontWeight: FontWeight.w500,
                                   ),
+                                  const Spacer(),
                                   SizedBox(
-                                    width:
-                                        SizeConfig.getProportionateScreenWidth(
-                                            context: context, inputWidth: 110),
+                                    width: 110.width,
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -197,7 +196,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                         ),
                                         TextWidget(
                                           text: isVisible ? "Show" : "Hide",
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.w500,
                                         )
                                       ],
@@ -205,14 +204,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   ),
                                 ],
                               ),
-                              const SizedBox(
-                                height: 20,
+                              SizedBox(
+                                height: 20.height,
                               ),
                               SizedBox(
                                 height: SizeConfig.getProportionateScreenHeight(
-                                    context: context, inputHeight: 130),
+                                    context: context, inputHeight: 150),
                                 child: GridView.count(
                                   mainAxisSpacing: 10,
+                                  primary: false,
                                   crossAxisSpacing: 10,
                                   crossAxisCount: 3,
                                   childAspectRatio: 2 / 1,
@@ -247,8 +247,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               ),
                               ChartContainer(
                                   selectedDate: selectedTime, label: "Sales"),
-                              const SizedBox(
-                                height: 20,
+                              SizedBox(
+                                height: 20.height,
                               ),
                               GestureDetector(
                                 onTap: () {
@@ -300,7 +300,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         ),
                         SizedBox(
                           height: SizeConfig.getProportionateScreenHeight(
-                              context: context, inputHeight: 50),
+                              context: context, inputHeight: 50.height),
                         )
                       ],
                     ),
@@ -310,8 +310,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Navigator.pushNamed(context, Routes.noStoreOrService);
                         },
                         isEnabled: true),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: 20.height,
                     )
                   ],
                 ),

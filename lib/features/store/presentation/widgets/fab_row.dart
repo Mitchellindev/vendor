@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../../config/router/routes.dart';
 import 'fab_icon_button.dart';
-import 'package:flutter/material.dart';
 
 class FabRow extends StatelessWidget {
   const FabRow({
@@ -12,21 +13,22 @@ class FabRow extends StatelessWidget {
     return Row(
       children: [
         FabIconButton(
+          onTap: () {},
           icon: Image.asset("assets/images/fab_chat.png"),
         ),
         const SizedBox(
           width: 20,
         ),
         FabIconButton(
-          borderRadius: 20,
-          icon: IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, Routes.addProduct);
-            },
-            icon: Icon(
-              Icons.add,
-              color: Colors.white,
-              size: 30,
+          onTap: () {
+            Navigator.pushNamed(context, Routes.addProduct);
+          },
+          borderRadius: 15,
+          icon: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Image.asset(
+              "assets/images/plus.png",
+              width: 20,
             ),
           ),
         ),

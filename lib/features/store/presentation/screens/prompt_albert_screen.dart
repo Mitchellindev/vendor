@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/widgets/text_widget.dart';
 import '../../../auth/presentation/widgets/input_field_widget.dart';
 import '../widgets/fab_icon_button.dart';
-import 'package:flutter/material.dart';
 
 class PromptAlbertScreen extends StatefulWidget {
   const PromptAlbertScreen({super.key, required this.isMicrophoneEnabled});
@@ -52,6 +53,7 @@ class _PromptAlbertScreenState extends State<PromptAlbertScreen> {
       ),
       floatingActionButton: widget.isMicrophoneEnabled
           ? FabIconButton(
+              onTap: () {},
               borderRadius: 20,
               icon: Padding(
                 padding: const EdgeInsets.all(10.0),

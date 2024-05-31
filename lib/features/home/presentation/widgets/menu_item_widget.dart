@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/text_widget.dart';
@@ -21,18 +22,19 @@ class MenuItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15),
+      padding:
+          EdgeInsets.symmetric(horizontal: 30.0.width, vertical: 15.height),
       child: GestureDetector(
         onTap: onTap,
         child: Row(
           children: [
             Image.asset(
               iconPath,
-              width: imageWidth,
+              width: imageWidth.width,
               color: imageColor,
             ),
-            const SizedBox(
-              width: 15,
+            SizedBox(
+              width: 15.width,
             ),
             TextWidget(
               text: label,

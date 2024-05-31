@@ -1,7 +1,9 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
 import '../../../../core/widgets/text_widget.dart';
-import 'package:flutter/material.dart';
 
 class ProductItemWidget extends StatelessWidget {
   const ProductItemWidget({
@@ -64,8 +66,8 @@ class ProductItemWidget extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 10.height,
         ),
         PrimaryButton(
             label: "Edit Product",

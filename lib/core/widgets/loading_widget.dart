@@ -1,5 +1,6 @@
-import 'text_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'text_widget.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key, required this.label});
@@ -8,6 +9,7 @@ class LoadingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(

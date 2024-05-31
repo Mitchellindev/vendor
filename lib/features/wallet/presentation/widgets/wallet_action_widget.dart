@@ -1,5 +1,7 @@
-import '../../../../core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class WalletActionWidget extends StatelessWidget {
   const WalletActionWidget(
@@ -12,35 +14,36 @@ class WalletActionWidget extends StatelessWidget {
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 116,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: const Color.fromARGB(28, 3, 14, 79),
-        ),
-        padding: const EdgeInsets.symmetric(
-          vertical: 12.5,
-        ),
-        child: Column(children: [
-          CircleAvatar(
-            radius: 25,
-            backgroundColor: const Color.fromARGB(59, 3, 14, 79),
-            child: Image.asset(
-              icon,
-              width: 30,
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color.fromARGB(28, 3, 14, 79),
+          ),
+          padding: const EdgeInsets.symmetric(
+            vertical: 12.5,
+          ),
+          child: Column(children: [
+            CircleAvatar(
+              radius: 20,
+              backgroundColor: const Color.fromARGB(59, 3, 14, 79),
+              child: Image.asset(
+                icon,
+                width: 24.height,
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          TextWidget(
-            text: label,
-            fontWeight: FontWeight.w500,
-            fontSize: 16,
-          )
-        ]),
+            SizedBox(
+              height: 15.height,
+            ),
+            TextWidget(
+              text: label,
+              fontWeight: FontWeight.w500,
+              fontSize: 16,
+            )
+          ]),
+        ),
       ),
     );
   }

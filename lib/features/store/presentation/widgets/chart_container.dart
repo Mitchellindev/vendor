@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/utils/helpers.dart';
 import '../../../../core/widgets/text_widget.dart';
-import 'package:flutter/material.dart';
 
 class ChartContainer extends StatelessWidget {
   const ChartContainer({
@@ -51,7 +52,9 @@ class ChartContainer extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Image.asset("assets/images/service_chart.png")
+          Image.asset(
+            "assets/images/service_chart.png",
+          )
         ],
       ),
     );

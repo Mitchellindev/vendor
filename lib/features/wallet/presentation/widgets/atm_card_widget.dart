@@ -1,5 +1,7 @@
-import '../../../../core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class ATMCardWidget extends StatelessWidget {
   const ATMCardWidget({super.key});
@@ -12,7 +14,7 @@ class ATMCardWidget extends StatelessWidget {
           color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(10)),
       width: double.infinity,
-      height: 208,
+      height: 188.height,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

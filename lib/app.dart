@@ -2,6 +2,7 @@ import 'package:broadcaadvendor/config/router/app_router.dart';
 import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/config/theme/light_theme.dart';
 import 'package:broadcaadvendor/core/connection/network_info.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:broadcaadvendor/features/auth/data/providers/local_provider.dart';
 import 'package:broadcaadvendor/features/auth/data/providers/remote_provider.dart';
 import 'package:broadcaadvendor/features/auth/data/repositories/auth_repository.dart';
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppConstraints().initialize(context);
+
     final appRouter = AppRouter();
     return GestureDetector(
         onTap: () {
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
             theme: lightTheme(),
             debugShowCheckedModeBanner: false,
             // initialRoute: Routes.login,
-            initialRoute: Routes.login,
+            initialRoute: Routes.dashboard,
 
             onGenerateRoute: appRouter.onGenerateRoute,
           ),

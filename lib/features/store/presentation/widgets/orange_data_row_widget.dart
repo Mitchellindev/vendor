@@ -1,5 +1,7 @@
-import '../../../../core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class OrangeDataRow extends StatelessWidget {
   const OrangeDataRow({
@@ -21,8 +23,8 @@ class OrangeDataRow extends StatelessWidget {
             fontSize: 18,
           ),
           Container(
-            height: 40,
-            width: 40,
+            height: 40.height,
+            width: 40.width,
             decoration: BoxDecoration(
                 color: const Color(0xffF49F1C),
                 borderRadius: BorderRadius.circular(10)),

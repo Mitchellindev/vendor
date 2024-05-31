@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
@@ -6,7 +8,6 @@ import '../../../auth/presentation/widgets/input_field_widget.dart';
 import '../../../store/presentation/widgets/accordion_widget.dart';
 import '../../../store/presentation/widgets/checkbox_container_widget.dart';
 import '../../../store/presentation/widgets/vendor_category_check_box.dart';
-import 'package:flutter/material.dart';
 
 class ServiceCreationFormScreen extends StatefulWidget {
   const ServiceCreationFormScreen({super.key});
@@ -51,7 +52,8 @@ class _ServiceCreationFormScreenState extends State<ServiceCreationFormScreen> {
     super.initState();
   }
 
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
 
   @override
   Widget build(BuildContext context) {

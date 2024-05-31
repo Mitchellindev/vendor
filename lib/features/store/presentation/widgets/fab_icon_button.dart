@@ -5,27 +5,32 @@ class FabIconButton extends StatelessWidget {
     super.key,
     required this.icon,
     this.borderRadius = 10,
+    required this.onTap,
   });
   final Widget icon;
   final double borderRadius;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromARGB(133, 3, 14, 79),
-              blurRadius: 10.0,
-              spreadRadius: 1.0,
-              offset: Offset(-4.0, 5.0),
-            )
-          ],
-          color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(borderRadius)),
-      child: icon,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+            boxShadow: const [
+              BoxShadow(
+                color: Color.fromARGB(133, 3, 14, 79),
+                blurRadius: 10.0,
+                spreadRadius: 1.0,
+                offset: Offset(-4.0, 5.0),
+              )
+            ],
+            color: Theme.of(context).colorScheme.primary,
+            borderRadius: BorderRadius.circular(borderRadius)),
+        child: icon,
+      ),
     );
   }
 }

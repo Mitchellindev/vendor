@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import '../../../../config/router/routes.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../widgets/booked_services.dart';
 import '../widgets/no_booked_service.dart';
-import 'package:flutter/material.dart';
 
 class BookedServicesScreen extends StatefulWidget {
   const BookedServicesScreen({super.key});
@@ -12,7 +13,8 @@ class BookedServicesScreen extends StatefulWidget {
 }
 
 class _BookedServicesScreenState extends State<BookedServicesScreen> {
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
   int value = 0;
 
   @override

@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../core/widgets/text_widget.dart';
@@ -7,7 +9,6 @@ import '../../../store/presentation/widgets/edit_photos_popup.dart';
 import '../../../store/presentation/widgets/name_change_popup.dart';
 import '../../../store/presentation/widgets/primary_icon_button.dart';
 import '../../../store/presentation/widgets/vendor_category_check_box.dart';
-import 'package:flutter/material.dart';
 
 class EditServiceScreen extends StatefulWidget {
   const EditServiceScreen({super.key});
@@ -19,7 +20,8 @@ class EditServiceScreen extends StatefulWidget {
 class _EditServiceScreenState extends State<EditServiceScreen> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   bool isLoading = true;
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
 
   @override
   Widget build(BuildContext context) {

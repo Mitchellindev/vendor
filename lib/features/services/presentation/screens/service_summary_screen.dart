@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+
 import '../../../../config/router/routes.dart';
 import '../../../home/presentation/widgets/logo_header.dart';
 import '../../../home/presentation/widgets/menu_widget.dart';
 import '../../../home/presentation/widgets/search_header.dart';
-import '../widgets/scrollable_service_body.dart';
 import '../../../store/presentation/widgets/fab_icon_button.dart';
-import 'package:flutter/material.dart';
+import '../widgets/scrollable_service_body.dart';
 
 class ServiceSummaryScreen extends StatefulWidget {
   const ServiceSummaryScreen({super.key});
@@ -15,7 +16,8 @@ class ServiceSummaryScreen extends StatefulWidget {
 
 class _ServiceSummaryScreenState extends State<ServiceSummaryScreen> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,7 @@ class _ServiceSummaryScreenState extends State<ServiceSummaryScreen> {
         ),
       ),
       floatingActionButton: FabIconButton(
+        onTap: () {},
         borderRadius: 20,
         icon: IconButton(
           onPressed: () {

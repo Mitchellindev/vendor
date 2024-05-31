@@ -1,9 +1,11 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../config/router/routes.dart';
 import '../../../../core/utils/size_config.dart';
 import '../../../../core/widgets/horizontal_divider.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../widgets/profile_action_widget.dart';
-import 'package:flutter/material.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
@@ -95,7 +97,7 @@ class _EditProfileScreenState extends State<EditProfileScreen>
             padding: const EdgeInsets.symmetric(vertical: 30),
             width: double.infinity,
             height: SizeConfig.getProportionateScreenHeight(
-                context: context, inputHeight: 700),
+                context: context, inputHeight: 700.height),
             decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(

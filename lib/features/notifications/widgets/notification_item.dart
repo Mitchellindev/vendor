@@ -1,6 +1,8 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:flutter/material.dart';
+
 import '../../../core/utils/size_config.dart';
 import '../../../core/widgets/text_widget.dart';
-import 'package:flutter/material.dart';
 
 class NotificationItem extends StatelessWidget {
   const NotificationItem(
@@ -11,7 +13,7 @@ class NotificationItem extends StatelessWidget {
       required this.onMenuItemSelected});
   final bool isRead;
   final VoidCallback onTap;
-  final List<Map<String, dynamic>> menuItems; // List of menu item titles
+  final List<Map<String, dynamic>> menuItems;
   final List<VoidCallback> onMenuItemSelected;
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class NotificationItem extends StatelessWidget {
                     ? Colors.transparent
                     : const Color.fromARGB(49, 3, 14, 79)),
             width: double.infinity,
-            height: 107,
+            height: 115.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [

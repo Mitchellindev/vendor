@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../core/widgets/text_widget.dart';
@@ -8,7 +10,6 @@ import '../widgets/edit_photos_popup.dart';
 import '../widgets/name_change_popup.dart';
 import '../widgets/primary_icon_button.dart';
 import '../widgets/vendor_category_check_box.dart';
-import 'package:flutter/material.dart';
 
 class EditStoreScreen extends StatefulWidget {
   const EditStoreScreen({super.key});
@@ -20,7 +21,8 @@ class EditStoreScreen extends StatefulWidget {
 class _EditStoreScreenState extends State<EditStoreScreen> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   bool isLoading = true;
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
 
   @override
   Widget build(BuildContext context) {

@@ -1,11 +1,12 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../core/widgets/text_widget.dart';
-import '../widgets/stock_counter.dart';
 import '../../../store/presentation/widgets/accordion_widget.dart';
 import '../../../store/presentation/widgets/name_change_popup.dart';
 import '../../../store/presentation/widgets/vendor_category_check_box.dart';
-import 'package:flutter/material.dart';
+import '../widgets/stock_counter.dart';
 
 class EditProductsScreen extends StatefulWidget {
   const EditProductsScreen({super.key});
@@ -17,7 +18,8 @@ class EditProductsScreen extends StatefulWidget {
 class _EditProductsScreenState extends State<EditProductsScreen> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   bool isLoading = true;
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
   int value = 0;
 
   @override

@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
@@ -143,7 +144,7 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 width: double.infinity,
                 height: SizeConfig.getProportionateScreenHeight(
-                    context: context, inputHeight: 700),
+                    context: context, inputHeight: 700.height),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(

@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
@@ -6,7 +8,6 @@ import '../../../auth/presentation/widgets/input_field_widget.dart';
 import '../widgets/accordion_widget.dart';
 import '../widgets/checkbox_container_widget.dart';
 import '../widgets/vendor_category_check_box.dart';
-import 'package:flutter/material.dart';
 
 class StoreCreationFormScreeen extends StatefulWidget {
   const StoreCreationFormScreeen({super.key});
@@ -53,7 +54,8 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
     super.initState();
   }
 
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
 
   @override
   Widget build(BuildContext context) {

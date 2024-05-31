@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'fab_row.dart';
 import 'scrollable_body.dart';
-import 'package:flutter/material.dart';
 
 class StoreSummary extends StatefulWidget {
   const StoreSummary({super.key});
@@ -10,7 +11,8 @@ class StoreSummary extends StatefulWidget {
 }
 
 class _StoreSummaryState extends State<StoreSummary> {
-  PageController controller = PageController(viewportFraction: .9);
+  PageController controller =
+      PageController(viewportFraction: .9, initialPage: 1);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class _StoreSummaryState extends State<StoreSummary> {
       children: [
         ScrollableBody(controller: controller),
         Positioned(
-            top: MediaQuery.of(context).size.height * 0.75,
+            bottom: MediaQuery.of(context).size.height * .18,
             right: 5,
             child: const FabRow())
       ],

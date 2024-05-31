@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/core/widgets/white_popup.dart';
 import 'package:flutter/material.dart';
@@ -18,19 +19,19 @@ class _MenuWidgetState extends State<MenuWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 300.width,
       color: Theme.of(context).colorScheme.primary,
       child: Column(
         children: [
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 50.height,
           ),
           Image.asset(
             "assets/images/splash_image.png",
-            width: 180,
+            width: 150.width,
           ),
-          const SizedBox(
-            height: 35,
+          SizedBox(
+            height: 35.height,
           ),
           const NotificationMenuItem(),
           MenuItemWidget(
@@ -49,12 +50,12 @@ class _MenuWidgetState extends State<MenuWidget> {
                 Navigator.pushNamed(context, Routes.profile);
               },
               iconPath: "assets/images/profile.png",
-              imageWidth: 22,
+              imageWidth: 22.width,
               label: "My Profile"),
           MenuItemWidget(
               onTap: () {},
               iconPath: "assets/images/cart.png",
-              imageWidth: 28,
+              imageWidth: 28.width,
               label: "My Orders"),
           MenuItemWidget(
               onTap: () {},
@@ -134,10 +135,10 @@ class _MenuWidgetState extends State<MenuWidget> {
           const Spacer(),
           Image.asset(
             "assets/images/upgrade_to_premium.png",
-            width: 220,
+            width: 200.width,
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.height,
           ),
           const Flexible(child: PrivacyPolicyWidget()),
         ],
