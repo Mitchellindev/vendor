@@ -46,6 +46,13 @@ class AuthStatePasswordResetSent extends AuthState {
   const AuthStatePasswordResetSent();
 }
 
+class AuthStateIsRegistered extends AuthState {
+  final AuthUserModel authUser;
+  const AuthStateIsRegistered({
+    required this.authUser,
+  });
+}
+
 class AuthStateBiometricsNotEnabled extends AuthState {}
 
 class AuthStateBiometricsError extends AuthState {

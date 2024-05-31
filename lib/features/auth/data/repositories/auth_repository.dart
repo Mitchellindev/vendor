@@ -3,11 +3,11 @@ import 'package:broadcaadvendor/core/utils/typedef.dart';
 import 'package:broadcaadvendor/features/auth/data/providers/local_provider.dart';
 import 'package:broadcaadvendor/features/auth/data/providers/remote_provider.dart';
 
-class FirebaseAuthRepositoryImplementation {
+class AuthRepository {
   final RemoteAuthProvider authProvider;
   final AuthUserLocalDataSource localAuthUserSource;
   final NetworkInfo networkInfo;
-  FirebaseAuthRepositoryImplementation({
+  AuthRepository({
     required this.authProvider,
     required this.localAuthUserSource,
     required this.networkInfo,
