@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:bloc/bloc.dart';
-import 'package:broadcaadvendor/features/auth/errors/auth_error.dart';
+import 'package:broadcaadvendor/features/auth/data/errors/auth_error.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../../core/errors/local_auth_error.dart';

@@ -1,8 +1,10 @@
 import 'package:broadcaadvendor/app/widgets/primary_button.dart';
 import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/utils/logger.dart';
 import 'package:broadcaadvendor/core/utils/size_config.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/features/auth/data/providers/remote_provider.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/loading_screen_body.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/chart_container.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/datails_grid_bloc.dart';
@@ -20,6 +22,11 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   bool isVisible = false;
   DateTime selectedTime = DateTime.now();
 
@@ -32,8 +39,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
       {
         "label": "Total Earnings",
         "amount": "12.00",
-        "onTap": () {
-          Navigator.pushNamed(context, Routes.storePerformance);
+        "onTap": () async {
+          print("Clicked");
+          await RemoteAuthProviderImplementation().signUp(
+              email: "cokwor23@gmail.com",
+              password: "Tenstrings2**",
+              userCountry: "Nigeria",
+              userName: "Okwor");
+          logger.i("Done");
+          // Navigator.pushNamed(context, Routes.storePerformance);
         }
       },
       {

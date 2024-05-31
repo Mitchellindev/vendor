@@ -1,5 +1,5 @@
 import 'package:broadcaadvendor/features/auth/data/models/auth_user_model.dart';
-import 'package:broadcaadvendor/features/auth/errors/auth_error.dart';
+import 'package:broadcaadvendor/features/auth/data/errors/auth_error.dart';
 import 'package:dartz/dartz.dart';
 
 typedef EitherAuthUserOrAuthError = Either<AuthError, AuthUserModel>;

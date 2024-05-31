@@ -1,5 +1,4 @@
 class RoutesAndPaths {
-  //Base URL
-  static const String baseUrl = "";
-  static const String everything = "";
+  static const String baseUrl = "https://dev-apis.broadcaad.com/auth/v1/user";
+  static const String signUp = "/sign-up";
 }

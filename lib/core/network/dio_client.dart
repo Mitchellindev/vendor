@@ -1,5 +1,6 @@
-import 'api_endpoint.dart';
 import 'package:dio/dio.dart';
+
+import 'api_endpoint.dart';
 
 // import 'package:the_food_hub_nsk_nig/core/network/api_endpoint.dart';
 
@@ -39,8 +40,9 @@ class DioClient {
   }
 
   ///Post Method
-  Future<Map<String, dynamic>> post(String path,
-      {data,
+  Future<Map<String, dynamic>> post(
+      {required String path,
+      required Map<String, dynamic> data,
       Map<String, dynamic>? queryParameters,
       Options? options,
       CancelToken? cancelToken,
