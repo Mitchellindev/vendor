@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/utils/helpers.dart';
 import '../../../../core/widgets/text_widget.dart';
-import 'package:flutter/material.dart';
 
 class ClicksViewsChartContainer extends StatelessWidget {
   const ClicksViewsChartContainer({
@@ -47,22 +48,19 @@ class ClicksViewsChartContainer extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const Spacer(),
           Padding(
             padding:
-                const EdgeInsets.only(top: 50.0).copyWith(left: 30, right: 30),
+                const EdgeInsets.only(top: 20.0).copyWith(left: 30, right: 30),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Stack(
                   alignment: Alignment.center,
                   children: [
                     SizedBox(
-                      width: 130,
-                      height: 130,
+                      width: 100,
+                      height: 100,
                       child: CircularProgressIndicator(
                         strokeWidth: 7,
                         backgroundColor: Theme.of(context).colorScheme.tertiary,
@@ -70,8 +68,8 @@ class ClicksViewsChartContainer extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 100,
-                      height: 100,
+                      width: 70,
+                      height: 70,
                       child: CircularProgressIndicator(
                         strokeWidth: 7,
                         color: const Color(0xffA5F1E9),
@@ -81,6 +79,7 @@ class ClicksViewsChartContainer extends StatelessWidget {
                     ),
                   ],
                 ),
+                const Spacer(),
                 Column(
                   children: [
                     Row(
@@ -143,7 +142,8 @@ class ClicksViewsChartContainer extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          const Spacer()
         ],
       ),
     );

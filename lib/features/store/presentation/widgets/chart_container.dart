@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../../../../core/utils/helpers.dart';
 import '../../../../core/widgets/text_widget.dart';
@@ -52,11 +53,60 @@ class ChartContainer extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Image.asset(
-            "assets/images/service_chart.png",
-          )
+          const Flexible(child: ChartWidget())
         ],
       ),
     );
   }
+}
+
+class ChartWidget extends StatefulWidget {
+  const ChartWidget({super.key});
+
+  @override
+  State<ChartWidget> createState() => _ChartWidgetState();
+}
+
+class _ChartWidgetState extends State<ChartWidget> {
+  late TooltipBehavior _tooltipBehavior;
+
+  @override
+  void initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfCartesianChart(
+          primaryXAxis: const CategoryAxis(),
+          title: const ChartTitle(text: 'Half yearly sales analysis'),
+          legend: const Legend(isVisible: true),
+          tooltipBehavior: _tooltipBehavior,
+          series: <LineSeries<SalesData, String>>[
+            LineSeries<SalesData, String>(
+                dataSource: <SalesData>[
+                  SalesData('Jan', 35),
+                  SalesData('Feb', 28),
+                  SalesData('Mar', 34),
+                  SalesData('Apr', 32),
+                  SalesData('May', 40)
+                ],
+                xValueMapper: (SalesData sales, _) => sales.year,
+                yValueMapper: (SalesData sales, _) => sales.sales,
+                // Enable data label
+                dataLabelSettings: const DataLabelSettings(isVisible: true))
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SalesData {
+  SalesData(this.year, this.sales);
+  final String year;
+  final double sales;
 }

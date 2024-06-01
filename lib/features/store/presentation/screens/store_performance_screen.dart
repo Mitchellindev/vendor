@@ -1,9 +1,9 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../app/enums/enums.dart';
 import '../../../../config/router/routes.dart';
-import '../../../../core/utils/size_config.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../../../services/presentation/widgets/rejected_service_item_widget.dart';
 import '../widgets/chart_container.dart';
@@ -93,8 +93,7 @@ class _StorePerformanceScreenState extends State<StorePerformanceScreen> {
               ),
             ),
             SizedBox(
-              height: SizeConfig.getProportionateScreenHeight(
-                  context: context, inputHeight: 290),
+              height: 350.height,
               child: PageView(
                 controller: controller,
                 onPageChanged: (value) {

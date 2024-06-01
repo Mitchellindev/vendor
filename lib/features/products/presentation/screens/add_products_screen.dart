@@ -199,18 +199,6 @@ class _AddProductsScreenState extends State<AddProductsScreen> {
                   // Navigator.pushNamed(context, Routes.editStore);
                 },
                 isEnabled: true),
-            InputFieldWidget(
-                hintColor: colorScheme.primary,
-                validator: (p0) {
-                  return null;
-                },
-                maxLines: 5,
-                enabledBorderRadius: 5,
-                hintSize: 18,
-                verticalContentPadding: 10,
-                hintText: "Additional Information",
-                onChanged: (val) {},
-                textFieldkey: addDetailsKey),
             const SizedBox(
               height: 30,
             ),

@@ -218,6 +218,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/intl-0.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "js",
       "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/js-0.7.1",
       "packageUri": "lib/",
@@ -452,6 +458,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "syncfusion_flutter_charts",
+      "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/syncfusion_flutter_charts-25.2.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "syncfusion_flutter_core",
+      "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-25.2.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/chukwuemekaokwor/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -524,7 +542,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-30T19:36:59.998385Z",
+  "generated": "2024-06-01T14:45:37.921434Z",
   "generator": "pub",
   "generatorVersion": "3.3.3"
 }

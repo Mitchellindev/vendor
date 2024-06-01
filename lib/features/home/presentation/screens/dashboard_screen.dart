@@ -166,7 +166,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   ),
                                   const Spacer(),
                                   SizedBox(
-                                    width: 110.width,
+                                    width: 120.width,
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
