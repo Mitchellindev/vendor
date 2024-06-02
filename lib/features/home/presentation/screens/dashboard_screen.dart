@@ -166,7 +166,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   ),
                                   const Spacer(),
                                   SizedBox(
-                                    width: 120.width,
+                                    width: 110.width,
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -245,8 +245,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              ChartContainer(
-                                  selectedDate: selectedTime, label: "Sales"),
+                              SizedBox(
+                                height: 400,
+                                child: ChartContainer(
+                                    selectedDate: selectedTime, label: "Sales"),
+                              ),
                               SizedBox(
                                 height: 20.height,
                               ),

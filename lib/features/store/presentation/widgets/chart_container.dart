@@ -69,10 +69,11 @@ class ChartWidget extends StatefulWidget {
 
 class _ChartWidgetState extends State<ChartWidget> {
   late TooltipBehavior _tooltipBehavior;
-
+  late TrackballBehavior _trackballBehavior;
   @override
   void initState() {
     _tooltipBehavior = TooltipBehavior(enable: true);
+    _trackballBehavior = TrackballBehavior();
     super.initState();
   }
 
@@ -81,12 +82,16 @@ class _ChartWidgetState extends State<ChartWidget> {
     return Scaffold(
       body: Center(
         child: SfCartesianChart(
+          trackballBehavior: _trackballBehavior,
           primaryXAxis: const CategoryAxis(),
           title: const ChartTitle(text: 'Half yearly sales analysis'),
-          legend: const Legend(isVisible: true),
+          legend: const Legend(
+            isVisible: true,
+          ),
           tooltipBehavior: _tooltipBehavior,
           series: <LineSeries<SalesData, String>>[
             LineSeries<SalesData, String>(
+                color: Theme.of(context).colorScheme.primary,
                 dataSource: <SalesData>[
                   SalesData('Jan', 35),
                   SalesData('Feb', 28),

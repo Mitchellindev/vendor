@@ -59,8 +59,8 @@ class ClicksViewsChartContainer extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     SizedBox(
-                      width: 100,
-                      height: 100,
+                      width: 120,
+                      height: 120,
                       child: CircularProgressIndicator(
                         strokeWidth: 7,
                         backgroundColor: Theme.of(context).colorScheme.tertiary,
@@ -68,8 +68,8 @@ class ClicksViewsChartContainer extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 70,
-                      height: 70,
+                      width: 90,
+                      height: 90,
                       child: CircularProgressIndicator(
                         strokeWidth: 7,
                         color: const Color(0xffA5F1E9),
