@@ -277,19 +277,9 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
             PrimaryButton(
                 label: "Submit",
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.editStore);
+                  Navigator.pushNamed(context, Routes.storeFront);
                 },
                 isEnabled: true),
-            InputFieldWidget(
-                hintColor: colorScheme.primary,
-                validator: (p0) {
-                  return null;
-                },
-                enabledBorderRadius: 5,
-                hintSize: 18,
-                hintText: "Add details.....",
-                onChanged: (val) {},
-                textFieldkey: addDetailsKey),
             const SizedBox(
               height: 30,
             )

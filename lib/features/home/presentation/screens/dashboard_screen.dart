@@ -166,7 +166,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   ),
                                   const Spacer(),
                                   SizedBox(
-                                    width: 110.width,
+                                    width: 120.width,
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -198,7 +198,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                           text: isVisible ? "Show" : "Hide",
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500,
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),

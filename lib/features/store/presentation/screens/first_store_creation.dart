@@ -61,7 +61,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
               PrimaryButton(
                   label: "Get Started",
                   onPressed: () {
-                    if (_radioChoice == 1) {
+                    if (_radioChoice == 2) {
                       Navigator.pushNamed(context, Routes.aiCreateStore);
                     } else {
                       Navigator.pushNamed(context, Routes.storeCreationForm);

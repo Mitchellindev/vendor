@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-import '../../../../core/utils/helpers.dart';
 import '../../../../core/widgets/text_widget.dart';
 
-class ChartContainer extends StatelessWidget {
+class ChartContainer extends StatefulWidget {
   const ChartContainer({
     super.key,
     required this.selectedDate,
@@ -13,6 +12,15 @@ class ChartContainer extends StatelessWidget {
 
   final DateTime selectedDate;
   final String label;
+
+  @override
+  State<ChartContainer> createState() => _ChartContainerState();
+}
+
+class _ChartContainerState extends State<ChartContainer> {
+  final _dateController = TextEditingController();
+
+  DateTime startDate = DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +36,7 @@ class ChartContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextWidget(
-                text: label,
+                text: widget.label,
                 fontWeight: FontWeight.w500,
               ),
               Row(
@@ -38,9 +46,18 @@ class ChartContainer extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                   GestureDetector(
-                    onTap: () {
-                      Helpers.showCupertinoDatePicker(
-                          context, selectedDate, (DateTime newDate) {});
+                    onTap: () async {
+                      // Helpers.showCupertinoDatePicker(
+                      //     context, widget.selectedDate, (DateTime newDate) {});
+                      DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                        firstDate: startDate,
+                        lastDate: DateTime(2025),
+                      );
+                      if (pickedDate != null) {
+                        _dateController.text =
+                            pickedDate.toString().split(' ')[0];
+                      }
                     },
                     child: const Icon(
                       Icons.arrow_drop_down,

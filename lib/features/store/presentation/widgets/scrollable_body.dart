@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
 
@@ -76,6 +77,9 @@ class ScrollableBody extends StatelessWidget {
                         child: TextWidget(
                           text: "Edit Store Profile",
                           fontSize: 18,
+                          onTap: () {
+                            Navigator.pushNamed(context, Routes.editStore);
+                          },
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).colorScheme.secondary,
                         ),

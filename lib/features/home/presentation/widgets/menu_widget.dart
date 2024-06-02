@@ -42,6 +42,12 @@ class _MenuWidgetState extends State<MenuWidget> {
               imageColor: Colors.white,
               label: "Dashboard"),
           MenuItemWidget(
+              onTap: () {
+                Navigator.of(context).pushNamed(Routes.myWallet);
+              },
+              iconPath: "assets/images/chat_menu_item.png",
+              label: "My Wallet"),
+          MenuItemWidget(
               onTap: () {},
               iconPath: "assets/images/chat_menu_item.png",
               label: "My Chat"),
