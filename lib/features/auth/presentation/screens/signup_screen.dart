@@ -1,6 +1,6 @@
 import 'package:broadcaadvendor/core/widgets/loading_widget.dart';
 import 'package:broadcaadvendor/core/widgets/snackbar.dart';
-import 'package:broadcaadvendor/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:broadcaadvendor/features/auth/bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -51,10 +51,16 @@ class _SignupScreenState extends State<SignupScreen> {
         }
         if (state is AuthStateIsRegistered) {
           Navigator.pushNamed(context, Routes.otpVerification);
+          setState(() {
+            isLoading = false;
+          });
         }
         if (state is AuthStateAuthError) {
           InfoSnackBar.showErrorSnackBar(context,
               "${state.authError.errorType.name}: ${state.authError.message}");
+          setState(() {
+            isLoading = false;
+          });
         }
       },
       builder: (context, state) {
@@ -160,13 +166,13 @@ class _SignupScreenState extends State<SignupScreen> {
                         //TODO: Location Service
                         PrimaryButton(
                           label: "Sign Up",
-                          onPressed: () {
+                          onPressed: () async {
                             context.read<AuthBloc>().add(
                                   AuthEventSignup(
-                                      email: emailKey.currentState!.value,
-                                      password: passwordKey.currentState!.value,
-                                      userName: nameKey.currentState!.value,
-                                      userCountry: "Nigeria"),
+                                    email: emailKey.currentState!.value,
+                                    password: passwordKey.currentState!.value,
+                                    userName: nameKey.currentState!.value,
+                                  ),
                                 );
                           },
                           isEnabled:

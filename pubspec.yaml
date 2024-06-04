@@ -28,7 +28,9 @@ dependencies:
   data_connection_checker_tv: ^0.3.5-nullsafety
   syncfusion_flutter_charts: ^25.2.6
   location_plus: ^1.0.6
-
+  geolocator: ^9.0.2
+  geocode: ^1.0.3
+  geocoding: ^3.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

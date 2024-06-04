@@ -2,8 +2,12 @@ import 'package:broadcaadvendor/core/network/api_endpoint.dart';
 import 'package:broadcaadvendor/core/network/dio_client.dart';
 import 'package:broadcaadvendor/core/utils/logger.dart';
 import 'package:broadcaadvendor/core/utils/typedef.dart';
+import 'package:broadcaadvendor/features/auth/data/enums/auth_enums.dart';
+import 'package:broadcaadvendor/features/auth/data/errors/auth_error.dart';
 import 'package:broadcaadvendor/features/auth/data/models/auth_user_model.dart';
+import 'package:broadcaadvendor/features/location/location_service.dart';
 import 'package:dartz/dartz.dart';
+import 'package:geocode/geocode.dart';
 
 abstract class RemoteAuthProvider {
   EitherAuthUserOrAuthError getCurrentUser();
@@ -12,7 +16,6 @@ abstract class RemoteAuthProvider {
     required String email,
     required String password,
     required String userName,
-    required String userCountry,
     String userType = "vendor",
   });
 
@@ -38,27 +41,38 @@ class RemoteAuthProviderImplementation implements RemoteAuthProvider {
     required String email,
     required String password,
     required String userName,
-    required String userCountry,
     String userType = "vendor",
   }) async {
     try {
+      final Address address = await LocationServiceClass.determinePosition();
+      logger.e(address.countryName);
       final response = await DioClient.instance
           .post(path: RoutesAndPaths.signUp, queryParameters: {
         "platform": "android"
       }, data: {
         "email": email,
         "password": password,
-        "user_country": userCountry,
+        "user_country": address.countryName ?? "",
         "username": userName,
         "user_type": userType,
       });
-      logger.e(response);
+      if (response["code"] != 200) {
+        if (response["data"][0]["user_country"] != null) {
+          return left(AuthError(
+              errorType: AuthErrorType.signupError,
+              message: "${response["data"][0]["user_country"]}"));
+        }
+      } else {
+        return right(
+            AuthUserModel(email: "email", userType: "Vendor", userCountry: ""));
+      }
     } catch (e) {
-      logger.e(e);
+      return left(AuthError(
+          errorType: AuthErrorType.signupError, message: e.toString()));
     }
-
-    return right(
-        AuthUserModel(email: "email", userType: "Vendor", userCountry: ""));
+    return left(AuthError(
+        errorType: AuthErrorType.signupError,
+        message: "Uncaught Signup Error"));
   }
 
   @override

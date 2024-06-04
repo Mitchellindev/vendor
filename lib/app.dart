@@ -6,11 +6,10 @@ import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:broadcaadvendor/features/auth/data/providers/local_provider.dart';
 import 'package:broadcaadvendor/features/auth/data/providers/remote_provider.dart';
 import 'package:broadcaadvendor/features/auth/data/repositories/auth_repository.dart';
-import 'package:broadcaadvendor/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:broadcaadvendor/features/auth/bloc/auth_bloc.dart';
 import 'package:data_connection_checker_tv/data_connection_checker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:location_plus/location_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyApp extends StatefulWidget {
@@ -46,7 +45,7 @@ class _MyAppState extends State<MyApp> {
             theme: lightTheme(),
             debugShowCheckedModeBanner: false,
             // initialRoute: Routes.login,
-            initialRoute: Routes.dashboard,
+            initialRoute: Routes.login,
 
             onGenerateRoute: appRouter.onGenerateRoute,
           ),

@@ -17,14 +17,11 @@ class AuthRepository {
     required String email,
     required String password,
     required String userName,
-    required String userCountry,
+    // required String userCountry,
     String userType = "vendor",
   }) async {
     final user = authProvider.signUp(
-        userCountry: userCountry,
-        email: email,
-        password: password,
-        userName: userName);
+        email: email, password: password, userName: userName);
     await localAuthUserSource.saveUser(user);
     return user;
   }

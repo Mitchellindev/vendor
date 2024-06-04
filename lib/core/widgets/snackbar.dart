@@ -1,5 +1,6 @@
-import 'text_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'text_widget.dart';
 
 class InfoSnackBar {
   static SnackBar successSnackBar(String message) {
@@ -89,7 +90,7 @@ class InfoSnackBar {
 
   static SnackBar errorSnackBar(String message) {
     return SnackBar(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 5),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       backgroundColor: const Color(0xffFCD9D7),
       behavior: SnackBarBehavior.floating,
