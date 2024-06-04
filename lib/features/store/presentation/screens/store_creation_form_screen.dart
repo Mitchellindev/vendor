@@ -64,10 +64,13 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
     return Scaffold(
         appBar: AppBar(
           shape: const Border(bottom: BorderSide(width: 0.5)),
-          title: const TextWidget(
-            text: "Store Creation",
-            fontSize: 21,
-            fontWeight: FontWeight.w600,
+          title: Transform.translate(
+            offset: const Offset(-15, 0),
+            child: const TextWidget(
+              text: "Store Creation",
+              fontSize: 21,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         body: Padding(

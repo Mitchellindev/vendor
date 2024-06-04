@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+
 import '../../../../config/router/routes.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../widgets/atm_card_widget.dart';
 import '../widgets/transaction_history.dart';
 import '../widgets/wallet_actions.dart';
-import 'package:flutter/material.dart';
 
 class MyWalletScreen extends StatelessWidget {
   const MyWalletScreen({super.key});
@@ -13,10 +14,13 @@ class MyWalletScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
-        title: const TextWidget(
-          text: "My Wallet",
-          fontSize: 21,
-          fontWeight: FontWeight.w600,
+        title: Transform.translate(
+          offset: const Offset(-10, 0),
+          child: const TextWidget(
+            text: "My Wallet",
+            fontSize: 21,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
       body: Padding(

@@ -240,7 +240,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               const Padding(
                                 padding: EdgeInsets.only(bottom: 20.0),
                                 child: TextWidget(
-                                  text: "Sales OverView",
+                                  text: "Sales Overview",
                                   fontSize: 21,
                                   fontWeight: FontWeight.w500,
                                 ),

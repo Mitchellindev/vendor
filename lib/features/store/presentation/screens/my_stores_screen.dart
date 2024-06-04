@@ -12,10 +12,13 @@ class MyStoresScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
-        title: const TextWidget(
-          text: "My Stores",
-          fontSize: 21,
-          fontWeight: FontWeight.w600,
+        title: Transform.translate(
+          offset: const Offset(-10, 0),
+          child: const TextWidget(
+            text: "My Stores",
+            fontSize: 21,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
       body: Padding(

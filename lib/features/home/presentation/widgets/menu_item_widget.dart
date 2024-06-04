@@ -8,7 +8,7 @@ class MenuItemWidget extends StatelessWidget {
       {super.key,
       required this.iconPath,
       required this.label,
-      this.imageWidth = 24,
+      this.imageWidth = 20,
       this.color = Colors.white,
       this.imageColor,
       required this.onTap});
@@ -38,7 +38,7 @@ class MenuItemWidget extends StatelessWidget {
             ),
             TextWidget(
               text: label,
-              fontSize: 18,
+              fontSize: 15,
               fontWeight: FontWeight.w400,
               color: color,
             ),

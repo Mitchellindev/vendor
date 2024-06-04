@@ -123,8 +123,12 @@ class _MenuWidgetState extends State<MenuWidget> {
                             const SizedBox(
                               width: 100,
                             ),
-                            const TextWidget(
-                                text: "Yes",
+                            TextWidget(
+                                text: "Logout",
+                                onTap: () {
+                                  Navigator.popUntil(
+                                      context, (route) => route.isFirst);
+                                },
                                 fontSize: 21,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.red)

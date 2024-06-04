@@ -40,6 +40,12 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
               ),
               _buildChoiceButton(context,
                   value: 1,
+                  groupValue: _radioChoice,
+                  onChanged: (p0) {
+                    setState(() {
+                      _radioChoice = 1;
+                    });
+                  },
                   image: "assets/images/ai_file.png",
                   label: "Create Store with Albert",
                   onTap: () => setState(() {
@@ -50,8 +56,14 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
               ),
               _buildChoiceButton(context,
                   value: 2,
+                  groupValue: _radioChoice,
                   image: "assets/images/note.png",
                   label: "Create your store manually",
+                  onChanged: (p0) {
+                    setState(() {
+                      _radioChoice = 2;
+                    });
+                  },
                   onTap: () => setState(() {
                         _radioChoice == 2;
                       })),
@@ -61,7 +73,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
               PrimaryButton(
                   label: "Get Started",
                   onPressed: () {
-                    if (_radioChoice == 2) {
+                    if (_radioChoice == 1) {
                       Navigator.pushNamed(context, Routes.aiCreateStore);
                     } else {
                       Navigator.pushNamed(context, Routes.storeCreationForm);
@@ -80,7 +92,9 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
       {required String label,
       required VoidCallback onTap,
       required String image,
-      required int value}) {
+      required int value,
+      required void Function(int?)? onChanged,
+      required int groupValue}) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -88,7 +102,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
         decoration: BoxDecoration(
             border: Border.all(
                 color: Theme.of(context).colorScheme.primary,
-                width: _radioChoice == 1 ? 1 : 2),
+                width: groupValue != value ? 1 : 2),
             borderRadius: BorderRadius.circular(10)),
         child: Center(
           child: Row(
@@ -98,11 +112,10 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
                 width: 20.width,
               ),
               Radio<int>(
-                  value: 1,
-                  groupValue: 2,
-                  onChanged: (val) {
-                    _radioChoice = val!;
-                  }),
+                value: value,
+                groupValue: groupValue,
+                onChanged: onChanged,
+              ),
               SizedBox(
                 width: 3.width,
               ),

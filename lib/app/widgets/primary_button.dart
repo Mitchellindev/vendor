@@ -1,5 +1,6 @@
-import '../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../core/widgets/text_widget.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
@@ -31,7 +32,7 @@ class PrimaryButton extends StatelessWidget {
       onPressed: isEnabled ? onPressed : null,
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        minimumSize: const Size(double.infinity, 48),
+        minimumSize: const Size(double.infinity, 50),
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
             side: const BorderSide(

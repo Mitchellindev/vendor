@@ -108,6 +108,23 @@ class _SignupScreenState extends State<SignupScreen> {
                             },
                             textFieldkey: nameKey),
                         InputFieldWidget(
+                            validator: (p0) {
+                              final emailState = Validator.validateEmail(
+                                  emailKey.currentState?.value);
+                              return emailState;
+                            },
+                            enabledBorderRadius: 5,
+                            hintColor: const Color.fromARGB(120, 58, 58, 58),
+                            hintSize: 18,
+                            hintText: "Email/Phone number",
+                            onChanged: (val) {
+                              setState(() {
+                                emailIsValid =
+                                    emailKey.currentState!.validate();
+                              });
+                            },
+                            textFieldkey: emailKey),
+                        InputFieldWidget(
                           enabledBorderRadius: 5,
                           obscureText: obscureText,
                           hintColor: const Color.fromARGB(120, 58, 58, 58),
@@ -143,27 +160,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                           ),
                         ),
-                        InputFieldWidget(
-                            validator: (p0) {
-                              final emailState = Validator.validateEmail(
-                                  emailKey.currentState?.value);
-                              return emailState;
-                            },
-                            enabledBorderRadius: 5,
-                            hintColor: const Color.fromARGB(120, 58, 58, 58),
-                            hintSize: 18,
-                            hintText: "Email/Phone number",
-                            onChanged: (val) {
-                              setState(() {
-                                emailIsValid =
-                                    emailKey.currentState!.validate();
-                              });
-                            },
-                            textFieldkey: emailKey),
                         const SizedBox(
                           height: 20,
                         ),
-                        //TODO: Location Service
                         PrimaryButton(
                           label: "Sign Up",
                           onPressed: () async {

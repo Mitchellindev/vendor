@@ -1,13 +1,10 @@
 import 'package:broadcaadvendor/core/network/api_endpoint.dart';
 import 'package:broadcaadvendor/core/network/dio_client.dart';
-import 'package:broadcaadvendor/core/utils/logger.dart';
 import 'package:broadcaadvendor/core/utils/typedef.dart';
 import 'package:broadcaadvendor/features/auth/data/enums/auth_enums.dart';
 import 'package:broadcaadvendor/features/auth/data/errors/auth_error.dart';
 import 'package:broadcaadvendor/features/auth/data/models/auth_user_model.dart';
-import 'package:broadcaadvendor/features/location/location_service.dart';
 import 'package:dartz/dartz.dart';
-import 'package:geocode/geocode.dart';
 
 abstract class RemoteAuthProvider {
   EitherAuthUserOrAuthError getCurrentUser();
@@ -44,15 +41,15 @@ class RemoteAuthProviderImplementation implements RemoteAuthProvider {
     String userType = "vendor",
   }) async {
     try {
-      final Address address = await LocationServiceClass.determinePosition();
-      logger.e(address.countryName);
+      // final Address address = await LocationServiceClass.determinePosition();
+      // logger.e(address.countryName);
       final response = await DioClient.instance
           .post(path: RoutesAndPaths.signUp, queryParameters: {
         "platform": "android"
       }, data: {
         "email": email,
         "password": password,
-        "user_country": address.countryName ?? "",
+        "user_country": "Nigeria",
         "username": userName,
         "user_type": userType,
       });

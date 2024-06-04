@@ -64,41 +64,40 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
                 ),
               ],
             ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  children: [
-                    Image.asset(
-                      "assets/images/cuate.png",
-                      width: 117.14,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const TextWidget(
-                      textAlign: TextAlign.center,
-                      text: "You have no store/ service",
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const TextWidget(
-                      textAlign: TextAlign.center,
-                      text:
-                          "Tap on either buttons above to create your first store or service",
-                      fontWeight: FontWeight.w300,
-                      fontSize: 18,
-                    ),
-                  ],
-                ),
+            Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  Image.asset(
+                    "assets/images/cuate.png",
+                    width: 117.14,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const TextWidget(
+                    textAlign: TextAlign.center,
+                    text: "You have no store/ service",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const TextWidget(
+                    textAlign: TextAlign.center,
+                    text:
+                        "Tap on either buttons above to create your first store or service",
+                    fontWeight: FontWeight.w300,
+                    fontSize: 18,
+                  ),
+                ],
               ),
             ),
+            const Spacer(),
             PrimaryButton(
                 label: "Create your store",
                 onPressed: () {
@@ -126,6 +125,8 @@ class _NoStoreWidgetState extends State<NoStoreWidget> {
               backgroundColor: Colors.white,
               isEnabled: true,
             ),
+            const Spacer(),
+            const Spacer()
           ],
         ),
       ),

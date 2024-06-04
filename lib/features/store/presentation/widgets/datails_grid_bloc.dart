@@ -12,9 +12,6 @@ class DetailsGridBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: 0,
-      ),
       width: 134,
       decoration: BoxDecoration(
         gradient: const LinearGradient(

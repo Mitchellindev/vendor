@@ -68,14 +68,17 @@ class _StorePerformanceScreenState extends State<StorePerformanceScreen> {
     return Scaffold(
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
-        title: TextWidget(
-          text: _selectedInt == 0
-              ? "Sales/ Stock Performance"
-              : _selectedInt == 1
-                  ? "Store Interaction Performance"
-                  : "Rejected/Sold",
-          fontSize: 21,
-          fontWeight: FontWeight.w600,
+        title: Transform.translate(
+          offset: const Offset(-10, 0),
+          child: TextWidget(
+            text: _selectedInt == 0
+                ? "Sales/ Stock Performance"
+                : _selectedInt == 1
+                    ? "Store Interaction Performance"
+                    : "Rejected/Sold",
+            fontSize: 21,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
       body: Padding(
