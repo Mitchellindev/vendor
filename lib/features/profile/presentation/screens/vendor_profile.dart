@@ -119,22 +119,16 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
       },
     ];
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        leading: IconButton(
-            onPressed: () => Navigator.pop(context),
-            icon: Icon(
-              Icons.arrow_back,
-              color: Theme.of(context).colorScheme.secondary,
-            )),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: TextWidget(
-          text: "Vendor Profile",
-          fontSize: 28,
-          fontWeight: FontWeight.w600,
-          color: Theme.of(context).colorScheme.secondary,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0)
+              .copyWith(top: 20.height),
+          child: TextWidget(
+            text: "Vendor Profile",
+            fontSize: 28,
+            fontWeight: FontWeight.w600,
+            color: Theme.of(context).colorScheme.secondary,
+          ),
         ),
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
@@ -149,7 +143,7 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 width: double.infinity,
                 height: SizeConfig.getProportionateScreenHeight(
-                    context: context, inputHeight: 900.height),
+                    context: context, inputHeight: 1000.height),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
