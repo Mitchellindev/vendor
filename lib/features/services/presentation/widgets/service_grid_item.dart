@@ -1,6 +1,8 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../core/widgets/text_widget.dart';
-import 'package:flutter/material.dart';
 
 class ServiceGridItem extends StatelessWidget {
   const ServiceGridItem({
@@ -49,8 +51,8 @@ class ServiceGridItem extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 10.height,
         ),
         PrimaryButton(
             label: "Edit Package",

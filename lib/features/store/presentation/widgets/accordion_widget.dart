@@ -55,7 +55,7 @@ class _AccordionWidgetState extends State<AccordionWidget> {
             header: TextWidget(
               text: widget.label,
               fontSize: 17,
-              fontWeight: FontWeight.w200,
+              fontWeight: FontWeight.w400,
               color: widget.colorScheme.primary,
             ),
             contentHorizontalPadding: 0,

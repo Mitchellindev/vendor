@@ -1,18 +1,18 @@
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
 import '../../../../core/utils/size_config.dart';
 import '../../../../core/widgets/horizontal_divider.dart';
 import '../../../../core/widgets/text_widget.dart';
-import 'packages_widget.dart';
 import '../../../store/presentation/widgets/cover_image_stack.dart';
 import '../../../store/presentation/widgets/description.dart';
 import '../../../store/presentation/widgets/my_tab_view_widget.dart';
-import '../../../store/presentation/widgets/primary_icon_button.dart';
 import '../../../store/presentation/widgets/rating_row.dart';
 import '../../../store/presentation/widgets/reviews.dart';
-import '../../../store/presentation/widgets/short_primary_button.dart';
 import '../../../store/presentation/widgets/vendor_details.dart';
-import 'package:flutter/material.dart';
+import 'packages_widget.dart';
 
 class ScrollableBodyService extends StatelessWidget {
   const ScrollableBodyService({
@@ -67,24 +67,56 @@ class ScrollableBodyService extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ShortPrimaryButton(
-                    label: "Edit Service Profile",
-                    onPressed: () {
-                      Navigator.pushNamed(context, Routes.editServiceProfile);
-                    },
-                  ),
-                  PrimaryIconButton(
-                    onTap: () {},
-                    icon: Image.asset(
-                      "assets/images/block_icon.png",
-                      width: 24,
+                  Expanded(
+                    flex: 6,
+                    child: Container(
+                      height: 42,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Theme.of(context).colorScheme.primary),
+                      child: Center(
+                        child: TextWidget(
+                          text: "Edit Service Profile",
+                          fontSize: 18,
+                          onTap: () {
+                            Navigator.pushNamed(context, Routes.editStore);
+                          },
+                          fontWeight: FontWeight.w600,
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                      ),
                     ),
                   ),
-                  PrimaryIconButton(
-                    onTap: () {},
-                    icon: Image.asset(
-                      "assets/images/chart.png",
-                      width: 24,
+                  SizedBox(
+                    width: 20.width,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Theme.of(context).colorScheme.primary),
+                      child: Image.asset(
+                        "assets/images/shop.png",
+                        width: 24.height,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20.width,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Theme.of(context).colorScheme.primary),
+                      child: Image.asset(
+                        "assets/images/chart.png",
+                        width: 24.height,
+                      ),
                     ),
                   ),
                 ],

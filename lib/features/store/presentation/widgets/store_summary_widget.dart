@@ -20,7 +20,7 @@ class _StoreSummaryState extends State<StoreSummary> {
       children: [
         ScrollableBody(controller: controller),
         Positioned(
-            bottom: MediaQuery.of(context).size.height * .18,
+            bottom: MediaQuery.of(context).size.height * .22,
             right: 5,
             child: const FabRow())
       ],

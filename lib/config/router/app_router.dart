@@ -16,7 +16,6 @@ import '../../features/auth/presentation/screens/otp_screen.dart';
 import '../../features/auth/presentation/screens/reset_password.dart';
 import '../../features/auth/presentation/screens/signup_screen.dart';
 import '../../features/auth/presentation/screens/verification_successful.dart';
-import '../../features/home/presentation/screens/store_front.dart';
 import '../../features/notifications/screens/notifications_screens.dart';
 import '../../features/products/presentation/screens/add_products_screen.dart';
 import '../../features/products/presentation/screens/categories_items_screen.dart';
@@ -39,7 +38,6 @@ import '../../features/services/presentation/screens/pending_services_details_sc
 import '../../features/services/presentation/screens/pending_services_screen.dart';
 import '../../features/services/presentation/screens/rejected_completed_service_details_screen.dart';
 import '../../features/services/presentation/screens/service_quality_performance_screen.dart';
-import '../../features/services/presentation/screens/service_summary_screen.dart';
 import '../../features/services/presentation/screens/upload_package_screen.dart';
 import '../../features/store/presentation/screens/ai_create_store_screen.dart';
 import '../../features/store/presentation/screens/clicks_views_list_screen.dart';
@@ -85,10 +83,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ResetPasswordScreen(),
         );
-      case Routes.storeFront:
-        return MaterialPageRoute(
-          builder: (_) => const StoreFrontScreen(),
-        );
+      // case Routes.storeFront:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const StoreFrontScreen(),
+      //   );
       case Routes.firstStoreCreation:
         return MaterialPageRoute(
           builder: (_) => const FirstStoreCreationScreen(),
@@ -161,10 +159,10 @@ class AppRouter {
           builder: (_) => const MyStoresScreen(),
         );
 
-      case Routes.serviceSummary:
-        return MaterialPageRoute(
-          builder: (_) => const ServiceSummaryScreen(),
-        );
+      // case Routes.serviceSummary:
+      //   return MaterialPageRoute(
+      //     builder: (_) => const ServiceSummaryScreen(),
+      //   );
       case Routes.editServiceProfile:
         return MaterialPageRoute(
           builder: (_) => const EditServiceScreen(),

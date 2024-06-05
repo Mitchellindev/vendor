@@ -17,8 +17,11 @@ class VendorProfileScreen extends StatefulWidget {
 
 class _VendorProfileScreenState extends State<VendorProfileScreen>
     with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
   @override
   void initState() {
+    _controller = AnimationController(vsync: this);
     super.initState();
   }
 
@@ -136,6 +139,8 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
       bottomSheet: BottomSheet(
+        // enableDrag: true,
+        animationController: _controller,
         onClosing: () {},
         builder: (context) {
           return Stack(
@@ -144,7 +149,7 @@ class _VendorProfileScreenState extends State<VendorProfileScreen>
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 width: double.infinity,
                 height: SizeConfig.getProportionateScreenHeight(
-                    context: context, inputHeight: 700.height),
+                    context: context, inputHeight: 900.height),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
