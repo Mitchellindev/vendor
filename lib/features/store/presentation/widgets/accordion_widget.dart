@@ -1,7 +1,8 @@
 import 'package:accordion/accordion.dart';
 import 'package:accordion/controllers.dart';
-import '../../../../core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class AccordionWidget extends StatefulWidget {
   const AccordionWidget({
@@ -54,7 +55,7 @@ class _AccordionWidgetState extends State<AccordionWidget> {
             header: TextWidget(
               text: widget.label,
               fontSize: 17,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w200,
               color: widget.colorScheme.primary,
             ),
             contentHorizontalPadding: 0,

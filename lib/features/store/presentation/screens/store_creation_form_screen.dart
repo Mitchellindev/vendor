@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/features/store/presentation/widgets/rado_button_widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app/enums/enums.dart';
@@ -7,7 +8,6 @@ import '../../../../core/widgets/text_widget.dart';
 import '../../../auth/presentation/widgets/input_field_widget.dart';
 import '../widgets/accordion_widget.dart';
 import '../widgets/checkbox_container_widget.dart';
-import '../widgets/vendor_category_check_box.dart';
 
 class StoreCreationFormScreeen extends StatefulWidget {
   const StoreCreationFormScreeen({super.key});
@@ -36,7 +36,7 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
 
   bool nameIsValid = false;
   bool passwordIsValid = false;
-
+  int? _groupValue = 1;
   @override
   void initState() {
     vendorNameKey = GlobalKey<FormFieldState>();
@@ -206,7 +206,7 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
                 onChanged: (val) {},
                 textFieldkey: storeDiscriptionKey),
             AccordionWidget(
-              label: "Service Schedule",
+              label: "Store Schedule",
               colorScheme: colorScheme,
               widgetList: List.generate(
                   ServiceSchedule.values.length,
@@ -270,9 +270,16 @@ class _StoreCreationFormScreeenState extends State<StoreCreationFormScreeen> {
               colorScheme: colorScheme,
               widgetList: List.generate(
                   VendorCategory.values.length,
-                  (index) => CheckBoxContainerWidget<VendorCategory>(
-                        label: VendorCategory.values[index].name,
-                      )),
+                  (index) => RadioButtonWidget(
+                      onTap: () {},
+                      groupValue: _groupValue ?? 0,
+                      onChanged: (val) {
+                        setState(() {
+                          _groupValue = val;
+                        });
+                      },
+                      value: index,
+                      label: VendorCategory.values[index].name)),
             ),
             const SizedBox(
               height: 20,
