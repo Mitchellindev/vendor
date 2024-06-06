@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/settings/presentation/widgets/settings_actions_widgets.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class SettingsScreen extends StatelessWidget {
       },
       {"label": "Navigation Preference", "onTap": () {}},
       {"label": "Account Security", "onTap": () {}},
+      {},
       {"label": "Language", "onTap": () {}, "currentValue": "English"},
       {"label": "Country", "onTap": () {}, "currentValue": "Nigeria"},
       {"label": "Currency", "onTap": () {}, "currentValue": "NGN"},
@@ -36,7 +38,12 @@ class SettingsScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: Column(
           children: List.generate(actions.length, (index) {
-            if (index == 3 || index == 4 || index == 5) {
+            if (index == 3) {
+              return const HorizontalDivider(
+                paddingVertical: 0,
+              );
+            }
+            if (index == 4 || index == 5 || index == 6) {
               return SettingsActionWidget(
                 label: actions[index]["label"],
                 onTap: actions[index]["onTap"],

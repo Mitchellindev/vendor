@@ -196,7 +196,9 @@ class _AddProductsScreenState extends State<AddProductsScreen> {
             PrimaryButton(
                 label: "Submit",
                 onPressed: () {
-                  // Navigator.pushNamed(context, Routes.editStore);
+                  Navigator.pop(
+                    context,
+                  );
                 },
                 isEnabled: true),
             const SizedBox(
