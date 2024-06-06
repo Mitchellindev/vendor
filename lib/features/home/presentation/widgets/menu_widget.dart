@@ -24,16 +24,14 @@ class _MenuWidgetState extends State<MenuWidget> {
       child: SafeArea(
         child: Column(
           children: [
-            // SizedBox(
-            //   height: 70.height,
-            // ),
+            SizedBox(
+              height: 30.height,
+            ),
             Image.asset(
               "assets/images/splash_image.png",
               width: 150.width,
             ),
-            SizedBox(
-              height: 35.height,
-            ),
+            const Spacer(),
             const NotificationMenuItem(),
             MenuItemWidget(
                 onTap: () {
@@ -49,7 +47,9 @@ class _MenuWidgetState extends State<MenuWidget> {
                 iconPath: "assets/images/chat_menu_item.png",
                 label: "My Wallet"),
             MenuItemWidget(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.customerSupport);
+                },
                 iconPath: "assets/images/chat_menu_item.png",
                 label: "My Chat"),
             MenuItemWidget(
@@ -65,11 +65,15 @@ class _MenuWidgetState extends State<MenuWidget> {
                 imageWidth: 28.width,
                 label: "My Orders"),
             MenuItemWidget(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.pendingServices);
+                },
                 iconPath: "assets/images/clock.png",
                 label: "Pending Items"),
             MenuItemWidget(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.storePerformance);
+                },
                 iconPath: "assets/images/chart.png",
                 label: "My Store Analytics"),
             MenuItemWidget(
@@ -148,9 +152,7 @@ class _MenuWidgetState extends State<MenuWidget> {
               "assets/images/upgrade_to_premium.png",
               width: 200.width,
             ),
-            SizedBox(
-              height: 20.height,
-            ),
+            const Spacer(),
             const Flexible(child: PrivacyPolicyWidget()),
           ],
         ),

@@ -34,6 +34,8 @@ class Routes {
 
   //Services
   static const String createFirstService = '/createFirstService';
+  static const String editService = '/editService';
+
   static const String serviceCreationFormScreen = '/serviceCreationFormScreen';
   static const String serviceSummary = '/serviceSummary';
   static const String editServiceProfile = '/editServiceProfile';
@@ -45,6 +47,7 @@ class Routes {
   static const String serviceQualityPerformanceScreen =
       '/serviceQualityPerformanceScreen';
   static const String updateAddress = '/updateAddress';
+  static const String editPackage = '/editPackage';
 
   static const String rejectedCompletedServiceDetailsScreen =
       '/rejectedCompletedServiceDetailsScreen';

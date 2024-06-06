@@ -96,7 +96,7 @@ class _StorePerformanceScreenState extends State<StorePerformanceScreen> {
               ),
             ),
             SizedBox(
-              height: 350.height,
+              height: 500.height,
               child: PageView(
                 controller: controller,
                 onPageChanged: (value) {

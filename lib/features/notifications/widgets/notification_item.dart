@@ -30,7 +30,7 @@ class NotificationItem extends StatelessWidget {
                     ? Colors.transparent
                     : const Color.fromARGB(49, 3, 14, 79)),
             width: double.infinity,
-            height: 115.height,
+            height: 190.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -48,7 +48,7 @@ class NotificationItem extends StatelessWidget {
                       ),
                       SizedBox(
                         width: SizeConfig.getProportionateScreenWidth(
-                            context: context, inputWidth: 210),
+                            context: context, inputWidth: 210.width),
                         child: const TextWidget(
                           text: "Kelvin and two others viewed your store.",
                           fontSize: 16,

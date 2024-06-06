@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../core/widgets/text_widget.dart';
 import '../widgets/notification_item.dart';
-import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});
@@ -22,7 +23,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
         child: ListView(
           children: List.generate(
             5,

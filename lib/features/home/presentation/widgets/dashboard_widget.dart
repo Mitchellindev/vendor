@@ -112,7 +112,7 @@ class _DashBoardWidgetState extends State<DashBoardWidget> {
                         ],
                       ),
                       SizedBox(
-                        height: 20.height,
+                        height: 30.height,
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 10.height),

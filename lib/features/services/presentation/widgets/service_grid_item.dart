@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
 
@@ -20,13 +21,13 @@ class ServiceGridItem extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Image.asset("assets/images/product.png"),
+              Image.asset("assets/images/makeup_service.png"),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TextWidget(text: "Fashion Men Long sleeves"),
+                    TextWidget(text: "Bridal Makeup"),
                     SizedBox(
                       height: 10,
                     ),
@@ -56,8 +57,9 @@ class ServiceGridItem extends StatelessWidget {
         ),
         PrimaryButton(
             label: "Edit Package",
+            labelFontSize: 15,
             onPressed: () {
-              // Navigator.pushNamed(context, Routes.editProduct);
+              Navigator.pushNamed(context, Routes.editPackage);
             },
             isEnabled: true)
       ],

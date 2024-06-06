@@ -14,7 +14,7 @@ class ATMCardWidget extends StatelessWidget {
           color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(10)),
       width: double.infinity,
-      height: 188.height,
+      height: 300.height,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

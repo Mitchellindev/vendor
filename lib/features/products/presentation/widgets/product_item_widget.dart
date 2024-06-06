@@ -71,6 +71,7 @@ class ProductItemWidget extends StatelessWidget {
         ),
         PrimaryButton(
             label: "Edit Product",
+            labelFontSize: 15,
             onPressed: () {
               Navigator.pushNamed(context, Routes.editProduct);
             },

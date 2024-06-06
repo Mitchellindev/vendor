@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/radio_choice_button_store_service.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app/widgets/primary_button.dart';
@@ -21,7 +22,7 @@ class _CreateYourFirstServiceScreenState
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0.width),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -39,7 +40,7 @@ class _CreateYourFirstServiceScreenState
               const SizedBox(
                 height: 20,
               ),
-              _buildChoiceButton(context,
+              RadioChoiceButtonStoreService(
                   value: 1,
                   groupValue: _radioChoice,
                   onChanged: (p0) {
@@ -50,12 +51,12 @@ class _CreateYourFirstServiceScreenState
                   image: "assets/images/ai_file.png",
                   label: "Create service with Albert",
                   onTap: () => setState(() {
-                        _radioChoice == 1;
+                        _radioChoice = 1;
                       })),
               const SizedBox(
                 height: 20,
               ),
-              _buildChoiceButton(context,
+              RadioChoiceButtonStoreService(
                   value: 2,
                   groupValue: _radioChoice,
                   image: "assets/images/note.png",
@@ -66,7 +67,7 @@ class _CreateYourFirstServiceScreenState
                     });
                   },
                   onTap: () => setState(() {
-                        _radioChoice == 2;
+                        _radioChoice = 2;
                       })),
               const SizedBox(
                 height: 20,

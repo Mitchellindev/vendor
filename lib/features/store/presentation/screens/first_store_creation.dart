@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/core/utils/app_constraints.dart';
+import 'package:broadcaadvendor/features/store/presentation/widgets/radio_choice_button_store_service.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app/widgets/primary_button.dart';
@@ -20,7 +21,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0.width),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -38,7 +39,7 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
               const SizedBox(
                 height: 20,
               ),
-              _buildChoiceButton(context,
+              RadioChoiceButtonStoreService(
                   value: 1,
                   groupValue: _radioChoice,
                   onChanged: (p0) {
@@ -48,25 +49,36 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
                   },
                   image: "assets/images/ai_file.png",
                   label: "Create Store with Albert",
-                  onTap: () => setState(() {
-                        _radioChoice == 1;
-                      })),
+                  onTap: () {
+                    setState(() {
+                      _radioChoice = 1;
+                    });
+                  }),
               const SizedBox(
                 height: 20,
               ),
-              _buildChoiceButton(context,
-                  value: 2,
-                  groupValue: _radioChoice,
-                  image: "assets/images/note.png",
-                  label: "Create your store manually",
-                  onChanged: (p0) {
-                    setState(() {
-                      _radioChoice = 2;
-                    });
-                  },
-                  onTap: () => setState(() {
-                        _radioChoice == 2;
-                      })),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _radioChoice = 1;
+                  });
+                },
+                child: RadioChoiceButtonStoreService(
+                    value: 2,
+                    groupValue: _radioChoice,
+                    image: "assets/images/note.png",
+                    label: "Create your store manually",
+                    onChanged: (p0) {
+                      setState(() {
+                        _radioChoice = 2;
+                      });
+                    },
+                    onTap: () {
+                      setState(() {
+                        _radioChoice = 2;
+                      });
+                    }),
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -81,55 +93,6 @@ class _FirstStoreCreationScreenState extends State<FirstStoreCreationScreen> {
                   },
                   isEnabled: true),
               const Spacer(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  GestureDetector _buildChoiceButton(BuildContext context,
-      {required String label,
-      required VoidCallback onTap,
-      required String image,
-      required int value,
-      required void Function(int?)? onChanged,
-      required int groupValue}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(),
-        decoration: BoxDecoration(
-            border: Border.all(
-                color: Theme.of(context).colorScheme.primary,
-                width: groupValue != value ? 1 : 2),
-            borderRadius: BorderRadius.circular(10)),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: 20.width,
-              ),
-              Radio<int>(
-                value: value,
-                groupValue: groupValue,
-                onChanged: onChanged,
-              ),
-              SizedBox(
-                width: 3.width,
-              ),
-              Transform.translate(
-                offset: const Offset(-5, 0),
-                child: Image.asset(
-                  image,
-                  width: 20.width,
-                ),
-              ),
-              TextWidget(
-                text: label,
-                fontSize: 16,
-              ),
             ],
           ),
         ),

@@ -1,21 +1,18 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../app/enums/enums.dart';
 import '../../../../app/widgets/primary_button.dart';
 import '../../../../core/widgets/text_widget.dart';
-import '../../../store/presentation/widgets/accordion_widget.dart';
 import '../../../store/presentation/widgets/name_change_popup.dart';
-import '../../../store/presentation/widgets/vendor_category_check_box.dart';
-import '../widgets/stock_counter.dart';
 
-class EditProductsScreen extends StatefulWidget {
-  const EditProductsScreen({super.key});
+class EditPackageScreen extends StatefulWidget {
+  const EditPackageScreen({super.key});
 
   @override
-  State<EditProductsScreen> createState() => _EditProductsScreenState();
+  State<EditPackageScreen> createState() => _EditPackageScreenState();
 }
 
-class _EditProductsScreenState extends State<EditProductsScreen> {
+class _EditPackageScreenState extends State<EditPackageScreen> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   bool isLoading = true;
   PageController controller =
@@ -31,7 +28,7 @@ class _EditProductsScreenState extends State<EditProductsScreen> {
       appBar: AppBar(
         shape: const Border(bottom: BorderSide(width: 0.5)),
         title: const TextWidget(
-          text: "Edit Product",
+          text: "Edit Package",
           fontSize: 21,
           fontWeight: FontWeight.w600,
         ),
@@ -43,7 +40,7 @@ class _EditProductsScreenState extends State<EditProductsScreen> {
               const EdgeInsets.symmetric(horizontal: 20.0).copyWith(top: 20),
           child: ListView(
             children: [
-              Image.asset("assets/images/product.png"),
+              Image.asset("assets/images/makeup_service.png"),
               const SizedBox(
                 height: 30,
               ),
@@ -53,103 +50,69 @@ class _EditProductsScreenState extends State<EditProductsScreen> {
                         context: context,
                         builder: (context) {
                           return EditPopUp(
-                            label: "Products Name",
+                            label: "Package Name",
                             isCancelled: () {},
                           );
                         });
                   },
-                  content: "Fashion Men Long Sleeves"),
+                  content: "Bridal Makeup"),
               DetailsContainer(
                   onTap: () {
                     showDialog(
                         context: context,
                         builder: (context) {
                           return EditPopUp(
-                            label: "Product Color",
+                            label: "Price",
                             isCancelled: () {},
                           );
                         });
                   },
-                  content: "#34232"),
+                  content: "NGN 8,700"),
               DetailsContainer(
                   onTap: () {
                     showDialog(
                         context: context,
                         builder: (context) {
                           return EditPopUp(
-                            label: "Product Price",
-                            isCancelled: () {},
-                          );
-                        });
-                  },
-                  content: "NGN 3,232"),
-              DetailsContainer(
-                  onTap: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return EditPopUp(
-                            label: "Product Description",
+                            label: "Package Description",
                             isCancelled: () {},
                           );
                         });
                   },
                   content:
-                      "A long-sleeved shirt for male typically features a button-down front, collar, and a cuffs at the wrist. It’s designed to provide coverage and warmth, often made from variety of fabrics like cotton or linen. these shirt comes in various color, patterns, and style, suitable for both formal and casual occassions."),
-              AccordionWidget(
-                paddingListTop: 10,
-                paddingListBottom: 10,
-                label: "Categories",
-                colorScheme: colorScheme,
-                widgetList: List.generate(
-                    ProductCategories.values.length,
-                    (index) => CheckBoxContainerWidget<ProductCategories>(
-                          label: ProductCategories.values[index].name,
-                        )),
-              ),
-              AccordionWidget(
-                paddingListTop: 10,
-                paddingListBottom: 10,
-                label: "Color",
-                colorScheme: colorScheme,
-                widgetList: List.generate(
-                    ProductColor.values.length,
-                    (index) => CheckBoxContainerWidget<ProductColor>(
-                          label: ProductColor.values[index].name,
-                        )),
-              ),
-              AccordionWidget(
-                paddingListTop: 10,
-                paddingListBottom: 10,
-                label: "Size",
-                colorScheme: colorScheme,
-                widgetList: List.generate(
-                    ProductSize.values.length,
-                    (index) => CheckBoxContainerWidget<ProductSize>(
-                          label: ProductSize.values[index].name,
-                        )),
-              ),
-              StockCounter(
-                  onPressedRemove: () {
-                    setState(() {
-                      if (value > 0) {
-                        value--;
-                      }
-                    });
+                      "Elevate your facial appearance with our first grade makeup sessions."),
+              DetailsContainer(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return EditPopUp(
+                            label: "Package Duration",
+                            isCancelled: () {},
+                          );
+                        });
                   },
-                  onPressedAdd: () {
-                    setState(() {
-                      value++;
-                    });
+                  content: "1hr"),
+              DetailsContainer(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return EditPopUp(
+                            label: "Edit details",
+                            isCancelled: () {},
+                          );
+                        });
                   },
-                  value: value),
+                  content:
+                      "Elevate your culinary taste with our mouth watering delicious Jollof rice."),
               const SizedBox(
                 height: 30,
               ),
               PrimaryButton(
                   label: "Submit",
                   onPressed: () {
-                    Navigator.of(context).pop();
+                    Navigator.of(context).pushNamed(Routes.serviceSummary);
                   },
                   isEnabled: true),
               const SizedBox(

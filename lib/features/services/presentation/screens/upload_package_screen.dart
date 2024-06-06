@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app/widgets/primary_button.dart';
@@ -174,7 +175,7 @@ class _AddServicePackageScreenState extends State<AddServicePackageScreen> {
             PrimaryButton(
                 label: "Submit",
                 onPressed: () {
-                  // Navigator.pushNamed(context, Routes.editStore);
+                  Navigator.pushNamed(context, Routes.serviceSummary);
                 },
                 isEnabled: true),
             const SizedBox(

@@ -6,6 +6,7 @@ class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
       {super.key,
       required this.label,
+      this.labelFontSize = 18,
       required this.onPressed,
       required this.isEnabled,
       this.backgroundColor = const Color(0xff030E4F),
@@ -19,6 +20,7 @@ class PrimaryButton extends StatelessWidget {
   final Color backgroundColor;
   final Color labelColor;
   final FontWeight fontWeight;
+  final double labelFontSize;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
@@ -26,7 +28,7 @@ class PrimaryButton extends StatelessWidget {
       label: TextWidget(
         text: label,
         color: labelColor,
-        fontSize: 18,
+        fontSize: labelFontSize,
         fontWeight: fontWeight,
       ),
       onPressed: isEnabled ? onPressed : null,

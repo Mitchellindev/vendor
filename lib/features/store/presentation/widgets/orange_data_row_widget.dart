@@ -27,11 +27,11 @@ class OrangeDataRow extends StatelessWidget {
             width: 40.width,
             decoration: BoxDecoration(
                 color: const Color(0xffF49F1C),
-                borderRadius: BorderRadius.circular(10)),
+                borderRadius: BorderRadius.circular(10.width)),
             child: Center(
               child: TextWidget(
                 text: value,
-                fontSize: 21,
+                fontSize: 15,
                 fontWeight: FontWeight.w500,
                 color: Theme.of(context).colorScheme.secondary,
               ),

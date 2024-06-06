@@ -174,7 +174,7 @@ class ScrollableBody extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 50.width,
+                    width: 30.width,
                   ),
                   Expanded(
                     flex: 3,

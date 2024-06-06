@@ -1,9 +1,13 @@
 import 'package:broadcaadvendor/features/card_details/presentation/screens/card_details_screen.dart';
 import 'package:broadcaadvendor/features/home/presentation/screens/dashboard_screen.dart';
+import 'package:broadcaadvendor/features/home/presentation/screens/store_front.dart';
+import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
 import 'package:broadcaadvendor/features/payment_method/presentation/screens/master_card_screen.dart';
 import 'package:broadcaadvendor/features/payment_method/presentation/screens/payment_methods_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/edit_package_screen.dart';
+import 'package:broadcaadvendor/features/services/presentation/screens/service_summary_screen.dart';
 import 'package:broadcaadvendor/features/settings/presentation/screens/settings_screen.dart';
 import 'package:broadcaadvendor/features/store/presentation/widgets/no_store_one.dart';
 import 'package:broadcaadvendor/features/support/presentation/screens/customer_support_screen.dart';
@@ -83,10 +87,18 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const ResetPasswordScreen(),
         );
-      // case Routes.storeFront:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const StoreFrontScreen(),
-      //   );
+      case Routes.storeFront:
+        final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            drawer: const MenuWidget(),
+            key: scaffoldKey,
+            body: StoreFrontScreen(
+              scaffoldKey: scaffoldKey,
+            ),
+          ),
+        );
       case Routes.firstStoreCreation:
         return MaterialPageRoute(
           builder: (_) => const FirstStoreCreationScreen(),
@@ -159,10 +171,18 @@ class AppRouter {
           builder: (_) => const MyStoresScreen(),
         );
 
-      // case Routes.serviceSummary:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const ServiceSummaryScreen(),
-      //   );
+      case Routes.serviceSummary:
+        final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            drawer: const MenuWidget(),
+            key: scaffoldKey,
+            body: ServiceSummaryScreen(
+              scaffoldKey: scaffoldKey,
+            ),
+          ),
+        );
       case Routes.editServiceProfile:
         return MaterialPageRoute(
           builder: (_) => const EditServiceScreen(),
@@ -292,6 +312,14 @@ class AppRouter {
       case Routes.cardDetails:
         return MaterialPageRoute(
           builder: (_) => const CardDetailsScreen(),
+        );
+      case Routes.editService:
+        return MaterialPageRoute(
+          builder: (_) => const EditServiceScreen(),
+        );
+      case Routes.editPackage:
+        return MaterialPageRoute(
+          builder: (_) => const EditPackageScreen(),
         );
       default:
         return MaterialPageRoute(

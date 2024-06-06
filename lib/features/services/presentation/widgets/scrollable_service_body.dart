@@ -1,9 +1,7 @@
 import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../app/widgets/primary_button.dart';
 import '../../../../config/router/routes.dart';
-import '../../../../core/utils/size_config.dart';
 import '../../../../core/widgets/horizontal_divider.dart';
 import '../../../../core/widgets/text_widget.dart';
 import '../../../store/presentation/widgets/cover_image_stack.dart';
@@ -153,25 +151,58 @@ class ScrollableBodyService extends StatelessWidget {
                 paddingVertical: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(
-                    width: SizeConfig.getProportionateScreenWidth(
-                        context: context, inputWidth: 115),
-                    child: PrimaryButton(
-                        label: "0 Views", onPressed: () {}, isEnabled: true),
+                  Expanded(
+                    flex: 2,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Theme.of(context).colorScheme.primary),
+                        child: Center(
+                          child: TextWidget(
+                            text: "0 Views",
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   SizedBox(
-                    width: SizeConfig.getProportionateScreenWidth(
-                        context: context, inputWidth: 226),
-                    child: PrimaryButton(
-                        icon: Image.asset(
-                          "assets/images/promote.png",
-                          width: 30,
+                    width: 30.width,
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Theme.of(context).colorScheme.primary),
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/images/promote_store.png",
+                                width: 24,
+                              ),
+                              const Spacer(),
+                              TextWidget(
+                                text: "Promote Store",
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Theme.of(context).colorScheme.secondary,
+                              ),
+                            ],
+                          ),
                         ),
-                        label: " Promote Service",
-                        onPressed: () {},
-                        isEnabled: true),
+                      ),
+                    ),
                   ),
                 ],
               ),
