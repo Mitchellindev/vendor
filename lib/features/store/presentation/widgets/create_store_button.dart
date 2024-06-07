@@ -1,5 +1,7 @@
-import '../../../../core/widgets/text_widget.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/text_widget.dart';
 
 class OutlinedIconButtonWidget extends StatelessWidget {
   const OutlinedIconButtonWidget(
@@ -20,7 +22,7 @@ class OutlinedIconButtonWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         margin: const EdgeInsets.only(bottom: 0),
         width: double.infinity,
-        height: 48,
+        height: 48.width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
