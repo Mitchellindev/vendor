@@ -17,9 +17,11 @@ class PaymentMethodsScreen extends StatelessWidget {
         }
       },
       {
-        "image": "assets/images/master_card.png",
+        "image": "assets/images/visa.png",
         "label": "Visa",
-        "onTap": () {}
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.visa);
+        }
       },
       {
         "image": "assets/images/master_card.png",

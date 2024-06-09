@@ -1,4 +1,5 @@
 import 'package:broadcaadvendor/config/router/routes.dart';
+import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:broadcaadvendor/core/widgets/horizontal_divider.dart';
 import 'package:broadcaadvendor/core/widgets/text_widget.dart';
 import 'package:broadcaadvendor/features/settings/presentation/widgets/settings_actions_widgets.dart';
@@ -16,14 +17,52 @@ class SettingsScreen extends StatelessWidget {
           Navigator.pushNamed(context, Routes.paymentMethods);
         }
       },
-      {"label": "Navigation Preference", "onTap": () {}},
-      {"label": "Account Security", "onTap": () {}},
+      {
+        "label": "Navigation Preference",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.navigationPreference);
+        }
+      },
+      {
+        "label": "Account Security",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.accountSettings);
+        }
+      },
       {},
-      {"label": "Language", "onTap": () {}, "currentValue": "English"},
-      {"label": "Country", "onTap": () {}, "currentValue": "Nigeria"},
-      {"label": "Currency", "onTap": () {}, "currentValue": "NGN"},
-      {"label": "Account Privacy", "onTap": () {}},
-      {"label": "Delete Account", "onTap": () {}},
+      {
+        "label": "Language",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.selectLanguage);
+        },
+        "currentValue": "English"
+      },
+      {
+        "label": "Country",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.selectCountry);
+        },
+        "currentValue": "Nigeria"
+      },
+      {
+        "label": "Currency",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.selectCurrency);
+        },
+        "currentValue": "NGN"
+      },
+      {
+        "label": "Account Privacy",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.accountPrivacy);
+        }
+      },
+      {
+        "label": "Delete Account",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.deleteAccount);
+        }
+      },
     ];
     return Scaffold(
       appBar: AppBar(
@@ -35,7 +74,7 @@ class SettingsScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20.0),
+        padding: EdgeInsets.symmetric(vertical: 20.width),
         child: Column(
           children: List.generate(actions.length, (index) {
             if (index == 3) {

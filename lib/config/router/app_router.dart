@@ -1,11 +1,26 @@
+import 'package:broadcaadvendor/features/account_privacy/presentation/screens/account_privacy_screen.dart';
+import 'package:broadcaadvendor/features/account_security/presentaion/screens/account_settings_screen.dart';
+import 'package:broadcaadvendor/features/account_security/presentaion/screens/change_password_screen.dart';
 import 'package:broadcaadvendor/features/card_details/presentation/screens/card_details_screen.dart';
+import 'package:broadcaadvendor/features/currency/presentation/screens/select_currency_screen.dart';
+import 'package:broadcaadvendor/features/delete_account/presentation/screens/delete_account_screen.dart';
+import 'package:broadcaadvendor/features/fund_with_card/presentation/screens/bank_details_screen.dart';
+import 'package:broadcaadvendor/features/fund_with_card/presentation/screens/card_details_screen.dart';
+import 'package:broadcaadvendor/features/fund_with_card/presentation/screens/fund_wallet_screen.dart';
+import 'package:broadcaadvendor/features/fund_with_card/presentation/screens/fund_with_bank_screen.dart';
+import 'package:broadcaadvendor/features/fund_with_card/presentation/screens/fund_with_card_screen.dart';
+import 'package:broadcaadvendor/features/fund_with_card/presentation/screens/funding_success_or_failure_screen.dart';
 import 'package:broadcaadvendor/features/home/presentation/screens/dashboard_screen.dart';
 import 'package:broadcaadvendor/features/home/presentation/screens/store_front.dart';
 import 'package:broadcaadvendor/features/home/presentation/widgets/menu_widget.dart';
+import 'package:broadcaadvendor/features/language/presentation/screens/select_language_screen.dart';
+import 'package:broadcaadvendor/features/navigation_preference/presentation/screens/navigation_preference_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_details_screen.dart';
 import 'package:broadcaadvendor/features/payment/presentation/screens/payment_history_screen.dart';
 import 'package:broadcaadvendor/features/payment_method/presentation/screens/master_card_screen.dart';
 import 'package:broadcaadvendor/features/payment_method/presentation/screens/payment_methods_screen.dart';
+import 'package:broadcaadvendor/features/payment_method/presentation/screens/visa_screen.dart';
+import 'package:broadcaadvendor/features/select_country/presentation/screens/select_country_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/edit_package_screen.dart';
 import 'package:broadcaadvendor/features/services/presentation/screens/service_summary_screen.dart';
 import 'package:broadcaadvendor/features/settings/presentation/screens/settings_screen.dart';
@@ -320,6 +335,66 @@ class AppRouter {
       case Routes.editPackage:
         return MaterialPageRoute(
           builder: (_) => const EditPackageScreen(),
+        );
+      case Routes.visa:
+        return MaterialPageRoute(
+          builder: (_) => const VisaScreen(),
+        );
+      case Routes.navigationPreference:
+        return MaterialPageRoute(
+          builder: (_) => const NavigationPreferenceScreen(),
+        );
+      case Routes.accountSettings:
+        return MaterialPageRoute(
+          builder: (_) => const AccountSettingsScreen(),
+        );
+      case Routes.changePassword:
+        return MaterialPageRoute(
+          builder: (_) => const ChangePasswordScreen(),
+        );
+      case Routes.selectLanguage:
+        return MaterialPageRoute(
+          builder: (_) => const SelectLanguageScreen(),
+        );
+      case Routes.selectCurrency:
+        return MaterialPageRoute(
+          builder: (_) => const SelectCurrencyScreen(),
+        );
+      case Routes.accountPrivacy:
+        return MaterialPageRoute(
+          builder: (_) => const AccountPrivacyScreen(),
+        );
+      case Routes.deleteAccount:
+        return MaterialPageRoute(
+          builder: (_) => const DeleteAccountScreen(),
+        );
+      case Routes.selectCountry:
+        return MaterialPageRoute(
+          builder: (_) => const SelectCountryScreen(),
+        );
+      case Routes.fundWallet:
+        return MaterialPageRoute(
+          builder: (_) => const FundWalletScreen(),
+        );
+      case Routes.fundWithCard:
+        return MaterialPageRoute(
+          builder: (_) => const FundWithCardScreen(),
+        );
+      case Routes.cardDetailFundWallet:
+        return MaterialPageRoute(
+          builder: (_) => const CardDetailsFundWalletScreen(),
+        );
+      case Routes.fundingSuccessFailure:
+        return MaterialPageRoute(
+          builder: (_) => const FundingSuccessOrFailureScreen(),
+        );
+      case Routes.fundWithBank:
+        return MaterialPageRoute(
+          builder: (_) => const FundWithBankScreen(),
+        );
+      case Routes.bankDetails:
+        return MaterialPageRoute(
+          builder: (_) => const BankDetailsScreen(),
         );
       default:
         return MaterialPageRoute(

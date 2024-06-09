@@ -86,4 +86,35 @@ class Routes {
   static const String paymentMethods = "/paymentMethods";
   static const String masterCard = "/masterCard";
   static const String cardDetails = "/cardDetails";
+  static const String visa = "/visa";
+
+  //Navigation Preference
+  static const String navigationPreference = "/navigationPreference";
+
+  //Account Settings
+  static const String accountSettings = "/accountSettings";
+  static const String changePassword = "/changePassword";
+
+  //Select Language
+  static const String selectLanguage = "/selectLanguage";
+
+  //Select Currency
+  static const String selectCurrency = "/selectCurrency";
+
+  //Account Privacy
+  static const String accountPrivacy = "/accountPrivacy";
+
+  //Delete Account
+  static const String deleteAccount = "/deleteAccount";
+
+  //Select Country
+  static const String selectCountry = "/selectCountry";
+
+  //Fund Wallet
+  static const String fundWallet = "/fundWallet";
+  static const String fundWithBank = "/fundWithBank";
+  static const String fundWithCard = "/fundWithCard";
+  static const String bankDetails = "/bankDetails";
+  static const String cardDetailFundWallet = "/cardDetailFundWallet";
+  static const String fundingSuccessFailure = "/fundingSuccessFailure";
 }

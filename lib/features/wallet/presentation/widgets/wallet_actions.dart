@@ -1,3 +1,4 @@
+import 'package:broadcaadvendor/config/router/routes.dart';
 import 'package:broadcaadvendor/core/utils/app_constraints.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,13 @@ class WalletActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> actions = [
-      {"icon": "assets/images/withdraw.png", "label": "Fund", "onTap": () {}},
+      {
+        "icon": "assets/images/withdraw.png",
+        "label": "Fund",
+        "onTap": () {
+          Navigator.pushNamed(context, Routes.fundWallet);
+        }
+      },
       {"icon": "assets/images/fund.png", "label": "Withdraw", "onTap": () {}},
       {"icon": "assets/images/request.png", "label": "Request", "onTap": () {}}
     ];
